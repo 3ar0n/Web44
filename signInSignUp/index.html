@@ -19,8 +19,42 @@
     </div>
     <div class="screenWelcome">
         <div class="title">Welcome</div>
-        <div class="signIn" onclick="signInUp(signIn)">SignIn</div>
-        <div class="signUp" onclick="signInUp(signUp)">SignUp</div>
+        <div class="buttonSignIn" onclick="signInUp('signIn')">SignIn</div>
+        <div class="buttonSignUp" onclick="signInUp('signUp')">SignUp</div>
+    </div>
+    <div class="formSignIn">
+        <div class="background">
+            <form action="">
+                <div class="tabs">
+                    <ul class="ulTabs">
+                        <li class="active">
+                            <a href="#" onclick="signIn()">SIGN IN</a>
+                            <span class="line"></span>
+                        </li>
+                        <li>
+                            <a href="#up" onclick="signUp()">SIGN UP</a>
+                            <span class="line"></span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="inputs">
+                    <input type="text" class="input " placeholder="Name" name="name_us" />
+                    <input type="text" class="input activeInput" placeholder="Email" name="emauil_us" />
+                    <input type="password" class="input activeInput" placeholder="Password" name="pass_us" />  
+                    <input type="password" class="input " placeholder="Confirm Password" name="conf_pass_us" />
+                    <a href="#" class="linkForgotPass" >Forgot Password ?</a>    
+                    <div class="termsAndCons">
+                        <p>
+                            <input type="checkbox" name="termsAndCons" /> 
+                            <label for="termsAndCons">Accept  Terms and Conditions.</label>
+                        </p>
+                    </div>
+                </div>
+                <div class="button">
+                    <button class="buttonSign">SIGN IN</button>
+                </div>
+            </form>
+        </div>
     </div>
     <script type="text/javascript" src="js/index.js"></script>
 </body>
