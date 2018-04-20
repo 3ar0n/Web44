@@ -82,58 +82,6 @@ div.navigationBar a div.iconBack:hover
     height: 42px;
     width: 144px;
 }
-div.screenWelcome
-{
-    z-index: 1;
-    position: fixed;
-    color: #ffffff;
-    top: 35px;
-    left: 0px;
-    width: 100%;
-    height: 100vh;
-}
-div.screenWelcome div.title
-{
-    margin: 19vh auto 10vh auto;
-    text-align: center;
-    font-size: 10vw;
-    cursor: default;
-}
-div.screenWelcome div.buttonSignIn,
-div.screenWelcome div.buttonSignUp
-{
-    margin: 0px;
-    margin-top: 22px;
-    padding: 5px;
-    width: 35vw;
-    text-align: center;
-    font-size: 5vw;
-    font-weight: bolder;
-    text-shadow: 2px 2px 0px rgba(255, 170, 230, 1);
-    background: #ffffff;
-    border-radius: 8px;
-    /*transform: skew(-20deg);*/
-    color: #8ad8ff;
-    transition: all 0.2s;
-    cursor: pointer;
-}
-div.screenWelcome div.buttonSignIn
-{
-    float: left;
-    margin-left: 12vw;
-}
-div.screenWelcome div.buttonSignUp
-{
-    float: right;
-    margin-right: 12vw;
-}
-div.screenWelcome div.buttonSignIn:hover,
-div.screenWelcome div.buttonSignUp:hover
-{
-    text-shadow: 2px 2px 0px rgba(255, 170, 230, 1);
-    background: #8ad8ff;
-    color: #ffffff;
-}
 div.formSignIn
 {
     z-index: 2;
@@ -265,12 +213,14 @@ div.formSignIn div.background form div.inputs a.linkForgotPass
 div.formSignIn div.background form div.inputs a.linkForgotPass:hover
 {
     color: #8ad8ff;
+    transition: 0s;
 }
 div.formSignIn div.background form div.inputs div.termsAndCons
 {
     margin: 0px 1vw 0px 1vw;
     font-size: 3vh;
     display: none;
+    cursor: pointer;
     transition: all 0.5s;
 }
 div.formSignIn div.background form div.inputs div.termsAndCons p input
@@ -278,6 +228,11 @@ div.formSignIn div.background form div.inputs div.termsAndCons p input
     margin: 0px;
     width: 3vh;
     height: 3vh;
+    cursor: pointer;
+}
+div.formSignIn div.background form div.inputs div.termsAndCons p label
+{
+    cursor: pointer;
 }
 div.formSignIn div.background form div.button
 {
@@ -301,35 +256,6 @@ div.formSignIn div.background form div.button button.buttonSign
 }
 @media (max-width: 1024px)
 {
-    div.screenWelcome div.title
-    {
-        margin: 29vh auto 0vh auto;
-        text-align: center;
-        font-size: 15vw;
-    }
-    div.screenWelcome div.buttonSignIn,
-    div.screenWelcome div.buttonSignUp
-    {
-        margin: 0px;
-        margin-top: 22px;
-        padding: 5px;
-        width: 35vw;
-        text-align: center;
-        font-size: 10vw;
-        background: #ffffff;
-        transform: skew(-20deg);
-        color: #8ad8ff;
-    }
-    div.screenWelcome div.buttonSignIn
-    {
-        float: left;
-        margin-left: 11vw;
-    }
-    div.screenWelcome div.buttonSignUp
-    {
-        float: right;
-        margin-right: 11vw;
-    }
     div.formSignIn div.background
     {
         width: 65vw;

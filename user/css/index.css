@@ -1,0 +1,177 @@
+body
+{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'Century Gothic', sans-serif;
+    transition: 0.5s;
+}
+div.bigBackground
+{
+    z-index: -1;
+    height: 100vh;
+    width: 100%;
+    background: url(../img/bigBackground.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: bottom;
+}
+div.navigationBar
+{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 45px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+div.navigationBar div.shadowNavLeft,
+div.navigationBar div.shadowNavRight
+{
+    z-index: 1;
+    position: fixed;
+    content:'';
+    left: -14px;
+    top: -30px;
+    height: 40px;
+    width:40%;
+    background:#292929;
+    -webkit-box-shadow: 0 25px 55px rgba(41, 41, 41, .5);
+    -moz-box-shadow: 0 25px 55px rgba(41, 41, 41, .5);
+    box-shadow: 0 25px 55px rgba(41, 41, 41, .5);
+    -webkit-transform: rotate(-4deg);
+    -moz-transform: rotate(-4deg);
+    transform: rotate(-4deg);
+}
+div.navigationBar div.shadowNavRight{
+    -webkit-transform: rotate(4deg);
+    -moz-transform: rotate(4deg);
+    transform: rotate(4deg);
+    right: -14px;
+    left: auto;
+}
+div.navigationBar div.background
+{
+    z-index: 2;
+    position: fixed;
+    width: 100%;
+    height: 45px;
+    background: #ffffff;
+}
+div.navigationBar a div.iconBack
+{
+    z-index: 3;
+    position: relative;
+    margin-top: 5px;
+    margin-left: 5vw;
+    float: left;
+    height: 35px;
+    width: 134px;
+    background: url(../img/iconHome.png);
+    background-size: cover;
+    background-attachment: contain;
+    background-position: center;
+    transition: 0.5s;
+}
+div.navigationBar a div.iconBack:hover
+{
+    margin-top: 1px;
+    margin-left: 32px;
+    height: 42px;
+    width: 161px;
+}
+div.paper
+{
+    z-index: 2;
+    position: fixed;
+    top: 45px;
+    width: 100vw;
+    height: 100%;
+}
+div.paper div.background
+{
+    width: 65vw;
+    margin: 12vh auto;
+    padding: 2vh 0vh;
+    background: #ffffff;
+    cursor: default;
+    border-radius: 8px;
+    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.21);
+    transition: all 0.5s;
+}
+.title
+{
+    text-align: left;
+    margin: 2vh 0vh;
+    padding-left: 1vw;
+    width: 100% - 1vw;
+    font-size: 5vh;
+    font-weight: bolder;
+    color: #ffffff;
+    background: #b0bec5;
+}
+div.paper div.background form.info
+{
+    text-align: center;
+}
+div.paper div.background form.info input.input
+{
+    position: relative;
+    width: 40%;
+    margin: 2vh 1vw;
+    border: none;
+    border-bottom: 2px solid #b0bec5;
+    outline: none;
+    font-weight: bold;
+    color: #8ad8ff;
+    background-color: transparent;
+    transition: all 0.5s;
+    font-size: 3vh;
+}
+div.paper div.background form.info input.input:focus
+{
+    border-bottom: 2px solid #ff8383;
+}
+div.paper div.background form.info button.buttonChange
+{
+    position: relative;
+    background: rgba(255, 64, 88, 0.74);
+    box-shadow: 0px 2px 20px 2px rgba(255, 114, 132, 0.5);
+    border-radius: 8px;
+    width: 40%;
+    height: 10vh;
+    border: none;
+    color: #ffffff;
+    font-size: 3vh;
+    margin-top: 2vh;
+    margin-bottom: 1vh;
+    margin-left: 28vw;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+@media (max-width: 1024px)
+{
+    div.paper div.background form.info button.buttonChange
+    {
+        width: 80%;
+        height: 10vh;
+        font-size: 3vh;
+        margin-top: 2vh;
+        margin-bottom: 1vh;
+        margin-left: auto;
+    }
+}
+@media (max-width: 765px)
+{
+    div.paper div.background
+    {
+        width: 85vw;
+        margin: 8vh auto;
+    }
+    div.paper div.background form.info input.input
+    {
+        width: 80%;
+    }
+}

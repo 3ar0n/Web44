@@ -17,11 +17,6 @@
             <div class="iconBack"></div>
         </a>
     </div>
-    <div class="screenWelcome">
-        <div class="title">Welcome</div>
-        <div class="buttonSignIn" onclick="signInUp('signIn')">SignIn</div>
-        <div class="buttonSignUp" onclick="signInUp('signUp')">SignUp</div>
-    </div>
     <div class="formSignIn">
         <div class="background">
             <form action="">
@@ -38,20 +33,20 @@
                     </ul>
                 </div>
                 <div class="inputs">
-                    <input type="text" class="input " placeholder="Name" name="name_us" />
-                    <input type="text" class="input activeInput" placeholder="Email" name="emauil_us" />
-                    <input type="password" class="input activeInput" placeholder="Password" name="pass_us" />  
-                    <input type="password" class="input " placeholder="Confirm Password" name="conf_pass_us" />
+                    <input type="text" class="input " placeholder="Name" id="name_us" required="false"/>
+                    <input type="text" class="input activeInput" placeholder="Email" id="email_us" required="true"/>
+                    <input type="password" class="input activeInput" placeholder="Password" id="pass_us" required="true"/>  
+                    <input type="password" class="input " placeholder="Confirm Password" id="conf_pass_us" required="false"/>
                     <a href="#" class="linkForgotPass" >Forgot Password ?</a>    
                     <div class="termsAndCons">
                         <p>
-                            <input type="checkbox" name="termsAndCons" /> 
+                            <input type="checkbox" id="termsAndCons" /> 
                             <label for="termsAndCons">Accept  Terms and Conditions.</label>
                         </p>
                     </div>
                 </div>
                 <div class="button">
-                    <button class="buttonSign">SIGN IN</button>
+                    <button class="buttonSign" onclick="buttonSign()">SIGN IN</button>
                 </div>
             </form>
         </div>
