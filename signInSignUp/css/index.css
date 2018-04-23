@@ -161,7 +161,7 @@ div.formSignIn div.background form div.inputs
 div.formSignIn div.background form div.inputs input.input
 {
     position: relative;
-    width: 90%;
+    width: 80%;
     margin: 1vh auto;
     border: none;
     border-bottom: 2px solid #b0bec5;
