@@ -3,277 +3,322 @@
 <head>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Sóng Thần - Di động đa sắc màu</title>
+	<title>Nhóm 44 - Smartphone & Tablet</title>
 	<link href="./ui/css/homepage.css" rel="stylesheet" type="text/css">
+	<script src="./js/homepage.js"></script>
 </head>
 <body>
-	<div class="navigation-bar">
-	<aside>
-		<form style="float: left; margin-left:10%; margin-top: 7px;">
-			<input type=text name="search" placeholder="Tìm kiếm..">
+	<aside><div class="navigation-bar" id="navBar">
+		<form class="search-bar" style="float: left; margin-left:1%; margin-top: 7px;">
+			<input type=text name="search" placeholder="Tìm kiếm...">
 		</form>
-		<a href="#">Đăng nhập</a>
-		<a href="#">Hỏi đáp</a>
-		<a href="#">Khuyến mãi</a>
-		<a href="#">Tablet</a>
+		<a href="javascript:void(0);" class="dropdown-icon" onclick="dropdownNav()">&#9776;</a>
+		<a href="#" class="none"></a>
+		<a href="./signInSignUp/index.html">Đăng nhập</a>
+		<a href="#">Giỏ hàng</a>
+		<a href="#">Máy tính bảng</a>
 		<a href="#">Điện thoại</a>
-	</aside>
-	</div>
-	<div class="main-content">Chưa biết ghi cái gì</div>
-	<br><br><br>
-	<aside>
-	<p class="catergory">Sản phẩm bán chạy</p>
-	<div class="columns">
-		<ul class="info">
-			<li class="info_img"><img src="./data/img/vivo-v9.png" style="width: 100%"></li>
-			<li class="info_name">1nf0_n4m3</li>
-			<li class="info_price">6.900.000 vnd</li>
-			<li class="info_link">Chi tiết</li>
-		</ul>
-	</div>
-	<div class="columns">
-			<ul class="info">
-				<li class="info_img"><img src="./data/img/vivo-v9.png" style="width: 100%"></li>
-				<li class="info_name">1nf0_n4m3</li>
-				<li class="info_price">6.900.000 vnd</li>
-				<li class="info_link">Chi tiết</li>
-			</ul>
-	</div>
-	<div class="columns">
-			<ul class="info">
-				<li class="info_img"><img src="./data/img/vivo-v9.png" style="width: 100%"></li>
-				<li class="info_name">1nf0_n4m3</li>
-				<li class="info_price">6.900.000 vnd</li>
-				<li class="info_link">Chi tiết</li>
-			</ul>
-	</div>
-	<div class="columns">
-			<ul class="info">
-				<li class="info_img"><img src="./data/img/vivo-v9.png" style="width: 100%"></li>
-				<li class="info_name">1nf0_n4m3</li>
-				<li class="info_price">6.900.000 vnd</li>
-				<li class="info_link">Chi tiết</li>
-			</ul>
-	</div>
-	<div class="columns">
-			<ul class="info">
-				<li class="info_img"><img src="./data/img/vivo-v9.png" style="width: 100%"></li>
-				<li class="info_name">1nf0_n4m3</li>
-				<li class="info_price">6.900.000 vnd</li>
-				<li class="info_link">Chi tiết</li>
-			</ul>
-	</div>
-	<div class="columns">
-			<ul class="info">
-				<li class="info_img"><img src="./data/img/vivo-v9.png" style="width: 100%"></li>
-				<li class="info_name">1nf0_n4m3</li>
-				<li class="info_price">6.900.000 vnd</li>
-				<li class="info_link">Chi tiết</li>
-			</ul>
-	</div>
-	<div class="columns">
-			<ul class="info">
-				<li class="info_img"><img src="./data/img/vivo-v9.png" style="width: 100%"></li>
-				<li class="info_name">1nf0_n4m3</li>
-				<li class="info_price">6.900.000 vnd</li>
-				<li class="info_link">Chi tiết</li>
-			</ul>
-	</div>
-	<div class="columns">
-			<ul class="info">
-				<li class="info_img"><img src="./data/img/vivo-v9.png" style="width: 100%"></li>
-				<li class="info_name">1nf0_n4m3</li>
-				<li class="info_price">6.900.000 vnd</li>
-				<li class="info_link">Chi tiết</li>
-			</ul>
-	</div>
-	<div class="columns">
-			<ul class="info">
-				<li class="info_img"><img src="./data/img/vivo-v9.png" style="width: 100%"></li>
-				<li class="info_name">1nf0_n4m3</li>
-				<li class="info_price">6.900.000 vnd</li>
-				<li class="info_link">Chi tiết</li>
-			</ul>
-	</div>
-	<div class="columns">
-			<ul class="info">
-				<li class="info_img"><img src="./data/img/vivo-v9.png" style="width: 100%"></li>
-				<li class="info_name">1nf0_n4m3</li>
-				<li class="info_price">6.900.000 vnd</li>
-				<li class="info_link">Chi tiết</li>
-			</ul>
-	</div>
-	</aside>
+	</div></aside>
 
-	<aside>
-	<p class="catergory">Sản phẩm xem nhiều</p>
-	<div class="columns">
-			<ul class="info">
-				<li class="info_img"><img src="./data/img/vivo-v9.png" style="width: 100%"></li>
-				<li class="info_name">1nf0_n4m3</li>
-				<li class="info_price">6.900.000 vnd</li>
-				<li class="info_link">Chi tiết</li>
-			</ul>
+	<div class="main-content">
+		<div class="side">
+			<p>side</p>
 		</div>
-		<div class="columns">
-				<ul class="info">
-					<li class="info_img"><img src="./data/img/vivo-v9.png" style="width: 100%"></li>
-					<li class="info_name">1nf0_n4m3</li>
-					<li class="info_price">6.900.000 vnd</li>
-					<li class="info_link">Chi tiết</li>
-				</ul>
-		</div>
-		<div class="columns">
-				<ul class="info">
-					<li class="info_img"><img src="./data/img/vivo-v9.png" style="width: 100%"></li>
-					<li class="info_name">1nf0_n4m3</li>
-					<li class="info_price">6.900.000 vnd</li>
-					<li class="info_link">Chi tiết</li>
-				</ul>
-		</div>
-		<div class="columns">
-				<ul class="info">
-					<li class="info_img"><img src="./data/img/vivo-v9.png" style="width: 100%"></li>
-					<li class="info_name">1nf0_n4m3</li>
-					<li class="info_price">6.900.000 vnd</li>
-					<li class="info_link">Chi tiết</li>
-				</ul>
-		</div>
-		<div class="columns">
-				<ul class="info">
-					<li class="info_img"><img src="./data/img/vivo-v9.png" style="width: 100%"></li>
-					<li class="info_name">1nf0_n4m3</li>
-					<li class="info_price">6.900.000 vnd</li>
-					<li class="info_link">Chi tiết</li>
-				</ul>
-		</div>
-		<div class="columns">
-				<ul class="info">
-					<li class="info_img"><img src="./data/img/vivo-v9.png" style="width: 100%"></li>
-					<li class="info_name">1nf0_n4m3</li>
-					<li class="info_price">6.900.000 vnd</li>
-					<li class="info_link">Chi tiết</li>
-				</ul>
-		</div>
-		<div class="columns">
-				<ul class="info">
-					<li class="info_img"><img src="./data/img/vivo-v9.png" style="width: 100%"></li>
-					<li class="info_name">1nf0_n4m3</li>
-					<li class="info_price">6.900.000 vnd</li>
-					<li class="info_link">Chi tiết</li>
-				</ul>
-		</div>
-		<div class="columns">
-				<ul class="info">
-					<li class="info_img"><img src="./data/img/vivo-v9.png" style="width: 100%"></li>
-					<li class="info_name">1nf0_n4m3</li>
-					<li class="info_price">6.900.000 vnd</li>
-					<li class="info_link">Chi tiết</li>
-				</ul>
-		</div>
-		<div class="columns">
-				<ul class="info">
-					<li class="info_img"><img src="./data/img/vivo-v9.png" style="width: 100%"></li>
-					<li class="info_name">1nf0_n4m3</li>
-					<li class="info_price">6.900.000 vnd</li>
-					<li class="info_link">Chi tiết</li>
-				</ul>
-		</div>
-		<div class="columns">
-				<ul class="info">
-					<li class="info_img"><img src="./data/img/vivo-v9.png" style="width: 100%"></li>
-					<li class="info_name">1nf0_n4m3</li>
-					<li class="info_price">6.900.000 vnd</li>
-					<li class="info_link">Chi tiết</li>
-				</ul>
-		</div>
-	</aside>
+		<div class="main">
+			<p class="catergory">Sản phẩm mới</p>
+			<div class="container">
+				<div class="columns">
+					<ul class="info">
+						<li class="info_name">Samsung Galaxy J7 Pro</li>
+						<li class="info_img"><img src="./data/img/samsung-galaxy-j7-pro-2323-400x460.png" style="width: 100%"></li>
+						<li class="info_price">6.900.000 đ</li>
+						<li class="info_sum">3GB RAM - 3600 mAh</li>
+						<li class="info_link" style="text-align: right; font-size: 11px;"><a href="./product information/samsung-galaxy-j7-pro.html">Chi tiết</a></li>
+					</ul>
+				</div>
+				<div class="columns">
+					<ul class="info">
+						<li class="info_name">Oppo F7</li>
+						<li class="info_img"><img src="./data/img/oppo-f7.png" style="width: 100%"></li>
+						<li class="info_price">7.499.000 đ</li>
+						<li class="info_sum">4GB RAM - 3400 mAh</li>
+						<li class="info_link" style="text-align: right; font-size: 11px;"><a href="./product information/samsung-galaxy-j7-pro.html">Chi tiết</a></li>
+					</ul>
+				</div>
+				<div class="columns">
+					<ul class="info">
+						<li class="info_name">Vivi v9</li>
+						<li class="info_img"><img src="./data/img/vivo-v9.png" style="width: 100%"></li>
+						<li class="info_price">6.900.000 đ</li>
+						<li class="info_sum">4GB RAM - 3400 mAh</li>
+						<li class="info_link" style="text-align: right; font-size: 11px;"><a href="./product information/samsung-galaxy-j7-pro.html">Chi tiết</a></li>
+					</ul>
+				</div>
+				<div class="columns">
+					<ul class="info">
+						<li class="info_name">Sony Xperia L1</li>
+						<li class="info_img"><img src="./data/img/sony-xperia-l1.png" style="width: 100%"></li>
+						<li class="info_price">6.900.000 đ</li>
+						<li class="info_sum">4GB RAM - 3400 mAh</li>
+						<li class="info_link" style="text-align: right; font-size: 11px;"><a href="./product information/samsung-galaxy-j7-pro.html">Chi tiết</a></li>
+					</ul>
+				</div>
+				<div class="columns">
+					<ul class="info">
+						<li class="info_name">Samsung Galaxy A8 Plus</li>
+						<li class="info_img"><img src="./data/img/samsung-galaxy-a8-plus.png" style="width: 100%"></li>
+						<li class="info_price">6.900.000 đ</li>
+						<li class="info_sum">4GB RAM - 3400 mAh</li>
+						<li class="info_link" style="text-align: right; font-size: 11px;"><a href="./product information/samsung-galaxy-j7-pro.html">Chi tiết</a></li>
+					</ul>
+				</div>
 
-	<aside>
-		<p class="catergory">Sản phẩm xem nhiều</p>
-		<div class="columns">
-			<ul class="info">
-				<li class="info_img"><img src="./data/img/vivo-v9.png" style="width: 100%"></li>
-				<li class="info_name">1nf0_n4m3</li>
-				<li class="info_price">6.900.000 vnd</li>
-				<li class="info_link">Chi tiết</li>
-			</ul>
+				<div class="columns">
+					<ul class="info">
+						<li class="info_name">Samsung Galaxy J7 Pro</li>
+						<li class="info_img"><img src="./data/img/samsung-galaxy-j7-pro-2323-400x460.png" style="width: 100%"></li>
+						<li class="info_price">6.900.000 đ</li>
+						<li class="info_sum">3GB RAM - 3600 mAh</li>
+						<li class="info_link" style="text-align: right; font-size: 11px;"><a href="./product information/samsung-galaxy-j7-pro.html">Chi tiết</a></li>
+					</ul>
+				</div>
+				<div class="columns">
+					<ul class="info">
+						<li class="info_name">Oppo F7</li>
+						<li class="info_img"><img src="./data/img/oppo-f7.png" style="width: 100%"></li>
+						<li class="info_price">7.499.000 đ</li>
+						<li class="info_sum">4GB RAM - 3400 mAh</li>
+						<li class="info_link" style="text-align: right; font-size: 11px;"><a href="./product information/samsung-galaxy-j7-pro.html">Chi tiết</a></li>
+					</ul>
+				</div>
+				<div class="columns">
+					<ul class="info">
+						<li class="info_name">Vivi v9</li>
+						<li class="info_img"><img src="./data/img/vivo-v9.png" style="width: 100%"></li>
+						<li class="info_price">6.900.000 đ</li>
+						<li class="info_sum">4GB RAM - 3400 mAh</li>
+						<li class="info_link" style="text-align: right; font-size: 11px;"><a href="./product information/samsung-galaxy-j7-pro.html">Chi tiết</a></li>
+					</ul>
+				</div>
+				<div class="columns">
+					<ul class="info">
+						<li class="info_name">Sony Xperia L1</li>
+						<li class="info_img"><img src="./data/img/sony-xperia-l1.png" style="width: 100%"></li>
+						<li class="info_price">6.900.000 đ</li>
+						<li class="info_sum">4GB RAM - 3400 mAh</li>
+						<li class="info_link" style="text-align: right; font-size: 11px;"><a href="./product information/samsung-galaxy-j7-pro.html">Chi tiết</a></li>
+					</ul>
+				</div>
+				<div class="columns">
+					<ul class="info">
+						<li class="info_name">Samsung Galaxy A8 Plus</li>
+						<li class="info_img"><img src="./data/img/samsung-galaxy-a8-plus.png" style="width: 100%"></li>
+						<li class="info_price">6.900.000 đ</li>
+						<li class="info_sum">4GB RAM - 3400 mAh</li>
+						<li class="info_link" style="text-align: right; font-size: 11px;"><a href="./product information/samsung-galaxy-j7-pro.html">Chi tiết</a></li>
+					</ul>
+				</div>
+			</div>
+			<br><a href="#" class="see-more">xem thêm</a>
+
+			<br><hr width="100%">
+			<p class="catergory">Sản phẩm mới</p>
+			<div class="container">
+					<div class="columns">
+							<ul class="info">
+								<li class="info_name">Samsung Galaxy J7 Pro</li>
+								<li class="info_img"><img src="./data/img/samsung-galaxy-j7-pro-2323-400x460.png" style="width: 100%"></li>
+								<li class="info_price">6.900.000 đ</li>
+								<li class="info_sum">3GB RAM - 3600 mAh</li>
+								<li class="info_link" style="text-align: right; font-size: 11px;"><a href="./product information/samsung-galaxy-j7-pro.html">Chi tiết</a></li>
+							</ul>
+						</div>
+						<div class="columns">
+							<ul class="info">
+								<li class="info_name">Oppo F7</li>
+								<li class="info_img"><img src="./data/img/oppo-f7.png" style="width: 100%"></li>
+								<li class="info_price">7.499.000 đ</li>
+								<li class="info_sum">4GB RAM - 3400 mAh</li>
+								<li class="info_link" style="text-align: right; font-size: 11px;"><a href="./product information/samsung-galaxy-j7-pro.html">Chi tiết</a></li>
+							</ul>
+						</div>
+						<div class="columns">
+							<ul class="info">
+								<li class="info_name">Vivi v9</li>
+								<li class="info_img"><img src="./data/img/vivo-v9.png" style="width: 100%"></li>
+								<li class="info_price">6.900.000 đ</li>
+								<li class="info_sum">4GB RAM - 3400 mAh</li>
+								<li class="info_link" style="text-align: right; font-size: 11px;"><a href="./product information/samsung-galaxy-j7-pro.html">Chi tiết</a></li>
+							</ul>
+						</div>
+						<div class="columns">
+							<ul class="info">
+								<li class="info_name">Sony Xperia L1</li>
+								<li class="info_img"><img src="./data/img/sony-xperia-l1.png" style="width: 100%"></li>
+								<li class="info_price">6.900.000 đ</li>
+								<li class="info_sum">4GB RAM - 3400 mAh</li>
+								<li class="info_link" style="text-align: right; font-size: 11px;"><a href="./product information/samsung-galaxy-j7-pro.html">Chi tiết</a></li>
+							</ul>
+						</div>
+						<div class="columns">
+							<ul class="info">
+								<li class="info_name">Samsung Galaxy A8 Plus</li>
+								<li class="info_img"><img src="./data/img/samsung-galaxy-a8-plus.png" style="width: 100%"></li>
+								<li class="info_price">6.900.000 đ</li>
+								<li class="info_sum">4GB RAM - 3400 mAh</li>
+								<li class="info_link" style="text-align: right; font-size: 11px;"><a href="./product information/samsung-galaxy-j7-pro.html">Chi tiết</a></li>
+							</ul>
+						</div>
+		
+						<div class="columns">
+							<ul class="info">
+								<li class="info_name">Samsung Galaxy J7 Pro</li>
+								<li class="info_img"><img src="./data/img/samsung-galaxy-j7-pro-2323-400x460.png" style="width: 100%"></li>
+								<li class="info_price">6.900.000 đ</li>
+								<li class="info_sum">3GB RAM - 3600 mAh</li>
+								<li class="info_link" style="text-align: right; font-size: 11px;"><a href="./product information/samsung-galaxy-j7-pro.html">Chi tiết</a></li>
+							</ul>
+						</div>
+						<div class="columns">
+							<ul class="info">
+								<li class="info_name">Oppo F7</li>
+								<li class="info_img"><img src="./data/img/oppo-f7.png" style="width: 100%"></li>
+								<li class="info_price">7.499.000 đ</li>
+								<li class="info_sum">4GB RAM - 3400 mAh</li>
+								<li class="info_link" style="text-align: right; font-size: 11px;"><a href="./product information/samsung-galaxy-j7-pro.html">Chi tiết</a></li>
+							</ul>
+						</div>
+						<div class="columns">
+							<ul class="info">
+								<li class="info_name">Vivi v9</li>
+								<li class="info_img"><img src="./data/img/vivo-v9.png" style="width: 100%"></li>
+								<li class="info_price">6.900.000 đ</li>
+								<li class="info_sum">4GB RAM - 3400 mAh</li>
+								<li class="info_link" style="text-align: right; font-size: 11px;"><a href="./product information/samsung-galaxy-j7-pro.html">Chi tiết</a></li>
+							</ul>
+						</div>
+						<div class="columns">
+							<ul class="info">
+								<li class="info_name">Sony Xperia L1</li>
+								<li class="info_img"><img src="./data/img/sony-xperia-l1.png" style="width: 100%"></li>
+								<li class="info_price">6.900.000 đ</li>
+								<li class="info_sum">4GB RAM - 3400 mAh</li>
+								<li class="info_link" style="text-align: right; font-size: 11px;"><a href="./product information/samsung-galaxy-j7-pro.html">Chi tiết</a></li>
+							</ul>
+						</div>
+						<div class="columns">
+							<ul class="info">
+								<li class="info_name">Samsung Galaxy A8 Plus</li>
+								<li class="info_img"><img src="./data/img/samsung-galaxy-a8-plus.png" style="width: 100%"></li>
+								<li class="info_price">6.900.000 đ</li>
+								<li class="info_sum">4GB RAM - 3400 mAh</li>
+								<li class="info_link" style="text-align: right; font-size: 11px;"><a href="./product information/samsung-galaxy-j7-pro.html">Chi tiết</a></li>
+							</ul>
+						</div>
+			</div>
+			<br><a href="#" class="see-more">xem thêm</a>
+			
+			<br><hr width="100%">
+			<p class="catergory">Sản phẩm mới</p>
+			<div class="container">
+					<div class="columns">
+							<ul class="info">
+								<li class="info_name">Samsung Galaxy J7 Pro</li>
+								<li class="info_img"><img src="./data/img/samsung-galaxy-j7-pro-2323-400x460.png" style="width: 100%"></li>
+								<li class="info_price">6.900.000 đ</li>
+								<li class="info_sum">3GB RAM - 3600 mAh</li>
+								<li class="info_link" style="text-align: right; font-size: 11px;"><a href="./product information/samsung-galaxy-j7-pro.html">Chi tiết</a></li>
+							</ul>
+						</div>
+						<div class="columns">
+							<ul class="info">
+								<li class="info_name">Oppo F7</li>
+								<li class="info_img"><img src="./data/img/oppo-f7.png" style="width: 100%"></li>
+								<li class="info_price">7.499.000 đ</li>
+								<li class="info_sum">4GB RAM - 3400 mAh</li>
+								<li class="info_link" style="text-align: right; font-size: 11px;"><a href="./product information/samsung-galaxy-j7-pro.html">Chi tiết</a></li>
+							</ul>
+						</div>
+						<div class="columns">
+							<ul class="info">
+								<li class="info_name">Vivi v9</li>
+								<li class="info_img"><img src="./data/img/vivo-v9.png" style="width: 100%"></li>
+								<li class="info_price">6.900.000 đ</li>
+								<li class="info_sum">4GB RAM - 3400 mAh</li>
+								<li class="info_link" style="text-align: right; font-size: 11px;"><a href="./product information/samsung-galaxy-j7-pro.html">Chi tiết</a></li>
+							</ul>
+						</div>
+						<div class="columns">
+							<ul class="info">
+								<li class="info_name">Sony Xperia L1</li>
+								<li class="info_img"><img src="./data/img/sony-xperia-l1.png" style="width: 100%"></li>
+								<li class="info_price">6.900.000 đ</li>
+								<li class="info_sum">4GB RAM - 3400 mAh</li>
+								<li class="info_link" style="text-align: right; font-size: 11px;"><a href="./product information/samsung-galaxy-j7-pro.html">Chi tiết</a></li>
+							</ul>
+						</div>
+						<div class="columns">
+							<ul class="info">
+								<li class="info_name">Samsung Galaxy A8 Plus</li>
+								<li class="info_img"><img src="./data/img/samsung-galaxy-a8-plus.png" style="width: 100%"></li>
+								<li class="info_price">6.900.000 đ</li>
+								<li class="info_sum">4GB RAM - 3400 mAh</li>
+								<li class="info_link" style="text-align: right; font-size: 11px;"><a href="./product information/samsung-galaxy-j7-pro.html">Chi tiết</a></li>
+							</ul>
+						</div>
+		
+						<div class="columns">
+							<ul class="info">
+								<li class="info_name">Samsung Galaxy J7 Pro</li>
+								<li class="info_img"><img src="./data/img/samsung-galaxy-j7-pro-2323-400x460.png" style="width: 100%"></li>
+								<li class="info_price">6.900.000 đ</li>
+								<li class="info_sum">3GB RAM - 3600 mAh</li>
+								<li class="info_link" style="text-align: right; font-size: 11px;"><a href="./product information/samsung-galaxy-j7-pro.html">Chi tiết</a></li>
+							</ul>
+						</div>
+						<div class="columns">
+							<ul class="info">
+								<li class="info_name">Oppo F7</li>
+								<li class="info_img"><img src="./data/img/oppo-f7.png" style="width: 100%"></li>
+								<li class="info_price">7.499.000 đ</li>
+								<li class="info_sum">4GB RAM - 3400 mAh</li>
+								<li class="info_link" style="text-align: right; font-size: 11px;"><a href="./product information/samsung-galaxy-j7-pro.html">Chi tiết</a></li>
+							</ul>
+						</div>
+						<div class="columns">
+							<ul class="info">
+								<li class="info_name">Vivi v9</li>
+								<li class="info_img"><img src="./data/img/vivo-v9.png" style="width: 100%"></li>
+								<li class="info_price">6.900.000 đ</li>
+								<li class="info_sum">4GB RAM - 3400 mAh</li>
+								<li class="info_link" style="text-align: right; font-size: 11px;"><a href="./product information/samsung-galaxy-j7-pro.html">Chi tiết</a></li>
+							</ul>
+						</div>
+						<div class="columns">
+							<ul class="info">
+								<li class="info_name">Sony Xperia L1</li>
+								<li class="info_img"><img src="./data/img/sony-xperia-l1.png" style="width: 100%"></li>
+								<li class="info_price">6.900.000 đ</li>
+								<li class="info_sum">4GB RAM - 3400 mAh</li>
+								<li class="info_link" style="text-align: right; font-size: 11px;"><a href="./product information/samsung-galaxy-j7-pro.html">Chi tiết</a></li>
+							</ul>
+						</div>
+						<div class="columns">
+							<ul class="info">
+								<li class="info_name">Samsung Galaxy A8 Plus</li>
+								<li class="info_img"><img src="./data/img/samsung-galaxy-a8-plus.png" style="width: 100%"></li>
+								<li class="info_price">6.900.000 đ</li>
+								<li class="info_sum">4GB RAM - 3400 mAh</li>
+								<li class="info_link" style="text-align: right; font-size: 11px;"><a href="./product information/samsung-galaxy-j7-pro.html">Chi tiết</a></li>
+							</ul>
+						</div>
+			</div>
+			<br><a href="#" class="see-more">xem thêm</a>
+
 		</div>
-		<div class="columns">
-				<ul class="info">
-					<li class="info_img"><img src="./data/img/vivo-v9.png" style="width: 100%"></li>
-					<li class="info_name">1nf0_n4m3</li>
-					<li class="info_price">6.900.000 vnd</li>
-					<li class="info_link">Chi tiết</li>
-				</ul>
-		</div>
-		<div class="columns">
-				<ul class="info">
-					<li class="info_img"><img src="./data/img/vivo-v9.png" style="width: 100%"></li>
-					<li class="info_name">1nf0_n4m3</li>
-					<li class="info_price">6.900.000 vnd</li>
-					<li class="info_link">Chi tiết</li>
-				</ul>
-		</div>
-		<div class="columns">
-				<ul class="info">
-					<li class="info_img"><img src="./data/img/vivo-v9.png" style="width: 100%"></li>
-					<li class="info_name">1nf0_n4m3</li>
-					<li class="info_price">6.900.000 vnd</li>
-					<li class="info_link">Chi tiết</li>
-				</ul>
-		</div>
-		<div class="columns">
-				<ul class="info">
-					<li class="info_img"><img src="./data/img/vivo-v9.png" style="width: 100%"></li>
-					<li class="info_name">1nf0_n4m3</li>
-					<li class="info_price">6.900.000 vnd</li>
-					<li class="info_link">Chi tiết</li>
-				</ul>
-		</div>
-		<div class="columns">
-				<ul class="info">
-					<li class="info_img"><img src="./data/img/vivo-v9.png" style="width: 100%"></li>
-					<li class="info_name">1nf0_n4m3</li>
-					<li class="info_price">6.900.000 vnd</li>
-					<li class="info_link">Chi tiết</li>
-				</ul>
-		</div>
-		<div class="columns">
-				<ul class="info">
-					<li class="info_img"><img src="./data/img/vivo-v9.png" style="width: 100%"></li>
-					<li class="info_name">1nf0_n4m3</li>
-					<li class="info_price">6.900.000 vnd</li>
-					<li class="info_link">Chi tiết</li>
-				</ul>
-		</div>
-		<div class="columns">
-				<ul class="info">
-					<li class="info_img"><img src="./data/img/vivo-v9.png" style="width: 100%"></li>
-					<li class="info_name">1nf0_n4m3</li>
-					<li class="info_price">6.900.000 vnd</li>
-					<li class="info_link">Chi tiết</li>
-				</ul>
-		</div>
-		<div class="columns">
-				<ul class="info">
-					<li class="info_img"><img src="./data/img/vivo-v9.png" style="width: 100%"></li>
-					<li class="info_name">1nf0_n4m3</li>
-					<li class="info_price">6.900.000 vnd</li>
-					<li class="info_link">Chi tiết</li>
-				</ul>
-		</div>
-		<div class="columns">
-				<ul class="info">
-					<li class="info_img"><img src="./data/img/vivo-v9.png" style="width: 100%"></li>
-					<li class="info_name">1nf0_n4m3</li>
-					<li class="info_price">6.900.000 vnd</li>
-					<li class="info_link">Chi tiết</li>
-				</ul>
-		</div>
-	</aside>
-	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-	<div class="footer">
+	</div>
+
+	<div class="footer" style="color: white;">
 		<MARQUEE
 			BEHAVIOR = ALTERNATE | SCROLL | SLIDE 
 			DIRECTION = LEFT | RIGHT
