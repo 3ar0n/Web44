@@ -14,8 +14,26 @@ body {
     text-align: left;
 }
 
+/* Search bar */
+input[type=text] {
+    width: 300px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    background-color: white;
+    /*background-image: url('searchicon.png');
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;*/
+    padding: 5px 20px 5px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
 /* Style the top navigation bar */
 .navigation-bar {
+    position: fixed;
+    width: 100%;
     margin-left: 0px;
     padding: 0px;
     overflow: hidden;
@@ -26,9 +44,12 @@ body {
     float: right;
     display: block;
     color: white;
+    font-size: 14px;
+    font-weight: bold;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    transition: 0.1s;
 }
 
 .navigation-bar a:hover {
@@ -59,4 +80,40 @@ p.catergory {
 .footer p {
     color: #FFFFFF;
     text-align: center;
+}
+
+.columns {
+    float: left;
+    width: 10%;
+    padding: 8px;
+    font-size: 12px;
+}
+
+.info {
+    list-style-type: none;
+    border: 1px solid #eee;
+    margin: 0;
+    padding: 0;
+    -webkit-transition: 0.1s;
+    transition: 0.1s;
+}
+
+.info:hover {
+    box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2)
+}
+
+.info li {
+    border-bottom: 1px solid #eee;
+    padding: 1px;
+    text-align: center;
+}
+
+.info_link {
+    text-align: right;
+}
+
+@media only screen and (max-width: 600px) {
+    .columns {
+        width: 100%;
+    }
 }
