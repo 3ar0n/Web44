@@ -1,10 +1,4 @@
-<!DOCTYPE html>
-<html lang="vi">
-<head>
-	<meta charset="UTF-8">
-	<title>samsung galaxy j7 pro</title>
-	<style>
-		* {
+* {
 		    margin: 0;
 		    padding: 0;
 		}
@@ -196,66 +190,84 @@
 		    padding-bottom: 20px;
 		    cursor: pointer;
 		}
-	</style>
-</head>
-<body class ="" style="background-color: rgb(255,255,255);">
-	<section class="type0">
-		<ul class="breadcrumb">
-			<li>
-				<a href = "/index.html" title="Trang chủ">Trang chủ</a>
-				<span> > </span>
-				<a title="điện thoại">điện thoại</a>
-				<span>></span>
-				<a title="Samsung">SamSung</a>
-			</li>
-		</ul>
-		<div>
-			<h1>Điện thoại Samsung Galaxy J7 pro</h1>
-			<div class="ratingresult">
-				<a href="#danhgia">35 đánh giá</a>
-			</div>
-		</div>
-		<div class="clr"></div>
-		<aside class="picture">
-			<img src="./img/samsung-galaxy-j7-pro-2323-400x460.jpg" alt="điện thoại samsung J7 pro">
-		</aside>
-		<aside class = "area_price">
-			<strong>6.090.000đ</strong>
-			<div class="tsh">
-				<span>NHẬN HÀNG TRONG 1 GIỜ</span>
-			</div>
-			<div class="area_promotion zero">
-				<strong data-count="3">Khuyến mãi</strong>
-				<h3>Phiếu mua hàng trị giá 100.000đ khi mua online</h3>
-				<h3>Thùng cocacola (24 lon)</h3>
-			</div>
-		</aside>
-		<div class="rightInfo">
-			<ul class = "checkexist">
-				<strong>Kiểm tra: </strong>
-			<ul>
-			<ul class = "policy">
-				<li>
-					Trong hộp có: Sạc, Tai nghe, Sách hướng dẫn, Cáp, Cây lấy sim
-				</li>
-				<li>
-					Bảo hành chính hãng 12 tháng
-				</li>
-				<li>
-					1 đổi 1 nếu xảy ra lỗi sản phẩm tại nhà trong 1 ngày
-				</li>
-			</ul>
-		</div>
-		<div class = "clr"></div>
-		<div class = "box_content">
-			<aside class = "left_content">
-				<div class="characteristics">
-			        <h2>Đặc điểm nổi bật của Samsung Galaxy J7 Pro</h2>
-			        
-    			</div>
+		.slideshow-container {
+			  max-width: 780px;
+			  position: relative;
+			  margin: auto;
+			}
+			/* Ẩn các slider */
+			.mySlides {
+			    display: none;
+			}
 
-			</aside>
-		</div>
-	</section>
-</body>
-</html>
+			/* Thêm hiệu ứng khi chuyển đổi các slide */
+			.fade {
+			  -webkit-animation-name: fade;
+			  -webkit-animation-duration: 3s;
+			  animation-name: fade;
+			  animation-duration: 3s;
+			}
+			 
+			@-webkit-keyframes fade {
+			  from {opacity: .4} 
+			  to {opacity: 1}
+			}
+			 
+			@keyframes fade {
+			  from {opacity: .4} 
+			  to {opacity: 1}
+			}
+			.right_content {
+			    float: right;
+			    width: 30%;
+			    overflow: visible;
+			    margin: 20px 0;
+			}
+			.tableparameter {
+			    display: block;
+			    overflow: visible;
+			}
+			.parameter {
+			    display: block;
+			    position: relative;
+			    overflow: hidden;
+			    background: #fff;
+			    padding-top: 10px;
+			}
+			.parameter li {
+			    display: table;
+			    background: #fff;
+			    width: 100%;
+			    border-top: 1px solid #eee;
+			    padding: 5px 0;
+			}
+			.parameter li span {
+			    display: table-cell;
+			    width: 40%;
+			    vertical-align: top;
+			    padding: 5px 0;
+			    font-size: 14px;
+			    color: #666;
+			}
+			.navigation-bar {
+			    margin-left: 0px;
+			    padding: 0px;
+			    overflow: hidden;
+			    background-color: #00aaff;
+			}
+
+			.navigation-bar a {
+			    float: right;
+			    display: block;
+			    color: white;
+			    text-align: center;
+			    padding: 14px 16px;
+			    text-decoration: none;
+			}
+			header {
+			    position: absolute;
+			    top: 0;
+			    min-width: 1024px;
+			    width: 100%;
+			    height: 55px;
+			}
