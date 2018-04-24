@@ -261,9 +261,13 @@
 			    display: block;
 			    color: white;
 			    text-align: center;
-			    padding: 14px 16px;
+			    padding: 15px 16px;
 			    text-decoration: none;
 			}
+			.navigation-bar a:hover {
+			    background-color: #6699FF;
+			}
+
 			header {
 			    position: absolute;
 			    top: 0;
