@@ -4,13 +4,16 @@ window.onload =function()
     document.querySelector('div.formSignIn div.background').className = "background active";
 }
 var tempButtonSign = 1;
+//module.exports = {PI: 3.14}
+//export const PI = 3.14;
+
 function signUp()
 {
     tempButtonSign = 2;
     var inputs = document.querySelectorAll('div.formSignIn div.background form div.inputs input.input');
     document.querySelectorAll('div.formSignIn div.background form div.tabs ul.ulTabs li')[0].className=""; 
     document.querySelectorAll('div.formSignIn div.background form div.tabs ul.ulTabs li')[1].className="active"; 
-    for(var i = 0; i < inputs.length ; i++  ) 
+    for (var i = 0; i < inputs.length ; i++) 
     {
         if(i == 2  )
         {
@@ -23,7 +26,7 @@ function signUp()
     } 
     setTimeout( function()
     {
-        for(var d = 0; d < inputs.length ; d++  ) 
+        for (var d = 0; d < inputs.length ; d++) 
         {
             document.querySelectorAll('div.formSignIn div.background form div.inputs input.input')[d].className = "input activeInput";  
         }
@@ -61,7 +64,7 @@ function signIn()
     var inputs = document.querySelectorAll('div.formSignIn div.background form div.inputs input.input');
     document.querySelectorAll('div.formSignIn div.background form div.tabs ul.ulTabs li')[0].className = "active"; 
     document.querySelectorAll('div.formSignIn div.background form div.tabs ul.ulTabs li')[1].className = "";
-    for(var i = 0; i < inputs.length ; i++  ) 
+    for (var i = 0; i < inputs.length ; i++) 
     {
         switch(i) 
         {
@@ -76,7 +79,7 @@ function signIn()
     }
     setTimeout( function()
     {
-        for(var d = 0; d < inputs.length ; d++  ) 
+        for (var d = 0; d < inputs.length ; d++) 
         {
             switch(d) 
             {
@@ -110,7 +113,7 @@ function signIn()
     {
         document.querySelector('div.formSignIn div.background form div.inputs a.linkForgotPass').style.opacity = "1";
         document.querySelector('div.formSignIn div.background form div.inputs a.linkForgotPass').style.fontSize = "2vh"; 
-        for(var d = 0; d < inputs.length ; d++  ) 
+        for (var d = 0; d < inputs.length ; d++) 
         {
             switch(d) 
             {
@@ -127,8 +130,9 @@ function signIn()
     },1000);
     document.querySelector('div.formSignIn div.background form div.button button.buttonSign').innerHTML = "SIGN IN";    
 }
-function buttonSign()
+function checkForm()
 {
+    //check form correct or incorrect
     var email = document.getElementById("email_us").value;
     if(email != "")
     {
@@ -140,7 +144,16 @@ function buttonSign()
             return false;
         }
     }
+    else
+    {
+        return false;  //email
+    }
     /////
+    var password = document.getElementById("pass_us").value;
+    if (password === "")
+    {
+        return false;  //pass
+    }
     if(tempButtonSign === 1)
     {
         document.getElementById("name_us").required = false;
@@ -149,8 +162,12 @@ function buttonSign()
     if(tempButtonSign === 2)
     {
         document.getElementById("name_us").required = true;
+        var name = document.getElementById("name_us").value;
+        if(name === "")
+        {
+            return false;  //name
+        }
         document.getElementById("conf_pass_us").required = true;
-        var password = document.getElementById("pass_us").value;
         var confirmPassword = document.getElementById("conf_pass_us").value;
         if(confirmPassword != "")
         {
@@ -160,9 +177,35 @@ function buttonSign()
                 return false;
             }
         }
-        if(document.getElementById("termsAndCons").checked == false)
+        else
         {
-            alert("Accept  Terms and Conditions.");
+            return false;  //conf pass
         }
+        if(document.getElementById("termsAndCons").checked === false)
+        {
+            alert("Accept Terms and Conditions.");
+            return false;  //termAndCons
+        }
+    }
+    return true;
+}
+function buttonSign()
+{
+    var check = checkForm();
+    if (check === true)
+    {
+        //window.location.href = "../user/index.html";
+        //window.location.replace("../user/index.html");
+        //window.location = "../user/index.html";
+
+        //$(location).attr('href', '../user/index.html');
+        //$(window).attr('location', '../user/index.html');
+        //$(location).prop('href', '../user/index.html');
+
+        var url = "../user/index.html";
+        var link = document.createElement('a');
+        link.href = url;
+        document.body.appendChild(link);
+        link.click();
     }
 }
