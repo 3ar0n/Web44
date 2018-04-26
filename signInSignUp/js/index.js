@@ -1,7 +1,9 @@
+var random__recapcha = 0;
 window.onload =function()
 {
     $('div.formSignIn').fadeIn();
     document.querySelector('div.formSignIn div.background').className = "background active";
+    random__recapcha = Math.floor(Math.random() * 99990) + 100000;
 }
 var tempButtonSign = 1;
 //module.exports = {PI: 3.14}
@@ -10,6 +12,7 @@ var tempButtonSign = 1;
 function signUp()
 {
     tempButtonSign = 2;
+    document.getElementsByClassName('recapcha')[0].innerHTML = random__recapcha;
     var inputs = document.querySelectorAll('div.formSignIn div.background form div.inputs input.input');
     document.querySelectorAll('div.formSignIn div.background form div.tabs ul.ulTabs li')[0].className=""; 
     document.querySelectorAll('div.formSignIn div.background form div.tabs ul.ulTabs li')[1].className="active"; 
@@ -56,6 +59,8 @@ function signUp()
         document.querySelector('div.formSignIn div.background form div.inputs div.termsAndCons').style.opacity = "1";
         document.querySelector('div.formSignIn div.background form div.inputs div.termsAndCons').style.fontSize = "3vh";
         document.querySelector('div.formSignIn div.background form div.button button.buttonSign').innerHTML = "SIGN UP"; 
+        
+        document.getElementsByClassName('recapcha')[0].className = "recapcha active__recapcha";
     },1500);
 }
 function signIn()
@@ -129,12 +134,13 @@ function signIn()
         }
     },1000);
     document.querySelector('div.formSignIn div.background form div.button button.buttonSign').innerHTML = "SIGN IN";    
+    document.getElementsByClassName('recapcha')[0].className = "recapcha";
 }
 function checkForm()
 {
     //check form correct or incorrect
     var email = document.getElementById("email_us").value;
-    if(email != "")
+    if(email !== "")
     {
         var aG = email.indexOf("@");
         var dot = email.lastIndexOf(".");
@@ -158,6 +164,7 @@ function checkForm()
     {
         document.getElementById("name_us").required = false;
         document.getElementById("conf_pass_us").required = false;
+        document.getElementById("recapcha_us").required = false;
     }
     if(tempButtonSign === 2)
     {
@@ -169,9 +176,9 @@ function checkForm()
         }
         document.getElementById("conf_pass_us").required = true;
         var confirmPassword = document.getElementById("conf_pass_us").value;
-        if(confirmPassword != "")
+        if(confirmPassword !== "")
         {
-            if (password != confirmPassword) 
+            if (password !== confirmPassword) 
             {
                 alert("Password and Confirm Password are not the same.");
                 return false;
@@ -180,6 +187,20 @@ function checkForm()
         else
         {
             return false;  //conf pass
+        }
+        document.getElementById("recapcha_us").required = true;
+        var recapcha = document.getElementById("recapcha_us").value;
+        if(recapcha !== "")
+        {
+            if (recapcha !== random__recapcha) 
+            {
+                alert("The Recapcha you entered is incorrect");
+                return false;
+            }
+        }
+        else
+        {
+            return false;  //recapcha
         }
         if(document.getElementById("termsAndCons").checked === false)
         {
@@ -197,6 +218,7 @@ function buttonSign()
         //window.location.href = "../user/index.html";
         //window.location.replace("../user/index.html");
         //window.location = "../user/index.html";
+        window.location = "../user/index.html";
 
         //$(location).attr('href', '../user/index.html');
         //$(window).attr('location', '../user/index.html');

@@ -160,6 +160,7 @@ div.formSignIn div.background form div.inputs
 }
 div.formSignIn div.background form div.inputs input.input
 {
+    float: auto;
     position: relative;
     width: 80%;
     margin: 1vh auto;
@@ -200,6 +201,10 @@ div.formSignIn div.background form div.inputs input.input:nth-child(4)
 {
     transition-delay: 0.8s;
 }
+div.formSignIn div.background form div.inputs input.input:nth-child(5)
+{
+    transition-delay: 1s;
+}
 div.formSignIn div.background form div.inputs a.linkForgotPass
 {
     position: relative;
@@ -234,6 +239,29 @@ div.formSignIn div.background form div.inputs div.termsAndCons p label
 {
     cursor: pointer;
 }
+#recapcha_us
+{
+    width: 40%;
+}
+.recapcha
+{
+    opacity: 0;
+    margin-right: 3.5vw;
+    float: right;
+    width: 10.5vw;
+    height: 5vh;
+    font-size: 3vh;
+    font-style: italic;
+    text-decoration: line-through;
+    font-weight: bolder;
+    color: #292929;
+    background-color: #fff;
+    transition: all 0.5s;
+}
+.active__recapcha
+{
+    opacity: 1;
+}
 div.formSignIn div.background form div.button
 {
     text-align: center;
@@ -249,7 +277,7 @@ div.formSignIn div.background form div.button button.buttonSign
     border: none;
     color: #ffffff;
     font-size: 3vh;
-    margin-top: 25vh;
+    margin-top: 22vh;
     margin-bottom: 6vh;
     cursor: pointer;
     transition: all 0.5s;
@@ -263,7 +291,16 @@ div.formSignIn div.background form div.button button.buttonSign
     }
     div.formSignIn div.background form div.button button.buttonSign
     {
-        margin-top: 18vh;
+        margin-top: 12vh;
+    }
+    #recapcha_us
+    {
+        width: 40%;
+    }
+    .recapcha
+    {
+        margin-right: 6.5vw;
+        width: 19.5vw;
     }
 }
 @media (max-width: 765px)
