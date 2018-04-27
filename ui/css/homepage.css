@@ -70,6 +70,26 @@ p.catergory {
     font-weight: bold;
 }
 
+#backToTop {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 30px; /* Place the button at the bottom of the page */
+    right: 10px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: #0073f78a; /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 18px; /* Increase font size */
+}
+
+#backToTop:hover {
+    background-color: #0073f7d7; /* Add a dark-grey background on hover */
+}
+
 .container {
     display: flex;
     flex-flow: row wrap;
@@ -132,6 +152,27 @@ p.catergory {
     background-color: #00aaff;
 }
 .see-more:hover {
+    background-color: #0073f7;
+}
+
+.side-button button {
+    background-color: #f1f1f1; /* Green background */
+    border: 1px solid #f1f1f1; /* Green border */
+    color: #444444; /* White text */
+    font-weight: bold;
+    padding: 10px 20px; /* Some padding */
+    cursor: pointer; /* Pointer/hand icon */
+    width: 100%; /* Set a width if needed */
+    display: block; /* Make the buttons appear below each other */
+}
+
+.side-button button:not(:last-child) {
+    border-bottom: none; /* Prevent double borders */
+}
+
+/* Add a background color on hover */
+.side-button button:hover {
+    color: white;
     background-color: #0073f7;
 }
 
