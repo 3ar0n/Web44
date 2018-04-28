@@ -44,3 +44,8 @@ function dateClick(index)
         }
     }
 }
+
+function deleteGroup(element)
+{
+    element.parentElement.parentElement.style.display = "none";
+}

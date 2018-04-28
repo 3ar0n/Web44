@@ -185,6 +185,7 @@ div.paper div.background div.history div.groupDate
 }
 .groupImage
 {
+    position: relative;
     float: left;
     width: 10vw;
     margin: 3vh 0px 3vh 5vw;
@@ -213,6 +214,32 @@ div.paper div.background div.history div.groupDate
 {
     width: 10vw;
     object-fit: contain;
+}
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.6);
+    overflow: hidden;
+    width: 0;
+    height: 100%;
+    transition: .5s ease;
+}
+.inputCount
+{
+    top: 0;
+    left: 0;
+    width: 70%;
+}
+.buttonDelete
+{
+    font-weight: bolder;
+    color: #292929;
+    background-color: red;
+}
+.groupImage:hover .overlay {
+    width: 100%;
 }
 @media (max-width: 1024px)
 {

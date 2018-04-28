@@ -24,7 +24,7 @@ function signUp()
         }
         else
         {  
-            document.querySelectorAll('div.formSignIn div.background form div.inputs input.input')[i].style.display = "block";
+            document.querySelectorAll('div.formSignIn div.background form div.inputs input.input')[i].style.display = "inline-block";
         }
     } 
     setTimeout( function()
@@ -79,7 +79,7 @@ function signIn()
             case 2:
                 console.log(inputs[i].name);
             default: 
-            document.querySelectorAll('div.formSignIn div.background form div.inputs input.input')[i].style.display = "block";
+            document.querySelectorAll('div.formSignIn div.background form div.inputs input.input')[i].style.display = "inline-block";
         }
     }
     setTimeout( function()
@@ -94,7 +94,7 @@ function signIn()
                 case 2:
                     console.log(inputs[d].name); 
                 default:
-                document.querySelectorAll('div.formSignIn div.background form div.inputs input.input')[d].style.display = "block";  
+                document.querySelectorAll('div.formSignIn div.background form div.inputs input.input')[d].style.display = "inline-block";  
                 document.querySelectorAll('div.formSignIn div.background form div.inputs input.input')[2].className = "input activeInput";  
             }
         }
@@ -192,7 +192,7 @@ function checkForm()
         var recapcha = document.getElementById("recapcha_us").value;
         if(recapcha !== "")
         {
-            if (recapcha !== random__recapcha) 
+            if (recapcha !== String(random__recapcha)) 
             {
                 alert("The Recapcha you entered is incorrect");
                 return false;
@@ -218,16 +218,19 @@ function buttonSign()
         //window.location.href = "../user/index.html";
         //window.location.replace("../user/index.html");
         //window.location = "../user/index.html";
-        window.location = "../user/index.html";
 
         //$(location).attr('href', '../user/index.html');
         //$(window).attr('location', '../user/index.html');
         //$(location).prop('href', '../user/index.html');
 
+        /*
         var url = "../user/index.html";
         var link = document.createElement('a');
         link.href = url;
         document.body.appendChild(link);
         link.click();
+        */
+
+        window.open("./../user/index.html");
     }
 }

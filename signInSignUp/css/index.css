@@ -156,11 +156,11 @@ div.formSignIn div.background form div.inputs
     float: left;
     width: 100%;
     margin-top: 2vh;
-    text-align: center;
+    text-align: center!important;
 }
 div.formSignIn div.background form div.inputs input.input
 {
-    float: auto;
+    float: none;
     position: relative;
     width: 80%;
     margin: 1vh auto;
@@ -183,7 +183,7 @@ div.formSignIn div.background form div.inputs input.input.activeInput
 {
     font-size: 3vh;
     opacity: 1;
-    display: block;
+    display: inline-block;
 }
 div.formSignIn div.background form div.inputs input.input:nth-child(1)
 {
