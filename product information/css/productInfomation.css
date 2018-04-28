@@ -1,16 +1,16 @@
 * {
-		    margin: 0;
-		    padding: 0;
-		}
-		body, input, button, option, textarea, label, legend, h1, h2, h3, h4, h5, h6, h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
-			    font: 14px/18px Helvetica,Arial,'DejaVu Sans','Liberation Sans',Freesans,sans-serif;
-			    color: #333;
-			    outline: none;
-			}
-		body {
-		    min-width: 1024px;
-		    overflow-x: hidden;
-		}
+	margin: 0;
+	padding: 0;
+}
+body, input, button, option, textarea, label, legend, h1, h2, h3, h4, h5, h6, h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+	font: 14px/18px Helvetica,Arial,'DejaVu Sans','Liberation Sans',Freesans,sans-serif;
+	color: #333;
+	outline: none;
+}
+body {
+	min-width: 1024px;
+	overflow-x: hidden;
+}
 		ul, ol {
 		    list-style: none;
 		}
