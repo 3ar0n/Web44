@@ -93,9 +93,9 @@ p.catergory {
 .info_sum {
     color: #333333;
 }
-.info_link {
+/*.info_link a {
     text-decoration: none;
-}
+}*/
 
 .see-more {
     margin: auto;
