@@ -24,13 +24,13 @@ body {
 
 /* Search bar & Top navigation bar */
 .search-bar input[type=text] {
-    width: 150%;
-    box-sizing: border-box;
+    width: 145%;
+    box-sizing: inherit;
     border: 2px solid #ccc;
     border-radius: 4px;
     font-size: 14px;
     background-color: white;
-    padding: 5px 20px 5px 10px;
+    padding: 8px 20px 5px 10px;
     /*-webkit-transition: width 0.4s ease-in-out;
     transition: width 0.4s ease-in-out;*/
 }
@@ -73,8 +73,8 @@ p.catergory {
 #backToTop {
     display: none; /* Hidden by default */
     position: fixed; /* Fixed/sticky position */
-    bottom: 30px; /* Place the button at the bottom of the page */
-    right: 10px; /* Place the button 30px from the right */
+    bottom: 35px; /* Place the button at the bottom of the page */
+    right: 5px; /* Place the button 30px from the right */
     z-index: 99; /* Make sure it does not overlap */
     border: none; /* Remove borders */
     outline: none; /* Remove outline */
@@ -193,7 +193,7 @@ p.catergory {
 
 @media screen and (max-width: 800px) {
     .search-bar input[type=text] {
-        width: 108%;
+        width: 110%;
     }
     .navigation-bar a {
         display: none;
