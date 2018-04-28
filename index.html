@@ -4,21 +4,23 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Nhóm 44 - Smartphone & Tablet</title>
-	<link href="./ui/css/homepage.css" rel="stylesheet" type="text/css">
+	<link href="./css/homepage.css" rel="stylesheet" type="text/css">
 	<script src="./js/homepage.js"></script>
 </head>
 <body>
-	<aside><div class="navigation-bar" id="navBar">
-		<form class="search-bar" style="float: left; margin-left:1%; margin-top: 7px;">
-			<input type=text name="search" placeholder="Tìm kiếm...">
-		</form>
-		<a href="javascript:void(0);" class="dropdown-icon" onclick="dropdownNav()">&#9776;</a>
-		<a href="#" class="none"></a>
-		<a href="./signInSignUp/index.html">&#128100 Tài khoản</a>
-		<a href="#">&#128722 Giỏ hàng</a>
-		<a href="#">&#128172 Hỏi đáp</a>
-		<a href="./index.html">&#127968 Trang chủ</a>
-	</div></aside>
+	<header>
+		<div class="navigation-bar" id="navBar">
+			<form class="search-bar" style="float: left; margin-left:1%; margin-top: 7px;">
+				<input type=text name="search" placeholder="Tìm kiếm...">
+			</form>
+			<a href="javascript:void(0);" class="dropdown-icon" onclick="dropdownNav()">&#9776;</a>
+			<a href="#" class="none"></a>
+			<a href="./signInSignUp/index.html">&#128100 Tài khoản</a>
+			<a href="#">&#128722 Giỏ hàng</a>
+			<a href="#">&#128172 Hỏi đáp</a>
+			<a href="./index.html">&#127968 Trang chủ</a>
+		</div>
+	</header>
 
 	<button onclick="backToTopFunction()" id="backToTop">&#9650</button> 
 
@@ -328,15 +330,17 @@
 		</div>
 	</div>
 
-	<div class="footer" style="color: white;">
-		<MARQUEE
-			BEHAVIOR = ALTERNATE | SCROLL | SLIDE 
-			DIRECTION = LEFT | RIGHT
-			LOOP = int
-			SCROLLAMOUNT = long
-			SCROLLDELAY = long 
-			WIDTH = long>Sản phẩm chính hãng - Chất lượng đảm bảo - Giao hàng tận nơi - Phục vụ tận tình
-		</MARQUEE> 
-	</div>
+	<footer>
+		<div class="footer" style="color: white;">
+			<MARQUEE
+				BEHAVIOR = ALTERNATE | SCROLL | SLIDE 
+				DIRECTION = LEFT | RIGHT
+				LOOP = int
+				SCROLLAMOUNT = long
+				SCROLLDELAY = long 
+				WIDTH = long>Sản phẩm chính hãng - Chất lượng đảm bảo - Giao hàng tận nơi - Phục vụ tận tình
+			</MARQUEE> 
+		</div>
+	</footer>
 </body>
 </html>

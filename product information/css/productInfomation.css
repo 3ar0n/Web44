@@ -250,19 +250,43 @@
 			    color: #666;
 			}
 			.navigation-bar {
-			    margin-left: 0px;
-			    padding: 0px;
-			    overflow: hidden;
-			    background-color: #00aaff;
+				/*position: fixed;*/
+				width: 100%;
+				margin-left: 0px;
+				padding: 0px;
+				overflow: hidden;
+				background-color: #00aaff;
 			}
-
 			.navigation-bar a {
-			    float: right;
-			    display: block;
-			    color: white;
-			    text-align: center;
-			    padding: 14px 16px;
-			    text-decoration: none;
+				float: right;
+				display: block;
+				color: white;
+				font-size: 14px;
+				font-weight: bold;
+				text-align: center;
+				padding: 15px 13px;
+				text-decoration: none;
+				transition: 0.1s;
+			}
+			.navigation-bar a:hover {
+				background-color: #0073f7;
+			}
+			.navigation-bar a.dropdown-icon {
+				display: none;
+			}
+			.navigation-bar a.none {
+				display: none;
+			}
+			.search-bar input[type=text] {
+				width: 145%;
+				box-sizing: inherit;
+				border: 2px solid #ccc;
+				border-radius: 4px;
+				font-size: 14px;
+				background-color: white;
+				padding: 8px 20px 5px 10px;
+				/*-webkit-transition: width 0.4s ease-in-out;
+				transition: width 0.4s ease-in-out;*/
 			}
 			header {
 			    position: absolute;
