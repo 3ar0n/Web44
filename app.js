@@ -1,12 +1,10 @@
 const express = require('express');
 const exphbs = require('express-handlebars');
 const express_handlebars_sections = require('express-handlebars-sections');
-const path = require('path');
 const bodyParser = require('body-parser');
 const session = require('express-session');
 const MySQLStore = require('express-mysql-session')(session);
 const wnumb = require('wnumb');
-
 
 // Controllers
 const homeController = require('./controllers/homeController');  // example
@@ -32,7 +30,7 @@ app.engine('hbs', exphbs({
 }));
 app.set('view engine', 'hbs');
 
-app.use(express.static(path.resolve(__dirname, 'public')));
+app.use(express.static('public'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
     extended: false
@@ -44,7 +42,7 @@ var sessionStore = new MySQLStore({
     port: 3306,
     user: 'root',
     password: '',
-    database: 'please_name_a_name',
+    database: 'web44',
     createDatabaseTable: true,
     schema: {
         tableName: 'sessions',

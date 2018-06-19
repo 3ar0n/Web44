@@ -1,5 +1,5 @@
 {
-  "name": "Web44",
+  "name": "web44",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
@@ -23,7 +23,6 @@
     "express-session": "^1.15.6",
     "moment": "^2.22.2",
     "mysql": "^2.15.0",
-    "path": "^0.12.7",
     "wnumb": "^1.1.0"
   }
 }
