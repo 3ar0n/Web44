@@ -5,10 +5,23 @@
 	<meta charset="UTF-8">
 	<title>{{{_sections.title}}}</title>
 	{{{_sections.css_js}}}
+	<link rel="stylesheet" type="text/css" href="/assets/css/navigationBar.css">
+	<script type="text/javascript" src="/assets/js/navigationBar.js"></script> 
 	<link rel="icon" href="/img/homepage-logo.png">
 </head>
 
 <body>
+	<div class="navigation-bar" id="navBar">
+		<form class="search-bar" style="float: left; margin-left:1%; margin-top: 7px;">
+			<input type=text name="search" placeholder="Tìm kiếm...">
+		</form>
+		<a href="javascript:void(0);" class="dropdown-icon" onclick="dropdownNav()">&#9776;</a>
+		<a href="#" class="none"></a>
+		<a href="#">&#128100 Tài khoản</a>
+		<a href="#">&#128722 Giỏ hàng</a>
+		<a href="#">&#128172 Hỏi đáp</a>
+		<a href="/">&#127968 Trang chủ</a>
+	</div>
 	{{{body}}}
 </body>
 

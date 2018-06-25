@@ -2,150 +2,135 @@
 
 {{#section 'css_js'}}
     <link rel="stylesheet" type="text/css" href="/assets/css/productInformation.css">
-    <link rel="stylesheet" type="text/css" href="/assets/css/navigationBar.css">
-    <script type="text/javascript" src="/assets/js/homepage.js"></script> 
 {{/section}}
 
 {{!-- Bên dưới này là nội dung trình bày body của template: {{{body}}} tronng main.handlebars --}}
-<header>
-        <div class="navigation-bar" id="navBar">
-            <form class="search-bar" style="float: left; margin-left:1%; margin-top: 7px;">
-                <input type=text name="search" placeholder="Tìm kiếm...">
-            </form>
-            <a href="javascript:void(0);" class="dropdown-icon" onclick="dropdownNav()">&#9776;</a>
-            <a href="#" class="none"></a>
-            <a href="#">&#128100 Tài khoản</a>
-            <a href="#">&#128722 Giỏ hàng</a>
-            <a href="#">&#128172 Hỏi đáp</a>
-            <a href="/home">&#127968 Trang chủ</a>
+<section>
+    <ul class="breadcrumb">
+        <li>
+            <a href="/home" title="Trang chủ">Trang chủ</a>
+            <span> > </span>
+            <a title="điện thoại">điện thoại</a>
+            <span>></span>
+            <a title="Samsung">SamSung</a>
+        </li>
+    </ul>
+    <div>
+        <h1>Điện thoại Samsung Galaxy J7 pro</h1>
+        <div class="ratingresult">
+            <a href="#danhgia">35 đánh giá</a>
         </div>
-    </header>
-    <section>
-        <ul class="breadcrumb">
-            <li>
-                <a href = "/home" title="Trang chủ">Trang chủ</a>
-                <span> > </span>
-                <a title="điện thoại">điện thoại</a>
-                <span>></span>
-                <a title="Samsung">SamSung</a>
-            </li>
-        </ul>
-        <div>
-            <h1>Điện thoại Samsung Galaxy J7 pro</h1>
-            <div class="ratingresult">
-                <a href="#danhgia">35 đánh giá</a>
-            </div>
+    </div>
+    <div class="clr"></div>
+    <aside class="picture">
+        <img src="img/product/samsung-galaxy-j7-pro.png" alt="điện thoại samsung J7 pro">
+    </aside>
+    <aside class="area_price">
+        <strong>6.090.000đ</strong>
+        <div class="tsh">
+            <span>NHẬN HÀNG TRONG 1 GIỜ</span>
         </div>
-        <div class="clr"></div>
-        <aside class="picture">
-            <img src="img/product/samsung-galaxy-j7-pro.png" alt="điện thoại samsung J7 pro">
-        </aside>
-        <aside class = "area_price">
-            <strong>6.090.000đ</strong>
-            <div class="tsh">
-                <span>NHẬN HÀNG TRONG 1 GIỜ</span>
-            </div>
-            <div class="area_promotion zero">
-                <strong data-count="3">Khuyến mãi</strong>
-                <h3>Phiếu mua hàng trị giá 100.000đ khi mua online</h3>
-                <h3>Thùng cocacola (24 lon)</h3>
-            </div>
-            <div class = "area_promotion zero">
-                <strong data-count="3">Số lượt mua</strong>
-                <h3>121 lượt mua samsung galaxy J7 pro</h3>
-            </div>
-        </aside>
-        <div class="rightInfo">
-            <ul class = "checkexist">
-                <strong>Kiểm tra: </strong>
+        <div class="area_promotion zero">
+            <strong data-count="3">Khuyến mãi</strong>
+            <h3>Phiếu mua hàng trị giá 100.000đ khi mua online</h3>
+            <h3>Thùng cocacola (24 lon)</h3>
+        </div>
+        <div class="area_promotion zero">
+            <strong data-count="3">Số lượt mua</strong>
+            <h3>121 lượt mua samsung galaxy J7 pro</h3>
+        </div>
+    </aside>
+    <div class="rightInfo">
+        <ul class="checkexist">
+            <strong>Kiểm tra: </strong>
             <ul>
-            <ul class = "policy">
-                <li>
-                    Trong hộp có: Sạc, Tai nghe, Sách hướng dẫn, Cáp, Cây lấy sim
-                </li>
-                <li>
-                    Bảo hành chính hãng 12 tháng
-                </li>
-                <li>
-                    1 đổi 1 nếu xảy ra lỗi sản phẩm tại nhà trong 1 ngày
-                </li>
-            </ul>
-        </div>
-        <div class = "clr"></div>
-        <div class = "box_content">
-            <aside class = "left_content">
-                <div class="characteristics">
-                    <h2 style="font-size: 24px">Đặc điểm nổi bật của Samsung Galaxy J7 Pro</h2>
-                    <br/>
-                   <div class="slideshow-container">
-                      <div class="mySlides fade">
+                <ul class="policy">
+                    <li>
+                        Trong hộp có: Sạc, Tai nghe, Sách hướng dẫn, Cáp, Cây lấy sim
+                    </li>
+                    <li>
+                        Bảo hành chính hãng 12 tháng
+                    </li>
+                    <li>
+                        1 đổi 1 nếu xảy ra lỗi sản phẩm tại nhà trong 1 ngày
+                    </li>
+                </ul>
+    </div>
+    <div class="clr"></div>
+    <div class="box_content">
+        <aside class="left_content">
+            <div class="characteristics">
+                <h2 style="font-size: 24px">Đặc điểm nổi bật của Samsung Galaxy J7 Pro</h2>
+                <br/>
+                <div class="slideshow-container">
+                    <div class="mySlides fade">
                         <img src="img/slide/slide-1.jpg" style="width:100%">
-                      </div>
-                     
-                      <div class="mySlides fade">
-                        <img src="img/slide/slide-2.jpg" style="width:100%">
-                      </div>
-                     
-                      <div class="mySlides fade">
-                        <img src="img/slide/slide-3.jpg" style="width:100%">
-                      </div>
-
-                      <div class="mySlides fade">
-                        <img src="img/slide/slide-4.jpg" style="width:100%">
-                      </div>
-                      <div class="mySlides fade">
-                        <img src="img/slide/slide-5.jpg" style="width:100%">
-                      </div>
-                      <div class="mySlides fade">
-                        <img src="img/slide/slide-6.jpg" style="width:100%">
-                      </div>
-                      <div class="mySlides fade">
-                        <img src="img/slide/slide-7.jpg" style="width:100%">
-                      </div>
                     </div>
-                    <script>
-                        //khai báo biến slideIndex đại diện cho slide hiện tại
-                        var slideIndex;
-                        // KHai bào hàm hiển thị slide
-                        function showSlides() {
-                            var i;
-                            var slides = document.getElementsByClassName("mySlides");
-                            for (i = 0; i < slides.length; i++) {
-                                slides[i].style.display = "none";  
-                            }
-                         
-                            slides[slideIndex].style.display =  "block";
-                            //chuyển đến slide tiếp theo
-                            slideIndex++;
-                            //nếu đang ở slide cuối cùng thì chuyển về slide đầu
-                            if (slideIndex > slides.length - 1) {
-                                slideIndex = 0
-                            }    
-                            //tự động chuyển đổi slide sau 3s
-                            setTimeout(showSlides, 5000);
-                        }
-                          //mặc định hiển thị slide đầu tiên 
-                          showSlides(slideIndex = 0);
-                         
-                         
-                        function currentSlide(n) {
-                            howSlides(slideIndex = n);
-                        }
-                    </script>
+
+                    <div class="mySlides fade">
+                        <img src="img/slide/slide-2.jpg" style="width:100%">
+                    </div>
+
+                    <div class="mySlides fade">
+                        <img src="img/slide/slide-3.jpg" style="width:100%">
+                    </div>
+
+                    <div class="mySlides fade">
+                        <img src="img/slide/slide-4.jpg" style="width:100%">
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="img/slide/slide-5.jpg" style="width:100%">
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="img/slide/slide-6.jpg" style="width:100%">
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="img/slide/slide-7.jpg" style="width:100%">
+                    </div>
                 </div>
-            </aside>
-            <aside class = "right_content">
-                <div class="tableparameter">
-                    <h2 style="font-size: 24px">Thông số kĩ thuật</h2>
-                    <br />
-                    <ul class = "parameter">
-                        <li>
-                            <span>Màn hình:</span>
-                            <span>Super AMOLED, 5.5",FULL HD</span>
-                        </li>
-                        <li>
-                            <span>Hệ điều hành:</span>
-                            <span>Android 7.0 (Nougat)</span>
+                <script>
+                    //khai báo biến slideIndex đại diện cho slide hiện tại
+                    var slideIndex;
+                    // KHai bào hàm hiển thị slide
+                    function showSlides() {
+                        var i;
+                        var slides = document.getElementsByClassName("mySlides");
+                        for (i = 0; i < slides.length; i++) {
+                            slides[i].style.display = "none";
+                        }
+
+                        slides[slideIndex].style.display = "block";
+                        //chuyển đến slide tiếp theo
+                        slideIndex++;
+                        //nếu đang ở slide cuối cùng thì chuyển về slide đầu
+                        if (slideIndex > slides.length - 1) {
+                            slideIndex = 0
+                        }
+                        //tự động chuyển đổi slide sau 3s
+                        setTimeout(showSlides, 5000);
+                    }
+                    //mặc định hiển thị slide đầu tiên 
+                    showSlides(slideIndex = 0);
+
+
+                    function currentSlide(n) {
+                        howSlides(slideIndex = n);
+                    }
+                </script>
+            </div>
+        </aside>
+        <aside class="right_content">
+            <div class="tableparameter">
+                <h2 style="font-size: 24px">Thông số kĩ thuật</h2>
+                <br />
+                <ul class="parameter">
+                    <li>
+                        <span>Màn hình:</span>
+                        <span>Super AMOLED, 5.5",FULL HD</span>
+                    </li>
+                    <li>
+                        <span>Hệ điều hành:</span>
+                        <span>Android 7.0 (Nougat)</span>
                         <li>
                             <span>Camera sau:</span>
                             <span>13 MP</span>
@@ -174,93 +159,18 @@
                             <span>Dung lượng pin</span>
                             <span>3600 mAh</span>
                         </li>
-                    </ul>
-                </div>
-            </aside>
-        </div>
-        <div class = "clr"></div>
-        <div>
-            <h2 style="font-size: 24px">Các Sản phẩm cùng loại</h2>
-            <br/>
-        </div>
-        <div class="clr"></div>
-        <aside>
-            <div class="container">
-            <div class="columns">
-                <ul class="info">
-                    <li class="info_name">Samsung Galaxy J7 Pro</li>
-                    <li class="info_img">
-                        <img src="/img/product/samsung-galaxy-j7-pro.png" style="width: 100%">
-                    </li>
-                    <li class="info_price">6.900.000 đ</li>
-                    <li class="info_sum">3GB RAM - 3600 mAh</li>
-                    <li class="info_link" style="text-align: right; font-size: 11px;">
-                        <a href="#">Chi tiết</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="columns">
-                <ul class="info">
-                    <li class="info_name">Oppo F7</li>
-                    <li class="info_img">
-                        <img src="/img/product/oppo-f7.png" style="width: 100%">
-                    </li>
-                    <li class="info_price">7.499.000 đ</li>
-                    <li class="info_sum">4GB RAM - 3400 mAh</li>
-                    <li class="info_link" style="text-align: right; font-size: 11px;">
-                        <a href="#">Chi tiết</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="columns">
-                <ul class="info">
-                    <li class="info_name">Vivo v9</li>
-                    <li class="info_img">
-                        <img src="/img/product/vivo-v9.png" style="width: 100%">
-                    </li>
-                    <li class="info_price">6.900.000 đ</li>
-                    <li class="info_sum">4GB RAM - 3400 mAh</li>
-                    <li class="info_link" style="text-align: right; font-size: 11px;">
-                        <a href="#">Chi tiết</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="columns">
-                <ul class="info">
-                    <li class="info_name">Sony Xperia L1</li>
-                    <li class="info_img">
-                        <img src="/img/product/sony-xperia-l1.png" style="width: 100%">
-                    </li>
-                    <li class="info_price">6.900.000 đ</li>
-                    <li class="info_sum">4GB RAM - 3400 mAh</li>
-                    <li class="info_link" style="text-align: right; font-size: 11px;">
-                        <a href="#">Chi tiết</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="columns">
-                <ul class="info">
-                    <li class="info_name">Samsung Galaxy A8 Plus</li>
-                    <li class="info_img">
-                        <img src="/img/product/samsung-galaxy-a8-plus.png" style="width: 100%">
-                    </li>
-                    <li class="info_price">6.900.000 đ</li>
-                    <li class="info_sum">4GB RAM - 3400 mAh</li>
-                    <li class="info_link" style="text-align: right; font-size: 11px;">
-                        <a href="#">Chi tiết</a>
-                    </li>
                 </ul>
             </div>
         </aside>
+    </div>
+    <div class="clr"></div>
+    <div>
+        <h2 style="font-size: 24px">Các Sản phẩm cùng loại</h2>
         <br/>
-        <div class = "clr"></div>
-        <div>
-            <h2 style="font-size: 24px">Các Sản phẩm cùng hãng</h2>
-            <br/>
-        </div>
-        <div class="clr"></div>
-        <aside>
-            <div class="container">
+    </div>
+    <div class="clr"></div>
+    <aside>
+        <div class="container">
             <div class="columns">
                 <ul class="info">
                     <li class="info_name">Samsung Galaxy J7 Pro</li>
@@ -326,5 +236,80 @@
                     </li>
                 </ul>
             </div>
-        </aside>
-    </section>
+    </aside>
+    <br/>
+    <div class="clr"></div>
+    <div>
+        <h2 style="font-size: 24px">Các Sản phẩm cùng hãng</h2>
+        <br/>
+    </div>
+    <div class="clr"></div>
+    <aside>
+        <div class="container">
+            <div class="columns">
+                <ul class="info">
+                    <li class="info_name">Samsung Galaxy J7 Pro</li>
+                    <li class="info_img">
+                        <img src="/img/product/samsung-galaxy-j7-pro.png" style="width: 100%">
+                    </li>
+                    <li class="info_price">6.900.000 đ</li>
+                    <li class="info_sum">3GB RAM - 3600 mAh</li>
+                    <li class="info_link" style="text-align: right; font-size: 11px;">
+                        <a href="#">Chi tiết</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="columns">
+                <ul class="info">
+                    <li class="info_name">Oppo F7</li>
+                    <li class="info_img">
+                        <img src="/img/product/oppo-f7.png" style="width: 100%">
+                    </li>
+                    <li class="info_price">7.499.000 đ</li>
+                    <li class="info_sum">4GB RAM - 3400 mAh</li>
+                    <li class="info_link" style="text-align: right; font-size: 11px;">
+                        <a href="#">Chi tiết</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="columns">
+                <ul class="info">
+                    <li class="info_name">Vivo v9</li>
+                    <li class="info_img">
+                        <img src="/img/product/vivo-v9.png" style="width: 100%">
+                    </li>
+                    <li class="info_price">6.900.000 đ</li>
+                    <li class="info_sum">4GB RAM - 3400 mAh</li>
+                    <li class="info_link" style="text-align: right; font-size: 11px;">
+                        <a href="#">Chi tiết</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="columns">
+                <ul class="info">
+                    <li class="info_name">Sony Xperia L1</li>
+                    <li class="info_img">
+                        <img src="/img/product/sony-xperia-l1.png" style="width: 100%">
+                    </li>
+                    <li class="info_price">6.900.000 đ</li>
+                    <li class="info_sum">4GB RAM - 3400 mAh</li>
+                    <li class="info_link" style="text-align: right; font-size: 11px;">
+                        <a href="#">Chi tiết</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="columns">
+                <ul class="info">
+                    <li class="info_name">Samsung Galaxy A8 Plus</li>
+                    <li class="info_img">
+                        <img src="/img/product/samsung-galaxy-a8-plus.png" style="width: 100%">
+                    </li>
+                    <li class="info_price">6.900.000 đ</li>
+                    <li class="info_sum">4GB RAM - 3400 mAh</li>
+                    <li class="info_link" style="text-align: right; font-size: 11px;">
+                        <a href="#">Chi tiết</a>
+                    </li>
+                </ul>
+            </div>
+    </aside>
+</section>
