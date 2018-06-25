@@ -1,7 +1,7 @@
 {
   "name": "web44",
   "version": "1.0.0",
-  "description": "",
+  "description": "* 1512179 - Nguyễn Ngọc Hoàng\r * 1512501 - Đặng Quốc Thái\r * 1512540 - Vương Hữu Thiện",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -24,5 +24,10 @@
     "moment": "^2.22.2",
     "mysql": "^2.15.0",
     "wnumb": "^1.1.0"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/3ar0n/Web44/issues"
+  },
+  "homepage": "https://github.com/3ar0n/Web44#readme",
+  "devDependencies": {}
 }
