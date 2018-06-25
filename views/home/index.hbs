@@ -13,7 +13,7 @@
         <p class="catergory">Nhà sản xuất</p>
         <div class="side-button">
             {{#each Category}}
-            <button>{{brand}}</button>
+                <button class="home_sidebtn"><a href="/brand/view?id={{brandID}}">{{brandName}}</a></button>
             {{/each}}
         </div>
     </div>
@@ -25,12 +25,12 @@
                 <ul class="info">
                     <li class="info_name">{{proName}}</li>
                     <li class="info_img">
-                        <img src="/img/product/{{imgLink}}" alt="image" style="width: 100%">
+                        <img src="/img/product/{{brandName}}/{{imgLink}}" alt="image" style="width: 100%">
                     </li>
                     <li class="info_price">{{number_format price}} đ</li>
                     <li class="info_sum">{{shortInfo}}</li>
                     <li class="info_link" style="text-align: right; font-size: 11px;">
-                        <a href="/product">Chi tiết</a>
+                        <a class="home_product_detail" href="/product">Chi tiết</a>
                     </li>
                 </ul>
             </div>
@@ -48,7 +48,7 @@
                 <ul class="info">
                     <li class="info_name">{{proName}}</li>
                     <li class="info_img">
-                        <img src="/img/product/{{imgLink}}" alt="image" style="width: 100%">
+                        <img src="/img/product/{{brandName}}/{{imgLink}}" alt="image" style="width: 100%">
                     </li>
                     <li class="info_price">{{number_format price}} đ</li>
                     <li class="info_sum">{{shortInfo}}</li>
@@ -71,7 +71,7 @@
                 <ul class="info">
                     <li class="info_name">{{proName}}</li>
                     <li class="info_img">
-                        <img src="/img/product/{{imgLink}}" alt="image" style="width: 100%">
+                        <img src="/img/product/{{brandName}}/{{imgLink}}" alt="image" style="width: 100%">
                     </li>
                     <li class="info_price">{{number_format price}} đ</li>
                     <li class="info_sum">{{shortInfo}}</li>

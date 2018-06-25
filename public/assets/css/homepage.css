@@ -147,3 +147,12 @@ p.catergory {
         flex-direction: column;
     }
 }
+
+.home_sidebtn a {
+    color: black;
+    text-decoration: none;
+}
+
+.home_sidebtn a:hover {
+    color: white;
+}
