@@ -9,6 +9,7 @@ const wnumb = require('wnumb');
 // Controllers
 const homeController = require('./controllers/homeController');  // example
 const productController = require('./controllers/productController');
+const accountController = require('./controllers/accountController');
 
 // Middle-wares
 const handle404MDW = require('./middle-wares/handle404');
@@ -71,6 +72,8 @@ app.get('/', (req, res) => {
 
 app.use('/home', homeController);
 app.use('/product',productController);
+app.use('/account',accountController);
+
 app.use(handle404MDW);
 
 app.listen(port, () => {
