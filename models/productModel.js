@@ -20,3 +20,7 @@ exports.loadMostview = () => {
     var sql = `SELECT * FROM products JOIN brands WHERE products.brandID = brands.brandID ORDER BY totalView DESC limit ${config.ITEMS_PER_PAGE}`;
     return database.load(sql);
 }
+exports.loadInformation = () => {
+    var sql = `SELECT * FROM products where proID = 0`;
+    return database.load(sql);
+}

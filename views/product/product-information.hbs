@@ -6,27 +6,19 @@
 
 {{!-- Bên dưới này là nội dung trình bày body của template: {{{body}}} tronng main.handlebars --}}
 <section>
-    <ul class="breadcrumb">
-        <li>
-            <a href="/home" title="Trang chủ">Trang chủ</a>
-            <span> > </span>
-            <a title="điện thoại">điện thoại</a>
-            <span>></span>
-            <a title="Samsung">SamSung</a>
-        </li>
-    </ul>
+    {{#each information}}
     <div>
-        <h1>Điện thoại Samsung Galaxy J7 pro</h1>
+        <h1>Điện thoại {{anhSP}}</h1>
         <div class="ratingresult">
             <a href="#danhgia">35 đánh giá</a>
         </div>
     </div>
     <div class="clr"></div>
     <aside class="picture">
-        <img src="img/product/Samsung/samsung-galaxy-j7-pro.png" alt="điện thoại samsung J7 pro">
+        <img src="img/product/{{brandName}}/{{anhSP}}" alt="điện thoại {{anhSP}}">
     </aside>
     <aside class="area_price">
-        <strong>6.090.000đ</strong>
+        <strong>{{Gia}}đ</strong>
         <div class="tsh">
             <span>NHẬN HÀNG TRONG 1 GIỜ</span>
         </div>
@@ -37,9 +29,10 @@
         </div>
         <div class="area_promotion zero">
             <strong data-count="3">Số lượt mua</strong>
-            <h3>121 lượt mua samsung galaxy J7 pro</h3>
+            <h3>121 lượt mua {{anhSP}}</h3>
         </div>
     </aside>
+    {{/information}}
     <div class="rightInfo">
         <ul class="checkexist">
             <strong>Kiểm tra: </strong>
@@ -60,34 +53,36 @@
     <div class="box_content">
         <aside class="left_content">
             <div class="characteristics">
-                <h2 style="font-size: 24px">Đặc điểm nổi bật của Samsung Galaxy J7 Pro</h2>
+                {{#each information}}
+                <h2 style="font-size: 24px">Đặc điểm nổi bật của {{TenSP}}</h2>
                 <br/>
                 <div class="slideshow-container">
                     <div class="mySlides fade">
-                        <img src="img/slide/slide-1.jpg" style="width:100%">
+                        <img src="img/{{slide}}/slide-1.jpg" style="width:100%">
                     </div>
 
                     <div class="mySlides fade">
-                        <img src="img/slide/slide-2.jpg" style="width:100%">
+                        <img src="img/slide/{{slide}}/slide-2.jpg" style="width:100%">
                     </div>
 
                     <div class="mySlides fade">
-                        <img src="img/slide/slide-3.jpg" style="width:100%">
+                        <img src="img/slide/{{slide}}/slide-3.jpg" style="width:100%">
                     </div>
 
                     <div class="mySlides fade">
-                        <img src="img/slide/slide-4.jpg" style="width:100%">
+                        <img src="img/slide/{{slide}}/slide-4.jpg" style="width:100%">
                     </div>
                     <div class="mySlides fade">
-                        <img src="img/slide/slide-5.jpg" style="width:100%">
+                        <img src="img/slide/{{slide}}/slide-5.jpg" style="width:100%">
                     </div>
                     <div class="mySlides fade">
-                        <img src="img/slide/slide-6.jpg" style="width:100%">
+                        <img src="img/slide/{{slide}}/slide-6.jpg" style="width:100%">
                     </div>
                     <div class="mySlides fade">
-                        <img src="img/slide/slide-7.jpg" style="width:100%">
+                        <img src="img/slide/{{slide}}/slide-7.jpg" style="width:100%">
                     </div>
                 </div>
+                {{/information}}
                 <script>
                     //khai báo biến slideIndex đại diện cho slide hiện tại
                     var slideIndex;
@@ -120,125 +115,51 @@
             </div>
         </aside>
         <aside class="right_content">
+            {{#each information}}
             <div class="tableparameter">
                 <h2 style="font-size: 24px">Thông số kĩ thuật</h2>
                 <br />
                 <ul class="parameter">
                     <li>
                         <span>Màn hình:</span>
-                        <span>Super AMOLED, 5.5",FULL HD</span>
+                        <span>{{ManHinh}}</span>
                     </li>
                     <li>
                         <span>Hệ điều hành:</span>
-                        <span>Android 7.0 (Nougat)</span>
+                        <span>{{HDH}}</span>
                         <li>
                             <span>Camera sau:</span>
-                            <span>13 MP</span>
+                            <span>{{CameraSau}} MP</span>
                         </li>
                         <li>
                             <span>Camera trước:</span>
-                            <span>13 MP</span>
+                            <span>{{cameraTruoc}} MP</span>
                         </li>
                         <li>
                             <span>CPU:</span>
-                            <span>Exynos 7870 8 nhân 64 bit</span>
+                            <span>{{CPU}}</span>
                         </li>
                         <li>
                             <span>Ram:</span>
-                            <span>3 GB</span>
+                            <span>{{RAM}} GB</span>
                         </li>
                         <li>
                             <span>Bộ nhớ trong:</span>
-                            <span>32 GB</span>
+                            <span>{{BoNhoTrong}} GB</span>
                         </li>
                         <li>
                             <span>Thẻ SIM:</span>
-                            <span>2 Nano SIM, Hỗ trợ 4G</span>
+                            <span>{{SIM}}</span>
                         </li>
                         <li>
                             <span>Dung lượng pin</span>
-                            <span>3600 mAh</span>
+                            <span>{{Pin}} mAh</span>
                         </li>
                 </ul>
             </div>
+            {{/information}}
         </aside>
     </div>
-    <div class="clr"></div>
-    <div>
-        <h2 style="font-size: 24px">Các Sản phẩm cùng loại</h2>
-        <br/>
-    </div>
-    <div class="clr"></div>
-    <aside>
-        <div class="container">
-            <div class="columns">
-                <ul class="info">
-                    <li class="info_name">Samsung Galaxy J7 Pro</li>
-                    <li class="info_img">
-                        <img src="/img/product/Samsung/samsung-galaxy-j7-pro.png" style="width: 100%">
-                    </li>
-                    <li class="info_price">6.900.000 đ</li>
-                    <li class="info_sum">3GB RAM - 3600 mAh</li>
-                    <li class="info_link" style="text-align: right; font-size: 11px;">
-                        <a href="#">Chi tiết</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="columns">
-                <ul class="info">
-                    <li class="info_name">Oppo F7</li>
-                    <li class="info_img">
-                        <img src="/img/product/Oppo/oppo-f7.png" style="width: 100%">
-                    </li>
-                    <li class="info_price">7.499.000 đ</li>
-                    <li class="info_sum">4GB RAM - 3400 mAh</li>
-                    <li class="info_link" style="text-align: right; font-size: 11px;">
-                        <a href="#">Chi tiết</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="columns">
-                <ul class="info">
-                    <li class="info_name">Vivo v9</li>
-                    <li class="info_img">
-                        <img src="/img/product/Vivo/vivo-v9.png" style="width: 100%">
-                    </li>
-                    <li class="info_price">6.900.000 đ</li>
-                    <li class="info_sum">4GB RAM - 3400 mAh</li>
-                    <li class="info_link" style="text-align: right; font-size: 11px;">
-                        <a href="#">Chi tiết</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="columns">
-                <ul class="info">
-                    <li class="info_name">Sony Xperia L1</li>
-                    <li class="info_img">
-                        <img src="/img/product/Sony/sony-xperia-l1.png" style="width: 100%">
-                    </li>
-                    <li class="info_price">6.900.000 đ</li>
-                    <li class="info_sum">4GB RAM - 3400 mAh</li>
-                    <li class="info_link" style="text-align: right; font-size: 11px;">
-                        <a href="#">Chi tiết</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="columns">
-                <ul class="info">
-                    <li class="info_name">Samsung Galaxy A8 Plus</li>
-                    <li class="info_img">
-                        <img src="/img/product/Samsung/samsung-galaxy-a8-plus.png" style="width: 100%">
-                    </li>
-                    <li class="info_price">6.900.000 đ</li>
-                    <li class="info_sum">4GB RAM - 3400 mAh</li>
-                    <li class="info_link" style="text-align: right; font-size: 11px;">
-                        <a href="#">Chi tiết</a>
-                    </li>
-                </ul>
-            </div>
-    </aside>
-    <br/>
-    <div class="clr"></div>
     <div>
         <h2 style="font-size: 24px">Các Sản phẩm cùng hãng</h2>
         <br/>
@@ -246,70 +167,21 @@
     <div class="clr"></div>
     <aside>
         <div class="container">
+            {{#each model}}
             <div class="columns">
                 <ul class="info">
-                    <li class="info_name">Samsung Galaxy J7 Pro</li>
+                    <li class="info_name">{{proName}}</li>
                     <li class="info_img">
-                        <img src="/img/product/Samsung/samsung-galaxy-j7-pro.png" style="width: 100%">
+                        <img src="/img/product/{{brandName}}/{{imgLink}}" alt="image" style="width: 100%">
                     </li>
-                    <li class="info_price">6.900.000 đ</li>
-                    <li class="info_sum">3GB RAM - 3600 mAh</li>
+                    <li class="info_price">{{number_format price}} đ</li>
+                    <li class="info_sum">{{shortInfo}}</li>
                     <li class="info_link" style="text-align: right; font-size: 11px;">
-                        <a href="#">Chi tiết</a>
+                        <a class="home_product_detail" href="/product/view?id ={{proID}}">Chi tiết</a>
                     </li>
                 </ul>
             </div>
-            <div class="columns">
-                <ul class="info">
-                    <li class="info_name">Oppo F7</li>
-                    <li class="info_img">
-                        <img src="/img/product/Oppo/oppo-f7.png" style="width: 100%">
-                    </li>
-                    <li class="info_price">7.499.000 đ</li>
-                    <li class="info_sum">4GB RAM - 3400 mAh</li>
-                    <li class="info_link" style="text-align: right; font-size: 11px;">
-                        <a href="#">Chi tiết</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="columns">
-                <ul class="info">
-                    <li class="info_name">Vivo v9</li>
-                    <li class="info_img">
-                        <img src="/img/product/Vivo/vivo-v9.png" style="width: 100%">
-                    </li>
-                    <li class="info_price">6.900.000 đ</li>
-                    <li class="info_sum">4GB RAM - 3400 mAh</li>
-                    <li class="info_link" style="text-align: right; font-size: 11px;">
-                        <a href="#">Chi tiết</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="columns">
-                <ul class="info">
-                    <li class="info_name">Sony Xperia L1</li>
-                    <li class="info_img">
-                        <img src="/img/product/Sony/sony-xperia-l1.png" style="width: 100%">
-                    </li>
-                    <li class="info_price">6.900.000 đ</li>
-                    <li class="info_sum">4GB RAM - 3400 mAh</li>
-                    <li class="info_link" style="text-align: right; font-size: 11px;">
-                        <a href="#">Chi tiết</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="columns">
-                <ul class="info">
-                    <li class="info_name">Samsung Galaxy A8 Plus</li>
-                    <li class="info_img">
-                        <img src="/img/product/Samsung/samsung-galaxy-a8-plus.png" style="width: 100%">
-                    </li>
-                    <li class="info_price">6.900.000 đ</li>
-                    <li class="info_sum">4GB RAM - 3400 mAh</li>
-                    <li class="info_link" style="text-align: right; font-size: 11px;">
-                        <a href="#">Chi tiết</a>
-                    </li>
-                </ul>
-            </div>
+            {{/model}}
+        </div>
     </aside>
 </section>
