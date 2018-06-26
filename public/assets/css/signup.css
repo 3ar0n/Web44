@@ -1,0 +1,191 @@
+body
+{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'Century Gothic', sans-serif;
+    transition: 0.5s;
+}
+.bigBackground
+{
+    z-index: -1;
+    height: 100vh;
+    width: 100%;
+    background: url(../img/bigBackground.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: bottom;
+}
+.formSignUp
+{
+    z-index: 2;
+    position: fixed;
+    top: 45px;
+    width: 100vw;
+    height: 100vh;
+}
+.background__formSignUp
+{
+    width: 35vw;
+    margin: 6vh auto 0vh auto;
+    background: #ffffff;
+    cursor: default;
+    border-radius: 8px;
+    transition: all 0.5s;
+    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.21);
+}
+.title__form
+{
+    position: relative;
+    padding-top: 2vh;
+    padding-bottom: 1vh;
+    text-align: center;
+    font-family: Helvetica;
+    font-size: 26px;
+    font-weight: bold;
+    color: #ff8383;
+}
+.line__form
+{
+    position: relative;
+    margin-bottom: 1vh;
+    width: 100%;
+    float: left;
+    background-color: #ff8383;
+    height: 2px;
+}
+.inputs__form
+{
+    position: relative;
+    float: left;
+    width: 100%;
+    margin-top: 2vh;
+    text-align: center;
+}
+.input__form
+{
+    float: none;
+    position: relative;
+    width: 80%;
+    margin: 1vh auto;
+    border: none;
+    border-bottom: 2px solid #b0bec5;
+    outline: none;
+    font-weight: bold;
+    color: #8ad8ff;
+    background-color: transparent;
+    transition: all 0.25s;
+    font-size: 3vh;
+    opacity: 1;
+    display: inline-block;
+}
+.input__form:focus
+{
+    border-bottom: 2px solid #ff8383;
+}
+.linkForgotPass__form
+{
+    position: relative;
+    margin-top: 0px;
+    text-decoration: none;
+    color: #999;
+    font-size: 2vh;
+    display: block;
+    transition: all 0.5s;
+}
+.linkForgotPass__form:hover
+{
+    color: #8ad8ff;
+    transition: 0s;
+}
+.termsAndCons__form
+{
+    margin: 0px 1vw 0px 1vw;
+    font-size: 3vh;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+.termsAndCons__form p input
+{
+    margin: 0px;
+    width: 3vh;
+    height: 3vh;
+    cursor: pointer;
+}
+.termsAndCons__form p label
+{
+    cursor: pointer;
+}
+#recapcha_us
+{
+    width: 40%;
+}
+.recapcha__form
+{
+    margin-right: 3.5vw;
+    float: right;
+    width: 10.5vw;
+    height: 5vh;
+    font-size: 5vh;
+    font-style: italic;
+    text-decoration: line-through;
+    font-weight: bolder;
+    color: #292929;
+    background-color: #fff;
+    transition: all 0.5s;
+}
+.button__form
+{
+    text-align: center;
+}
+.buttonSign__form
+{
+    position: relative;
+    background: rgba(255, 64, 88, 0.74);
+    box-shadow: 0px 2px 20px 2px rgba(255, 114, 132, 0.5);
+    border-radius: 8px;
+    width: 80%;
+    height: 10vh;
+    border: none;
+    color: #ffffff;
+    font-size: 3vh;
+    margin-top: 10vh; /*22vh*/
+    margin-bottom: 6vh;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+@media (max-width: 1024px)
+{
+    .background__formSignUp
+    {
+        width: 65vw;
+        margin: 8vh auto 10vh auto;
+    }
+    .buttonSign__form
+    {
+        margin-top: 6vh;
+    }
+    .title__form
+    {
+        font-size: 36px;
+    }
+    .recapcha__form
+    {
+        margin-right: 6.5vw;
+        width: 19.5vw;
+        font-size: 4vh;
+    }
+}
+@media (max-width: 765px)
+{
+    .background__formSignUp
+    {
+        width: 85vw;
+        margin: 6vh auto 10vh auto;
+    }
+    .title__form
+    {
+        font-size: 26px;
+    }
+}
