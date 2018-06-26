@@ -6,19 +6,19 @@
 
 {{!-- Bên dưới này là nội dung trình bày body của template: {{{body}}} tronng main.handlebars --}}
 <section>
-    {{#each information}}
+    {{#with product}}
     <div>
-        <h1>Điện thoại {{anhSP}}</h1>
+        <h1>Điện thoại {{proName}}</h1>
         <div class="ratingresult">
-            <a href="#danhgia">35 đánh giá</a>
+            <a href="#danhgia">{{totalView}} lượt xem</a>
         </div>
     </div>
     <div class="clr"></div>
     <aside class="picture">
-        <img src="img/product/{{brandName}}/{{anhSP}}" alt="điện thoại {{anhSP}}">
+        <img src="/img/product/{{imgLink}}" alt="điện thoại {{proName}}">
     </aside>
     <aside class="area_price">
-        <strong>{{Gia}}đ</strong>
+        <strong>{{number_format price}} đ</strong>
         <div class="tsh">
             <span>NHẬN HÀNG TRONG 1 GIỜ</span>
         </div>
@@ -29,15 +29,15 @@
         </div>
         <div class="area_promotion zero">
             <strong data-count="3">Số lượt mua</strong>
-            <h3>121 lượt mua {{anhSP}}</h3>
+            <h3>{{totalBought}} lượt mua</h3>
         </div>
     </aside>
-    {{/information}}
+    {{/with}}
     <div class="rightInfo">
         <ul class="checkexist">
             <strong>Kiểm tra: </strong>
-            <ul>
-                <ul class="policy">
+            </ul>
+        <ul class="policy">
                     <li>
                         Trong hộp có: Sạc, Tai nghe, Sách hướng dẫn, Cáp, Cây lấy sim
                     </li>
@@ -47,42 +47,39 @@
                     <li>
                         1 đổi 1 nếu xảy ra lỗi sản phẩm tại nhà trong 1 ngày
                     </li>
-                </ul>
+        </ul>
     </div>
     <div class="clr"></div>
     <div class="box_content">
         <aside class="left_content">
             <div class="characteristics">
-                {{#each information}}
-                <h2 style="font-size: 24px">Đặc điểm nổi bật của {{TenSP}}</h2>
+                {{#with product}}
+                <h2 style="font-size: 24px">Đặc điểm nổi bật của {{proName}}</h2>
                 <br/>
                 <div class="slideshow-container">
                     <div class="mySlides fade">
-                        <img src="img/{{slide}}/slide-1.jpg" style="width:100%">
-                    </div>
-
-                    <div class="mySlides fade">
-                        <img src="img/slide/{{slide}}/slide-2.jpg" style="width:100%">
-                    </div>
-
-                    <div class="mySlides fade">
-                        <img src="img/slide/{{slide}}/slide-3.jpg" style="width:100%">
-                    </div>
-
-                    <div class="mySlides fade">
-                        <img src="img/slide/{{slide}}/slide-4.jpg" style="width:100%">
+                        <img src="/img/product/{{slide}}/slide-1.jpg" style="width:100%">
                     </div>
                     <div class="mySlides fade">
-                        <img src="img/slide/{{slide}}/slide-5.jpg" style="width:100%">
+                        <img src="/img/product/_slide/{{slide}}/slide-2.jpg" style="width:100%">
                     </div>
                     <div class="mySlides fade">
-                        <img src="img/slide/{{slide}}/slide-6.jpg" style="width:100%">
+                        <img src="/img/product/_slide/{{slide}}/slide-3.jpg" style="width:100%">
                     </div>
                     <div class="mySlides fade">
-                        <img src="img/slide/{{slide}}/slide-7.jpg" style="width:100%">
+                        <img src="/img/product/_slide/{{slide}}/slide-4.jpg" style="width:100%">
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="/img/product/_slide/{{slide}}/slide-5.jpg" style="width:100%">
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="/img/product/_slide/{{slide}}/slide-6.jpg" style="width:100%">
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="/img/product/_slide/{{slide}}/slide-7.jpg" style="width:100%">
                     </div>
                 </div>
-                {{/information}}
+                {{/with}}
                 <script>
                     //khai báo biến slideIndex đại diện cho slide hiện tại
                     var slideIndex;
@@ -115,25 +112,25 @@
             </div>
         </aside>
         <aside class="right_content">
-            {{#each information}}
+            {{#with product}}
             <div class="tableparameter">
                 <h2 style="font-size: 24px">Thông số kĩ thuật</h2>
                 <br />
                 <ul class="parameter">
                     <li>
                         <span>Màn hình:</span>
-                        <span>{{ManHinh}}</span>
+                        <span>{{display}}</span>
                     </li>
                     <li>
                         <span>Hệ điều hành:</span>
-                        <span>{{HDH}}</span>
+                        <span>{{OS}}</span>
                         <li>
                             <span>Camera sau:</span>
-                            <span>{{CameraSau}} MP</span>
+                            <span>{{backCam}} MP</span>
                         </li>
                         <li>
                             <span>Camera trước:</span>
-                            <span>{{cameraTruoc}} MP</span>
+                            <span>{{frontCam}} MP</span>
                         </li>
                         <li>
                             <span>CPU:</span>
@@ -145,7 +142,7 @@
                         </li>
                         <li>
                             <span>Bộ nhớ trong:</span>
-                            <span>{{BoNhoTrong}} GB</span>
+                            <span>{{Storage}} GB</span>
                         </li>
                         <li>
                             <span>Thẻ SIM:</span>
@@ -153,11 +150,11 @@
                         </li>
                         <li>
                             <span>Dung lượng pin</span>
-                            <span>{{Pin}} mAh</span>
+                            <span>{{battery}} mAh</span>
                         </li>
                 </ul>
             </div>
-            {{/information}}
+            {{/with}}
         </aside>
     </div>
     <div>
@@ -167,21 +164,21 @@
     <div class="clr"></div>
     <aside>
         <div class="container">
-            {{#each model}}
+            {{#each same_brand}}
             <div class="columns">
                 <ul class="info">
                     <li class="info_name">{{proName}}</li>
                     <li class="info_img">
-                        <img src="/img/product/{{brandName}}/{{imgLink}}" alt="image" style="width: 100%">
+                        <img src="/img/product/{{imgLink}}" alt="image" style="width: 100%">
                     </li>
                     <li class="info_price">{{number_format price}} đ</li>
                     <li class="info_sum">{{shortInfo}}</li>
                     <li class="info_link" style="text-align: right; font-size: 11px;">
-                        <a class="home_product_detail" href="/product/view?id ={{proID}}">Chi tiết</a>
+                        <a class="home_product_detail" href="/product/{{proID}}">Chi tiết</a>
                     </li>
                 </ul>
             </div>
-            {{/model}}
+            {{/each}}
         </div>
     </aside>
 </section>
