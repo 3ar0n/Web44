@@ -74,24 +74,4 @@ function checkForm()
 function buttonSign()
 {
     var check = checkForm();
-    if (check === true)
-    {
-        //window.location.href = "../user/index.html";
-        //window.location.replace("../user/index.html");
-        //window.location = "../user/index.html";
-
-        //$(location).attr('href', '../user/index.html');
-        //$(window).attr('location', '../user/index.html');
-        //$(location).prop('href', '../user/index.html');
-
-        /*
-        var url = "../user/index.html";
-        var link = document.createElement('a');
-        link.href = url;
-        document.body.appendChild(link);
-        link.click();
-        */
-
-        window.open("./../user/index.html");
-    }
 }
