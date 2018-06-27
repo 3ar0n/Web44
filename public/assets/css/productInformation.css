@@ -318,3 +318,14 @@ header {
 .side-button button:not(:last-child) {
    /*border-bo*/
 }
+.buttonADD
+{
+    position: relative;
+    background: #00aaff;
+    width: 80%;
+    height: 10vh;
+    border: 2px 2px 2px 2px;
+    color: #ffffff;
+    font-size: 3vh;
+    margin-left: 5vh;
+}
