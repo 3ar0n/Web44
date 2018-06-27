@@ -1,0 +1,29 @@
+{{#section 'title'}}
+    SignIn
+{{/section}}
+
+{{#section 'css_js'}}
+<link rel="stylesheet" type="text/css" href="/assets/css/signin.css"/>
+<script type="text/javascript" src="/assets/js/signin.js"></script>
+{{/section}}
+
+<body>
+    <div class="bigBackground"></div>
+    <div class="formSignIn">
+        <div class="background__formSignIn">
+            <form action="">
+                <div class="title__form">ĐĂNG NHẬP</div>
+                <span class="line__form"></span>
+                <div class="inputs__form">
+                    <input type="text" class="input__form" placeholder="Email" id="email_us" required="true"/>
+                    <input type="password" class="input__form" placeholder="Mật khẩu" id="pass_us" required="true"/>
+                    <a href="#" class="linkForgotPass__form" >Quên mật khẩu?</a> 
+                </div>
+                <div class="button__form">
+                    <button class="buttonSign__form" onclick="buttonSign()">ĐĂNG NHẬP</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/index.js"></script>
+</body>
