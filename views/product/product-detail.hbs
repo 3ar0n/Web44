@@ -2,10 +2,11 @@
 
 {{#section 'css_js'}}
     <link rel="stylesheet" type="text/css" href="/assets/css/productInformation.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/homepage.css">
 {{/section}}
 
 {{!-- Bên dưới này là nội dung trình bày body của template: {{{body}}} tronng main.handlebars --}}
-<section style="z-index: -1;">
+<section style="z-index: 0; background-color: white;">
     {{#with product}}
     <div>
         <h1>Điện thoại {{proName}}</h1>
@@ -58,7 +59,7 @@
                 <br/>
                 <div class="slideshow-container">
                     <div class="mySlides fade">
-                        <img src="/img/product/{{slide}}/slide-1.jpg" style="width:100%">
+                        <img src="/img/product/_slide/{{slide}}/slide-1.jpg" style="width:100%">
                     </div>
                     <div class="mySlides fade">
                         <img src="/img/product/_slide/{{slide}}/slide-2.jpg" style="width:100%">
@@ -174,7 +175,7 @@
                     <li class="info_price">{{number_format price}} đ</li>
                     <li class="info_sum">{{shortInfo}}</li>
                     <li class="info_link" style="text-align: right; font-size: 11px;">
-                        <a class="home_product_detail" href="/product/{{proID}}">Chi tiết</a>
+                        <a name="id" class="home_product_detail" href="/product/{{proID}}">Chi tiết</a>
                     </li>
                 </ul>
             </div>

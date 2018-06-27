@@ -11,8 +11,8 @@
 	<link rel="icon" href="/img/homepage-logo.png">
 </head>
 
-<body>
-	<div class="navigation-bar" id="navBar">
+<body style="background-color: white">
+	<div class="navigation-bar" id="navBar" style="z-index: 1;">
 		<form id="frmLogout" method="post" action="/account/logout"></form>
 		{{#if layoutVM.curUser.isAdmin}}
 		<a href="#" onclick="log_out()">📤 Đăng xuất</a>
