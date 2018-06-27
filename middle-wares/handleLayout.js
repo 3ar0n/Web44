@@ -4,9 +4,19 @@ module.exports = (req, res, next) => {
 		req.session.isLogged = false;
     }
 
+    if (req.session.isLogged === true) {
+        if (req.session.user.fullName === null) {
+            var userName = 'user';
+        } else {
+            var userName = req.session.user.fullName;
+        }
+    }
+    
+
     res.locals.layoutVM = {
         isLogged: req.session.isLogged,
-        curUser: req.session.user
+        curUser: req.session.user,
+        username: userName
     };
 
     next();

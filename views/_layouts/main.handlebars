@@ -25,9 +25,9 @@
 		<a href="#" class="none"></a>
 		{{#if layoutVM.isLogged}}
 		<a href="#" onclick="log_out()">📤 Đăng xuất</a>
-		<a href="#">👤 User</a>
+		<a href="#">👤 {{layoutVM.username}}</a>
 		{{else}}
-		<a href="/account/signup">📑 Đăng kí</a>
+		<a href="/account/signup">📑 Đăng ký</a>
 		<a href="/account/signin">📥 Đăng nhập</a>
 		{{/if}}
 		<a href="/">🏠 Trang chủ</a>
@@ -37,7 +37,6 @@
 		{{{body}}}
 	</div>
 	
-
 	<script>
 		function log_out() {
 			document.getElementById("frmLogout").submit();

@@ -6,9 +6,8 @@ router.get('/', (req, res) => {
 	res.redirect('/');
 });
 
-router.get('/:proID', (req, res) => {
-	var proID = req.params.proID;
-	//var proID = req.body.id
+router.get('/view', (req, res) => {
+	var proID = req.query.id
 	productModel.loadDetail(proID).then(rows => {
 		var brandID = rows[0].brandID;
 		var catID = rows[0].catID;
