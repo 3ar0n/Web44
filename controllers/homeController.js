@@ -1,6 +1,6 @@
 const express = require('express');
-var productModel = require('../models/productModel');
-var brandModel = require('../models/brandModel');
+const productModel = require('../models/productModel');
+const brandModel = require('../models/brandModel');
 const router = express.Router();
 
 router.get('/', (req, res) => {

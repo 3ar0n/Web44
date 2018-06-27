@@ -3,6 +3,7 @@
 
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>{{{_sections.title}}}</title>
 	{{{_sections.css_js}}}
 	<link rel="stylesheet" type="text/css" href="/assets/css/navigationBar.css">
@@ -12,18 +13,36 @@
 
 <body>
 	<div class="navigation-bar" id="navBar">
+		<form id="frmLogout" method="post" action="/account/logout"></form>
+		{{#if layoutVM.curUser.isAdmin}}
+		<a href="#" onclick="log_out()">📤 Đăng xuất</a>
+		<a href="#">👤 Admin</a>
+		{{else}}
 		<form class="search-bar" style="float: left; margin-left:1%; margin-top: 7px;">
 			<input type=text name="search" placeholder="Tìm kiếm...">
 		</form>
 		<a href="javascript:void(0);" class="dropdown-icon" onclick="dropdownNav()">&#9776;</a>
 		<a href="#" class="none"></a>
-		<a href="/account/signup">&#128100 Đăng kí</a>
-		<a href="/account/signin">&#128100 Đăng nhập</a>
-		<a href="#">&#128722 Giỏ hàng</a>
-		<a href="#">&#128172 Hỏi đáp</a>
-		<a href="/">&#127968 Trang chủ</a>
+		{{#if layoutVM.isLogged}}
+		<a href="#" onclick="log_out()">📤 Đăng xuất</a>
+		<a href="#">👤 User</a>
+		{{else}}
+		<a href="/account/signup">📑 Đăng kí</a>
+		<a href="/account/signin">📥 Đăng nhập</a>
+		{{/if}}
+		<a href="/">🏠 Trang chủ</a>
+		{{/if}}
 	</div>
-	{{{body}}}
+	<div style="margin-top: 50px;">
+		{{{body}}}
+	</div>
+	
+
+	<script>
+		function log_out() {
+			document.getElementById("frmLogout").submit();
+		};
+	</script>
 </body>
 
 </html>

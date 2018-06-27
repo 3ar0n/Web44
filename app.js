@@ -10,9 +10,12 @@ const wnumb = require('wnumb');
 const homeController = require('./controllers/homeController');  // example
 const productController = require('./controllers/productController');
 const accountController = require('./controllers/accountController');
+const adminController = require('./controllers/adminController');
 
 // Middle-wares
-const handle404MDW = require('./middle-wares/handle404');
+const handle404 = require('./middle-wares/handle404'),
+      handleLayout = require('./middle-wares/handleLayout'),
+      restrict = require('./middle-wares/restrict');
 
 const app = express();
 const port = 3000;
@@ -64,18 +67,21 @@ app.use(session({
     saveUninitialized: false
 }));
 
+app.use(handleLayout);
+
 // -----------
 
-app.get('/', (req, res) => {
-    res.redirect('/home');
+app.get('/home', (req, res) => {
+    res.redirect('/');
 });
 
-app.use('/home', homeController);
+app.use('/', homeController);
 app.use('/product',productController);
 app.use('/account',accountController);
+app.use('/admin',adminController);
 
-app.use(handle404MDW);
+app.use(handle404);
 
 app.listen(port, () => {
-    console.log("Serving on port " + port);
+    console.log("Running on port " + port);
 });

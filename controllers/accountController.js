@@ -17,19 +17,30 @@ router.post('/signin', (req, res) => {
     }
     accountModel.login(user).then (rows => {
         if (rows.length > 0) {
-            console.log('success');
+            //console.log('success');
             req.session.isLogged = true;
             req.session.user = rows[0];
-            res.render('account/signin');
+
+            if (req.session.user.isAdmin === 1) {
+                res.redirect('/admin');
+            } else {
+                res.redirect('/');
+            }
         }
         else {
-            console.log('fail');
+            //console.log('fail');
             var vm = {
                 fail:true
             }
             res.render('account/signin', vm);
         }
     })
+});
+
+router.post('/logout', (req, res) => {
+    req.session.isLogged = false;
+    req.session.user = null;
+    res.redirect('/');
 });
 
 module.exports = router;

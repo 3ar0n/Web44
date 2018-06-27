@@ -30,14 +30,14 @@
                     <li class="info_price">{{number_format price}} đ</li>
                     <li class="info_sum">{{shortInfo}}</li>
                     <li class="info_link" style="text-align: right; font-size: 11px;">
-                        <a class="home_product_detail" href="/product/{{proID}}">Chi tiết</a>
+                        <a name="id" class="home_product_detail" href="/product/{{proID}}">Chi tiết</a>
                     </li>
                 </ul>
             </div>
             {{/each}}
         </div>
         <br>
-        <a href="/product/more" class="see-more">xem thêm</a>
+        <a name="more" href="/product/more" class="see-more">xem thêm</a>
 
         <br>
         <hr width="100%">
