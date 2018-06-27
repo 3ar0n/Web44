@@ -207,16 +207,6 @@ cursor: pointer;
   animation-name: fade;
   animation-duration: 3s;
 }
- 
-@-webkit-keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
- 
-@keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
 .right_content {
     float: right;
     width: 30%;
