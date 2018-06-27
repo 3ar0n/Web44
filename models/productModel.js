@@ -34,3 +34,8 @@ exports.loadSameBrand = (proID, brandID) => {
     var sql = `SELECT * FROM products WHERE brandID = ${brandID} AND proID <> ${proID} limit 5`;
     return database.load(sql);
 }
+
+exports.loadSameCat = (proID, catID) => {
+    var sql = `SELECT * FROM products WHERE catID = ${catID} AND proID <> ${proID} limit 5`;
+    return database.load(sql);
+}

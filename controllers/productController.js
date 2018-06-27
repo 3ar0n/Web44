@@ -11,12 +11,17 @@ router.get('/:proID', (req, res) => {
 	//var proID = req.body.id
 	productModel.loadDetail(proID).then(rows => {
 		var brandID = rows[0].brandID;
-		productModel.loadSameBrand(proID, brandID).then(same_rows => {
-			var vm = {
-				product: rows[0],
-				same_brand: same_rows
-			}
-			res.render('product/product-detail', vm);
+		var catID = rows[0].catID;
+		productModel.loadSameBrand(proID, brandID).then(brand_rows => {
+			productModel.loadSameCat(proID, catID).then(cat_rows => {
+				var vm = {
+					product: rows[0],
+					product_name: rows[0].proName,
+					same_brand: brand_rows,
+					same_cat: cat_rows
+				}
+				res.render('product/product-detail', vm);
+			})
 		})
 	})
 });
