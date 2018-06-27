@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.1
+-- version 4.8.0.1
 -- https://www.phpmyadmin.net/
 --
--- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th6 26, 2018 lúc 01:19 PM
--- Phiên bản máy phục vụ: 10.1.33-MariaDB
--- Phiên bản PHP: 7.2.6
+-- Host: 127.0.0.1
+-- Generation Time: Jun 26, 2018 at 07:41 PM
+-- Server version: 10.1.32-MariaDB
+-- PHP Version: 7.2.5
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,13 +19,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Cơ sở dữ liệu: `web44`
+-- Database: `web44`
 --
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `brands`
+-- Table structure for table `brands`
 --
 
 CREATE TABLE `brands` (
@@ -34,7 +34,7 @@ CREATE TABLE `brands` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `brands`
+-- Dumping data for table `brands`
 --
 
 INSERT INTO `brands` (`brandID`, `brandName`) VALUES
@@ -59,7 +59,7 @@ INSERT INTO `brands` (`brandID`, `brandName`) VALUES
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `categories`
+-- Table structure for table `categories`
 --
 
 CREATE TABLE `categories` (
@@ -68,7 +68,7 @@ CREATE TABLE `categories` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `categories`
+-- Dumping data for table `categories`
 --
 
 INSERT INTO `categories` (`catID`, `catName`) VALUES
@@ -78,41 +78,7 @@ INSERT INTO `categories` (`catID`, `catName`) VALUES
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `productinformation`
---
-
-CREATE TABLE `productinformation` (
-  `proID` int(11) NOT NULL,
-  `anhSP` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
-  `slide` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
-  `ManHinh` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
-  `HDH` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
-  `cameraTruoc` int(11) DEFAULT NULL,
-  `CameraSau` int(11) DEFAULT NULL,
-  `CPU` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
-  `RAM` int(11) DEFAULT NULL,
-  `BoNhoTrong` int(11) DEFAULT NULL,
-  `SIM` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
-  `Pin` int(11) DEFAULT NULL,
-  `TenSP` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
-  `brandID` int(11) NOT NULL,
-  `Gia` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Đang đổ dữ liệu cho bảng `productinformation`
---
-
-INSERT INTO `productinformation` (`proID`, `anhSP`, `slide`, `ManHinh`, `HDH`, `cameraTruoc`, `CameraSau`, `CPU`, `RAM`, `BoNhoTrong`, `SIM`, `Pin`, `TenSP`, `brandID`, `Gia`) VALUES
-(0, 'iphone-x-256gb.png', 'slide-iphoneX', 'OLED, 5.8\", Super Retina', 'iOS 11', 7, 12, 'Apple A11 Bionic 6 nhân', 3, 256, '1 Nano SIM, Hỗ trợ 4G', 2716, 'iPhone X - 256GB', 0, 34790000),
-(1, 'bkav-bphone-2-hero.png', 'slide-bphone-2', 'IPS LCD, 5.5\", Full HD', 'BOS (Android 7.1)', 8, 16, 'Snapdragon 625 8 nhân 64-bit', 3, 32, '2 Nano SIM, Hỗ trợ 4G', 3000, 'BPhone 2017', 16, 9790000),
-(2, 'htc-u-play.png', 'htc-u-play', 'Super LCD, 5.2\", Full HD', 'Android 6.0 (Marshmallow)', 16, 16, 'MTK Helio P10 8 nhân 64-bit', 3, 32, '2 Nano SIM, Hỗ trợ 4G', 2500, 'HTC U Play', 5, 3790000),
-(3, 'nokia-6.png', 'nokia-6', 'IPS LCD, 5.5\", Full HD', 'Android 7.0 (Nougat)', 8, 16, 'Qualcomm Snapdragon 430 8 nhân 64 bit', 3, 32, '\r\n2 SIM Nano (SIM 2 chung khe thẻ nhớ), Hỗ trợ 4G', 3000, 'Nokia 6', 10, 4990000);
-
--- --------------------------------------------------------
-
---
--- Cấu trúc bảng cho bảng `products`
+-- Table structure for table `products`
 --
 
 CREATE TABLE `products` (
@@ -131,19 +97,51 @@ CREATE TABLE `products` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `products`
+-- Dumping data for table `products`
 --
 
 INSERT INTO `products` (`proID`, `proName`, `brandID`, `catID`, `imgLink`, `price`, `shortInfo`, `fullInfo`, `addedDay`, `totalView`, `totalBought`, `inStorage`) VALUES
-(0, 'iPhone X - 256GB', 0, 1, 'iphone-x-256gb.png', 34790000, '...', NULL, '2018-06-10', 10, 5, 2),
-(1, 'BPhone 2017', 16, 1, 'bkav-bphone-2-hero.png', 9790000, '...', NULL, '2018-06-06', 50, 0, 3),
-(2, 'HTC U Play', 5, 1, 'htc-u-play.png', 3790000, '...', NULL, '2018-06-01', 4, 1, 0),
-(3, 'Nokia 6', 10, 1, 'nokia-6.png', 4990000, '...', NULL, '2018-06-20', 16, 9, 1);
+(0, 'iPhone X - 256GB', 0, 1, 'Apple/iphone-x-256gb.png', 34790000, '...', NULL, '2018-06-10', 10, 5, 2),
+(1, 'BPhone 2017', 16, 1, 'Other/bkav-bphone-2-hero.png', 9790000, '...', NULL, '2018-06-06', 50, 0, 3),
+(2, 'HTC U Play', 5, 1, 'HTC/htc-u-play.png', 3790000, '...', NULL, '2018-06-01', 4, 1, 0),
+(3, 'Nokia 6', 10, 1, 'Nokia/nokia-6.png', 4990000, '...', NULL, '2018-06-20', 16, 9, 1),
+(4, 'iPhone 6 32GB', 0, 1, 'Apple/iphone-6-32gb.png', 7490000, '...', NULL, '2018-06-15', 2, 0, 10);
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `sessions`
+-- Table structure for table `product_detail`
+--
+
+CREATE TABLE `product_detail` (
+  `proID` int(11) NOT NULL,
+  `slide` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `display` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `OS` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `frontCam` float DEFAULT NULL,
+  `backCam` float DEFAULT NULL,
+  `CPU` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `RAM` int(11) DEFAULT NULL,
+  `storage` int(11) DEFAULT NULL,
+  `SIM` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `battery` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `product_detail`
+--
+
+INSERT INTO `product_detail` (`proID`, `slide`, `display`, `OS`, `frontCam`, `backCam`, `CPU`, `RAM`, `storage`, `SIM`, `battery`) VALUES
+(0, 'slide-iphoneX', 'OLED, 5.8\", Super Retina', 'iOS 11', 7, 12, 'Apple A11 Bionic 6 nhân', 3, 256, '1 Nano SIM, Hỗ trợ 4G', 2716),
+(1, 'slide-bphone-2', 'IPS LCD, 5.5\", Full HD', 'BOS (Android 7.1)', 8, 16, 'Snapdragon 625 8 nhân 64-bit', 3, 32, '2 Nano SIM, Hỗ trợ 4G', 3000),
+(2, 'htc-u-play', 'Super LCD, 5.2\", Full HD', 'Android 6.0 (Marshmallow)', 16, 16, 'MTK Helio P10 8 nhân 64-bit', 3, 32, '2 Nano SIM, Hỗ trợ 4G', 2500),
+(3, 'nokia-6', 'IPS LCD, 5.5\", Full HD', 'Android 7.0 (Nougat)', 8, 16, 'Qualcomm Snapdragon 430 8 nhân 64 bit', 3, 32, '\r\n2 SIM Nano (SIM 2 chung khe thẻ nhớ), Hỗ trợ 4G', 3000),
+(4, 'slide-iphoneX', 'LED-backlit IPS LCD, 4.7\", Retina HD', 'iOS 11', 1.3, 8, 'Apple A8 2 nhân 64-bit', 1, 32, '1 Nano SIM, Hỗ trợ 4G', 1810);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `sessions`
 --
 
 CREATE TABLE `sessions` (
@@ -153,29 +151,23 @@ CREATE TABLE `sessions` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Chỉ mục cho các bảng đã đổ
+-- Indexes for dumped tables
 --
 
 --
--- Chỉ mục cho bảng `brands`
+-- Indexes for table `brands`
 --
 ALTER TABLE `brands`
   ADD PRIMARY KEY (`brandID`);
 
 --
--- Chỉ mục cho bảng `categories`
+-- Indexes for table `categories`
 --
 ALTER TABLE `categories`
   ADD PRIMARY KEY (`catID`);
 
 --
--- Chỉ mục cho bảng `productinformation`
---
-ALTER TABLE `productinformation`
-  ADD PRIMARY KEY (`proID`);
-
---
--- Chỉ mục cho bảng `products`
+-- Indexes for table `products`
 --
 ALTER TABLE `products`
   ADD PRIMARY KEY (`proID`),
@@ -183,21 +175,33 @@ ALTER TABLE `products`
   ADD KEY `brandID` (`brandID`);
 
 --
--- Chỉ mục cho bảng `sessions`
+-- Indexes for table `product_detail`
+--
+ALTER TABLE `product_detail`
+  ADD PRIMARY KEY (`proID`);
+
+--
+-- Indexes for table `sessions`
 --
 ALTER TABLE `sessions`
   ADD PRIMARY KEY (`session_id`);
 
 --
--- Các ràng buộc cho các bảng đã đổ
+-- Constraints for dumped tables
 --
 
 --
--- Các ràng buộc cho bảng `products`
+-- Constraints for table `products`
 --
 ALTER TABLE `products`
   ADD CONSTRAINT `products_ibfk_1` FOREIGN KEY (`catID`) REFERENCES `categories` (`catID`),
   ADD CONSTRAINT `products_ibfk_2` FOREIGN KEY (`brandID`) REFERENCES `brands` (`brandID`);
+
+--
+-- Constraints for table `product_detail`
+--
+ALTER TABLE `product_detail`
+  ADD CONSTRAINT `product_detail_ibfk_1` FOREIGN KEY (`proID`) REFERENCES `products` (`proID`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
