@@ -15,7 +15,7 @@ router.post('/signin', (req, res) => {
         email: req.body.email,
         password: req.body.password
     }
-    accountModel.login(user).then (rows => {
+    accountModel.signin(user).then (rows => {
         if (rows.length > 0) {
             //console.log('success');
             req.session.isLogged = true;
@@ -33,6 +33,31 @@ router.post('/signin', (req, res) => {
                 fail:true
             }
             res.render('account/signin', vm);
+        }
+    })
+});
+
+router.post('/signup', (req, res) => {
+    var user = {
+        email: req.body.email,
+        password: req.body.password,
+        fullName: req.body.fullName,
+        phone: req.body.phone,
+        address: req.body.address
+    }
+    accountModel.signup(user).then (rows => {
+        if (rows.length > 0) {
+            console.log('success');
+            req.session.isLogged = true;
+            req.session.user = rows[0];
+            res.render('account/signup');
+        }
+        else {
+            console.log('fail');
+            var vm = {
+                fail:true
+            }
+            res.render('account/signup', vm);
         }
     })
 });
