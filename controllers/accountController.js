@@ -27,26 +27,36 @@ router.post('/signin', (req, res) => {
             }
         }
         else {
-            alert("Đăng nhập thất bại");
             res.render('account/signin');
         }
     })
 });
 
 router.post('/signup', (req, res) => {
-    var user = {
-        email: req.body.email,
-        password: req.body.password,
-        fullName: req.body.fullName,
-        phone: req.body.phone,
-        address: req.body.address,
-        isAdmin: 0
-    }
-    accountModel.addUser(user).then (rows => {
-        res.redirect('/account/signin');
+    var email = req.body.email;
+    accountModel.checkEmail(email).then (result => {
+        if (result.length > 0) {
+            res.render('account/signup');
+        } else {
+            var user = {
+                email: req.body.email,
+                password: req.body.password,
+                fullName: req.body.fullName,
+                phone: req.body.phone,
+                address: req.body.address,
+                isAdmin: 0
+            }
+            accountModel.addUser(user).then (rows => {
+                res.redirect('/account/signin');
+            }).catch(err => {
+                console.log(err);
+                res.end('fail');
+            });
+        }
     }).catch(err => {
+        console.log(err);
         res.end('fail');
-    });
+    })
 });
 
 router.post('/logout', (req, res) => {

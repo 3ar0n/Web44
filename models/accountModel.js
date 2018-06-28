@@ -22,3 +22,8 @@ exports.addUser = (user) => {
     values('${user.email}', '${user.password}', '${user.fullName}', '${user.phone}', '${user.address}', '${user.isAdmin}')`;
     return database.save(sql);
 }
+
+exports.checkEmail = (email) => {
+    var sql = `SELECT * FROM users WHERE email = '${email}'`;
+    return database.load(sql);
+}
