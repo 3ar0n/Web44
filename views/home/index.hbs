@@ -1,4 +1,4 @@
-{{#section 'title'}} Homepage {{/section}}
+{{#section 'title'}}Sóng Thần - Smartphone & Tablet chính hãng{{/section}}
 
 {{#section 'css_js'}}
     <link rel="stylesheet" type="text/css" href="/assets/css/homepage.css">
@@ -25,12 +25,12 @@
                 <ul class="info">
                     <li class="info_name">{{proName}}</li>
                     <li class="info_img">
-                        <img src="/img/product/{{imgLink}}" alt="image" style="width: 100%">
+                        <img src="/img/product/{{imgLink}}" alt="image" style="width: 158px; height: 182px;">
                     </li>
                     <li class="info_price">{{number_format price}} đ</li>
                     <li class="info_sum">{{shortInfo}}</li>
                     <li class="info_link" style="text-align: right; font-size: 11px;">
-                        <a name="id" class="home_product_detail" href="/product/{{proID}}">Chi tiết</a>
+                        <a name="id" class="home_product_detail" href="/product/view?id={{proID}}">Chi tiết »</a>
                     </li>
                 </ul>
             </div>
@@ -40,20 +40,20 @@
         <a name="more" href="/product/more" class="see-more">xem thêm</a>
 
         <br>
-        <hr width="100%">
-        <p class="catergory">Bán chạy</p>
+        <hr width="100%" color="#2196F3">
+        <p class="catergory">Sản phẩm bán chạy</p>
         <div class="container">
             {{#each bestseller}}
             <div class="columns">
                 <ul class="info">
                     <li class="info_name">{{proName}}</li>
                     <li class="info_img">
-                        <img src="/img/product/{{imgLink}}" alt="image" style="width: 100%">
+                        <img src="/img/product/{{imgLink}}" alt="image" style="width: 158px; height: 182px;">
                     </li>
                     <li class="info_price">{{number_format price}} đ</li>
                     <li class="info_sum">{{shortInfo}}</li>
                     <li class="info_link" style="text-align: right; font-size: 11px;">
-                        <a class="home_product_detail" href="/product/{{proID}}">Chi tiết</a>
+                        <a name="id" class="home_product_detail" href="/product/view?id={{proID}}">Chi tiết »</a>
                     </li>
                 </ul>
             </div>
@@ -63,20 +63,20 @@
         <a href="/product/more" class="see-more">xem thêm</a>
 
         <br>
-        <hr width="100%">
-        <p class="catergory">Xem nhiều</p>
+        <hr width="100%" color="#2196F3">
+        <p class="catergory">Sản phẩm được xem nhiều</p>
         <div class="container">
             {{#each mostview}}
             <div class="columns">
                 <ul class="info">
                     <li class="info_name">{{proName}}</li>
                     <li class="info_img">
-                        <img src="/img/product/{{imgLink}}" alt="image" style="width: 100%">
+                        <img src="/img/product/{{imgLink}}" alt="image" style="width: 158px; height: 182px;">
                     </li>
                     <li class="info_price">{{number_format price}} đ</li>
                     <li class="info_sum">{{shortInfo}}</li>
                     <li class="info_link" style="text-align: right; font-size: 11px;">
-                        <a class="home_product_detail" href="/product/{{proID}}">Chi tiết</a>
+                        <a name="id" class="home_product_detail" href="/product/view?id={{proID}}">Chi tiết »</a>
                     </li>
                 </ul>
             </div>

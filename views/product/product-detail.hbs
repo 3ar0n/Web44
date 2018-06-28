@@ -1,4 +1,4 @@
-{{#section 'title'}} Product Information {{/section}}
+{{#section 'title'}}{{product_name}} - chi tiết sản phẩm{{/section}}
 
 {{#section 'css_js'}}
     <link rel="stylesheet" type="text/css" href="/assets/css/productInformation.css">
@@ -32,6 +32,7 @@
             <strong data-count="3">Số lượt mua</strong>
             <h3>{{totalBought}} lượt mua</h3>
         </div>
+        <button type="submit" class="buttonADD" style="margin-top: 0;">ADD TO CART</button>
     </aside>
     {{/with}}
     <div class="rightInfo">
@@ -55,7 +56,7 @@
         <aside class="left_content">
             <div class="characteristics">
                 {{#with product}}
-                <h2 style="font-size: 24px">Đặc điểm nổi bật của {{proName}}</h2>
+                <h2 style="font-size: 24px">Đặc điểm nổi bật</h2>
                 <br/>
                 <div class="slideshow-container">
                     <div class="mySlides fade">
@@ -124,10 +125,10 @@
                     </li>
                     <li>
                         <span>Hệ điều hành:</span>
-                        <span>{{OS}}</span>
+                        <span>{{os}}</span>
                         <li>
                             <span>Camera sau:</span>
-                            <span>{{backCam}} MP</span>
+                            <span>{{rearCam}} MP</span>
                         </li>
                         <li>
                             <span>Camera trước:</span>
@@ -135,19 +136,19 @@
                         </li>
                         <li>
                             <span>CPU:</span>
-                            <span>{{CPU}}</span>
+                            <span>{{cpu}}</span>
                         </li>
                         <li>
                             <span>Ram:</span>
-                            <span>{{RAM}} GB</span>
+                            <span>{{ram}} GB</span>
                         </li>
                         <li>
                             <span>Bộ nhớ trong:</span>
-                            <span>{{Storage}} GB</span>
+                            <span>{{storage}} GB</span>
                         </li>
                         <li>
                             <span>Thẻ SIM:</span>
-                            <span>{{SIM}}</span>
+                            <span>{{sim}}</span>
                         </li>
                         <li>
                             <span>Dung lượng pin</span>
@@ -159,7 +160,7 @@
         </aside>
     </div>
     <div>
-        <h2 style="font-size: 24px">Các Sản phẩm cùng hãng</h2>
+        <h2 style="font-size: 24px">Sản phẩm cùng hãng</h2>
         <br/>
     </div>
     <div class="clr"></div>
@@ -175,7 +176,31 @@
                     <li class="info_price">{{number_format price}} đ</li>
                     <li class="info_sum">{{shortInfo}}</li>
                     <li class="info_link" style="text-align: right; font-size: 11px;">
-                        <a name="id" class="home_product_detail" href="/product/{{proID}}">Chi tiết</a>
+                        <a name="id" class="home_product_detail" href="/product/view?id={{proID}}">Chi tiết »</a>
+                    </li>
+                </ul>
+            </div>
+            {{/each}}
+        </div>
+    </aside>
+    <div>
+        <h2 style="font-size: 24px">Sản phẩm cùng loại</h2>
+        <br/>
+    </div>
+    <div class="clr"></div>
+    <aside>
+        <div class="container">
+            {{#each same_cat}}
+            <div class="columns">
+                <ul class="info">
+                    <li class="info_name">{{proName}}</li>
+                    <li class="info_img">
+                        <img src="/img/product/{{imgLink}}" alt="image" style="width: 100%">
+                    </li>
+                    <li class="info_price">{{number_format price}} đ</li>
+                    <li class="info_sum">{{shortInfo}}</li>
+                    <li class="info_link" style="text-align: right; font-size: 11px;">
+                        <a name="id" class="home_product_detail" href="/product/view?id={{proID}}">Chi tiết »</a>
                     </li>
                 </ul>
             </div>
