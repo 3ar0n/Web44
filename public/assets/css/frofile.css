@@ -7,35 +7,9 @@ body
     font-family: 'Century Gothic', sans-serif;
     transition: 0.5s;
 }
-.bigBackground
+.title
 {
-    z-index: -1;
-    height: 100vh;
-    width: 100%;
-    background: url(../../img/bigBackground.jpg);
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: bottom;
-}
-.formSignIn
-{
-    position: fixed;
-    top: 45px;
-    width: 100vw;
-    height: 100vh;
-}
-.background__formSignIn
-{
-    width: 35vw;
-    margin: 12vh auto 0vh auto;
-    background: #ffffff;
-    cursor: default;
-    border-radius: 8px;
-    transition: all 0.5s;
-    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.21);
-}
-.title__form
-{
+    margin-top: 55px;
     position: relative;
     padding-top: 2vh;
     padding-bottom: 1vh;
@@ -45,7 +19,7 @@ body
     font-weight: bold;
     color: #ff8383;
 }
-.line__form
+.line
 {
     position: relative;
     margin-bottom: 1vh;
@@ -54,7 +28,7 @@ body
     background-color: #ff8383;
     height: 2px;
 }
-.inputs__form
+.inputs
 {
     position: relative;
     float: left;
@@ -62,7 +36,7 @@ body
     margin-top: 2vh;
     text-align: center;
 }
-.input__form
+.input
 {
     float: none;
     position: relative;
@@ -79,30 +53,15 @@ body
     opacity: 1;
     display: inline-block;
 }
-.input__form:focus
+.input:focus
 {
     border-bottom: 2px solid #ff8383;
 }
-.linkForgotPass__form
-{
-    position: relative;
-    margin-top: 0px;
-    text-decoration: none;
-    color: #999;
-    font-size: 2vh;
-    display: block;
-    transition: all 0.5s;
-}
-.linkForgotPass__form:hover
-{
-    color: #8ad8ff;
-    transition: 0s;
-}
-.button__form
+.button
 {
     text-align: center;
 }
-.buttonSign__form
+.buttonEdit
 {
     position: relative;
     background: rgba(255, 64, 88, 0.74);
@@ -113,30 +72,25 @@ body
     border: none;
     color: #ffffff;
     font-size: 3vh;
-    margin-top: 22vh; /*22vh*/
+    margin-top: 6vh; /*22vh*/
     margin-bottom: 6vh;
     cursor: pointer;
     transition: all 0.5s;
 }
 @media (max-width: 1024px)
 {
-    .background__formSignIn
+    .buttonEdit
     {
-        width: 65vw;
-        margin: 18vh auto 10vh auto;
+        margin-top: 6vh;
     }
-    .buttonSign__form
-    {
-        margin-top: 12vh;
-    }
-    .title__form
+    .title
     {
         font-size: 36px;
     }
 }
 @media (max-width: 765px)
 {
-    .title__form
+    .title
     {
         font-size: 26px;
     }

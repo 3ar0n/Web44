@@ -1,0 +1,24 @@
+{{#section 'title'}}Hồ sơ cá nhân{{/section}}
+
+{{#section 'css_js'}}
+<link rel="stylesheet" type="text/css" href="/assets/css/frofile.css"/>
+<script type="text/javascript" src="/assets/js/frofile.js"></script>
+{{/section}}
+<form action="" method="post">
+    <div class="title">HỒ SƠ CÁ NHÂN</div>
+    <span class="line"></span>
+    <div class="inputs">
+        <input type="text" class="input" placeholder="Email" id="email_us" required="true" name="email"/>
+        <input type="password" class="input" placeholder="Mật khẩu" id="pass_us" required="true" name="password"/>  
+        <input type="password" class="input" placeholder="Nhập lại mật khẩu" id="conf_pass_us" required="true"/>
+        <input type="text" class="input" placeholder="Họ tên" id="name_us" required="true" name="fullName"/>
+        <input type="text" class="input" placeholder="Số điện thoại" id="phone_number_us" required="true" name="phone"/>                    
+        <input type="text" class="input" placeholder="Địa chỉ" id="address_us" required="true" name="address"/> 
+    </div>
+    <div class="button">
+        <button type="submit" class="buttonEdit" onclick="buttonEdit()">LƯU THÔNG TIN</button>
+    </div>
+    <div class="title">LỊCH SỬ MUA HÀNG</div>
+    <span class="line"></span>
+    
+</form>

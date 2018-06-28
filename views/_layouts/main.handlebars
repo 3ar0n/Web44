@@ -18,11 +18,10 @@
 		<a href="#" onclick="log_out()">📤 Đăng xuất</a>
 		<a href="#">👤 Admin</a>
 		{{else}}
-		<form class="search-bar" style="float: left; margin-left:1%; margin-top: 7px;">
+		<form class="search-bar">
 			<input type=text name="search" placeholder="Tìm kiếm...">
 		</form>
 		<a href="javascript:void(0);" class="dropdown-icon" onclick="dropdownNav()">&#9776;</a>
-		<a href="#" class="none"></a>
 		{{#if layoutVM.isLogged}}
 		<a href="#" onclick="log_out()">📤 Đăng xuất</a>
 		<a href="#">👤 {{layoutVM.username}}</a>
@@ -31,6 +30,26 @@
 		<a href="/account/signin">📥 Đăng nhập</a>
 		{{/if}}
 		<a href="/">🏠 Trang chủ</a>
+		{{!-- Brands and Types --}}
+		<div class="brand dropdown">
+			<button class="brandButton button" onclick="brandFunction()">
+				⇩ Hãng
+			</button>
+			<div class="dropdown-content" id="brandDropdown">
+				<a href="#">Apple</a>
+				<a href="#">Bphone</a>
+				<a href="#">Htc</a>
+			</div>
+		</div> 
+		<div class="type dropdown">
+			<button class="typeButton button" onclick="typeFunction()">
+				⇩ Loại
+			</button>
+			<div class="dropdown-content" id="typeDropdown">
+				<a href="#">Điện thoại</a>
+				<a href="#">Máy tính bảng</a>
+			</div>
+		</div> 
 		{{/if}}
 	</div>
 	<div style="margin-top: 50px;">
