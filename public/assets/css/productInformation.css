@@ -12,211 +12,242 @@ body {
 	overflow-x: hidden;
 }
 ul, ol {
-list-style: none;
+    list-style: none;
 }
+
 h1 {
-float: left;
-overflow: hidden;
-font-size: 24px;
-color: #333;
-margin: 0 0 0 10px;
-line-height: 40px;
+    float: left;
+    overflow: hidden;
+    font-size: 24px;
+    color: #333;
+    margin: 0 0 0 10px;
+    line-height: 40px;
 }
+
 section {
-max-width: 1200px;
-width: 100%;
-min-width: 980px;
-margin: 55px auto 0;
-position: relative;
+    max-width: 1200px;
+    width: 100%;
+    min-width: 980px;
+    margin: 55px auto 0;
+    position: relative;
 }
+
 .breadcrumb {
-	display: block;
-overflow: hidden;
-	margin: 0 10px;
-background: #fff;
-line-height: 32px;
-	padding-top: 5px;
+    display: block;
+    overflow: hidden;
+    margin: 0 10px;
+    background: #fff;
+    line-height: 32px;
+    padding-top: 5px;
 }
+
 .breadcrumb li a {
-display: inline-block;
-white-space: nowrap;
-font-size: 14px;
-color: #288ad6;
-padding: 0 10px 0 0;
+    display: inline-block;
+    white-space: nowrap;
+    font-size: 14px;
+    color: #288ad6;
+    padding: 0 10px 0 0;
 }
+
 .ratingresult {
-float: left;
-font-size: 14px;
-	color: #288ad6;
-padding: 10px 10px 0 11px;
+    float: left;
+    font-size: 14px;
+    color: #288ad6;
+    padding: 10px 10px 0 11px;
 }
+
 .clr {
-clear: both;
+    clear: both;
 }
+
 .picture {
-float: left;
-overflow: hidden;
-width: 42%;
-position: relative;
+    float: left;
+    overflow: hidden;
+    width: 42%;
+    position: relative;
 }
+
 .area_price {
-float: left;
-position: relative;
-width: 30%;
-margin: 0 1% 0 1%;
-display: block;
-overflow: hidden;
-line-height: 20px;
-padding: 0 10px 10px;
+    float: left;
+    position: relative;
+    width: 30%;
+    margin: 0 1% 0 1%;
+    display: block;
+    overflow: hidden;
+    line-height: 20px;
+    padding: 0 10px 10px;
 }
+
 .area_price strong {
-display: inline-block;
-overflow: hidden;
-font-size: 24px;
-color: #e10c00;
-vertical-align: middle;
-margin-right: 5px;
+    display: inline-block;
+    overflow: hidden;
+    font-size: 24px;
+    color: #e10c00;
+    vertical-align: middle;
+    margin-right: 5px;
 }
+
 .tsh {
-background-color: #ecf7ed;
-border-radius: 3px;
-border: solid 1px #c4ddc8;
-margin: 5px 10px 10px;
-padding: 0 10px;
-font-weight: bold;
-line-height: 30px;
+    background-color: #ecf7ed;
+    border-radius: 3px;
+    border: solid 1px #c4ddc8;
+    margin: 5px 10px 10px;
+    padding: 0 10px;
+    font-weight: bold;
+    line-height: 30px;
 }
+
 .tsh span {
-line-height: 30px;
-padding-left: 10px;
-border-left: 1px solid #c4ddc8;
-display: block;
-color: #30a43b;
-margin-left: 28px;
+    line-height: 30px;
+    padding-left: 10px;
+    border-left: 1px solid #c4ddc8;
+    display: block;
+    color: #30a43b;
+    margin-left: 28px;
 }
+
 .area_promotion {
-display: block;
-overflow: hidden;
-border: 1px solid #ddd;
-border-radius: 4px;
-position: relative;
-margin: 5px 10px 12px;
-background: #fff;
-padding-bottom: 10px;
+    display: block;
+    overflow: hidden;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    position: relative;
+    margin: 5px 10px 12px;
+    background: #fff;
+    padding-bottom: 10px;
 }
+
 .area_promotion strong {
-display: block;
-overflow: hidden;
-font-size: 15px;
-color: #333;
-padding: 15px 15px 10px 15px;
-text-transform: uppercase;
+    display: block;
+    overflow: hidden;
+    font-size: 15px;
+    color: #333;
+    padding: 15px 15px 10px 15px;
+    text-transform: uppercase;
 }
+
 .area_promotion h3 {
-display: flex;
-align-items: center;
-height: auto;
-min-height: 50px;
-font-size: 14px;
-padding-right: 15px;
-line-height: 20px;
-float: left;
-width: calc(100% - 100px);
-margin: 0 10px 0 15px;
+    display: flex;
+    align-items: center;
+    height: auto;
+    min-height: 50px;
+    font-size: 14px;
+    padding-right: 15px;
+    line-height: 20px;
+    float: left;
+    width: calc(100% - 100px);
+    margin: 0 10px 0 15px;
 }
+
 .rightInfo {
-float: right;
-width: 22.5%;
-overflow: visible;
-background: #fff;
-position: relative;
+    float: right;
+    width: 22.5%;
+    overflow: visible;
+    background: #fff;
+    position: relative;
 }
+
 .policy {
-display: block;
-overflow: hidden;
-border: 1px solid #ddd;
-border-radius: 3px;
-padding-bottom: 5px;
-margin-bottom: 10px;
-padding-top: 10px;
+    display: block;
+    overflow: hidden;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    padding-top: 10px;
 }
+
 .policy li {
-display: block;
-overflow: hidden;
-padding: 5px 0 5px 28px;
-font-size: 14px;
-color: #333;
-line-height: 20px;
-margin: 0 10px;
-border-bottom: solid 1px #f0f0f0;
-position: relative;
-margin: 0 10px 0 0px;
+    display: block;
+    overflow: hidden;
+    padding: 5px 0 5px 28px;
+    font-size: 14px;
+    color: #333;
+    line-height: 20px;
+    margin: 0 10px;
+    border-bottom: solid 1px #f0f0f0;
+    position: relative;
+    margin: 0 10px 0 0px;
 }
+
 .checkexist {
-background: #fff;
-position: relative;
+    background: #fff;
+    position: relative;
 }
+
 .checkexist strong {
-display: inline-block;
-overflow: hidden;
-font-size: 16px;
-color: #288ad6;
-vertical-align: middle;
-margin-right: 5px;
+    display: inline-block;
+    overflow: hidden;
+    font-size: 16px;
+    color: #288ad6;
+    vertical-align: middle;
+    margin-right: 5px;
 }
+
 div {
-display: block;
+    display: block;
 }
+
 .clr {
-clear: both;
+    clear: both;
 }
+
 .box_content {
-display: block;
-overflow: hidden;
-border-top: 1px solid #e4e4e4;
-margin-top: 15px;
+    display: block;
+    overflow: hidden;
+    border-top: 1px solid #e4e4e4;
+    margin-top: 15px;
 }
+
 .left_content {
-float: left;
-width: 65%;
-overflow: hidden;
-position: relative;
-margin: 20px 0;
+    float: left;
+    width: 65%;
+    overflow: hidden;
+    position: relative;
+    margin: 20px 0;
 }
+
 .characteristics {
-display: block;
-overflow: hidden;
-position: relative;
-padding-bottom: 20px;
-cursor: pointer;
+    display: block;
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 20px;
+    cursor: pointer;
 }
+
 .slideshow-container {
-  max-width: 780px;
-  position: relative;
-  margin: auto;
+    max-width: 780px;
+    position: relative;
+    margin: auto;
 }
+
 /* Ẩn các slider */
+
 .mySlides {
     display: none;
 }
 
 /* Thêm hiệu ứng khi chuyển đổi các slide */
+
 .fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 3s;
-  animation-name: fade;
-  animation-duration: 3s;
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 3s;
+    animation-name: fade;
+    animation-duration: 3s;
 }
+
 .right_content {
     float: right;
     width: 30%;
     overflow: visible;
     margin: 20px 0;
 }
+
 .tableparameter {
     display: block;
     overflow: visible;
 }
+
 .parameter {
     display: block;
     position: relative;
@@ -224,6 +255,7 @@ cursor: pointer;
     background: #fff;
     padding-top: 10px;
 }
+
 .parameter li {
     display: table;
     background: #fff;
@@ -231,6 +263,7 @@ cursor: pointer;
     border-top: 1px solid #eee;
     padding: 5px 0;
 }
+
 .parameter li span {
     display: table-cell;
     width: 40%;
@@ -239,6 +272,7 @@ cursor: pointer;
     font-size: 14px;
     color: #666;
 }
+
 header {
     position: absolute;
     top: 0;
@@ -246,15 +280,18 @@ header {
     width: 100%;
     height: 55px;
 }
+
 .container {
     display: flex;
     flex-flow: row wrap;
 }
+
 .columns {
     width: 192px;
     padding: 10px;
     font-size: 12px;
 }
+
 .info {
     list-style-type: none;
     /*border: 2px solid #fff;*/
@@ -263,26 +300,32 @@ header {
     -webkit-transition: 0.1s;
     transition: 0.1s;
 }
+
 .info li {
     /*border-bottom: 1px solid #fff;*/
     padding: 3px;
     text-align: center;
 }
+
 .info:hover {
     /*border: 2px solid #444444;*/
     box-shadow: 0px 8px 12px 0px rgba(0, 0, 0, 0.5)
 }
+
 .info_name {
     color: #333333;
     font-weight: bold;
 }
+
 .info_price {
     font-size: 14px;
     color: #ffae00;
 }
+
 .info_sum {
     color: #333333;
 }
+
 /*.info_link a {
     text-decoration: none;
 }*/
@@ -300,26 +343,30 @@ header {
     border-radius: 10px;
     background-color: #00aaff;
 }
+
 .see-more:hover {
     background-color: #0073f7;
 }
 
 .side-button button {
-    background-color: #f1f1f1; /* Green background */
-    border: 1px solid #f1f1f1; /* Green border */
-    color: #444444; /* White text */
+    background-color: #f1f1f1;
+    /* Green background */
+    border: 1px solid #f1f1f1;
+    /* Green border */
+    color: #444444;
+    /* White text */
     font-weight: bold;
-    padding: 10px 20px; /* Some padding */
-    cursor: pointer; /* Pointer/hand icon */
-    width: 100%; /* Set a width if needed */
-    display: block; /* Make the buttons appear below each other */
+    padding: 10px 20px;
+    /* Some padding */
+    cursor: pointer;
+    /* Pointer/hand icon */
+    width: 100%;
+    /* Set a width if needed */
+    display: block;
+    /* Make the buttons appear below each other */
 }
 
-.side-button button:not(:last-child) {
-   /*border-bo*/
-}
-.buttonADD
-{
+.buttonADD {
     position: relative;
     background: #00aaff;
     width: 80%;

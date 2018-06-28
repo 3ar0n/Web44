@@ -17,7 +17,6 @@ router.post('/signin', (req, res) => {
     }
     accountModel.signin(user).then (rows => {
         if (rows.length > 0) {
-            //console.log('success');
             req.session.isLogged = true;
             req.session.user = rows[0];
 
@@ -28,11 +27,8 @@ router.post('/signin', (req, res) => {
             }
         }
         else {
-            //console.log('fail');
-            var vm = {
-                fail:true
-            }
-            res.render('account/signin', vm);
+            alert("Đăng nhập thất bại");
+            res.render('account/signin');
         }
     })
 });
@@ -43,23 +39,14 @@ router.post('/signup', (req, res) => {
         password: req.body.password,
         fullName: req.body.fullName,
         phone: req.body.phone,
-        address: req.body.address
+        address: req.body.address,
+        isAdmin: 0
     }
-    accountModel.signup(user).then (rows => {
-        if (rows.length > 0) {
-            console.log('success');
-            req.session.isLogged = true;
-            req.session.user = rows[0];
-            res.render('account/signup');
-        }
-        else {
-            console.log('fail');
-            var vm = {
-                fail:true
-            }
-            res.render('account/signup', vm);
-        }
-    })
+    accountModel.addUser(user).then (rows => {
+        res.redirect('/account/signin');
+    }).catch(err => {
+        res.end('fail');
+    });
 });
 
 router.post('/logout', (req, res) => {

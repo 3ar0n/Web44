@@ -1,0 +1,79 @@
+{{#section 'title'}}Dashboard{{/section}}
+
+{{#section 'css_js'}}
+    <link rel="stylesheet" type="text/css" href="/assets/css/bootstrap.min.css">
+    <script type="text/javascript" src="/assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/assets/js/jquery-3.3.1.min.js"></script> 
+{{/section}}
+
+<div class="col-md-3" style="padding-top:10px;">
+    <div class="panel panel-info">
+        <div class="list-group">
+            <a href="/admin/user" class="list-group-item">
+                <span class="glyphicon glyphicon-user"></span> Người dùng</a>
+            <a href="/admin/category" class="list-group-item">
+                <span class="glyphicon glyphicon-flag"></span> Loại sản phẩm</a>
+            <a href="/admin/brand" class="list-group-item">
+                <span class="glyphicon glyphicon-list-alt"></span> Nhà sản xuất</a>
+            <a class="list-group-item active">
+                <span class="glyphicon glyphicon-tag"></span> Sản phẩm</a>
+            <a href="/admin/cart" class="list-group-item">
+                <span class="glyphicon glyphicon-shopping-cart"></span> Đơn hàng</a>
+        </div>
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-9 col-md-9 col-lg-9">
+            <div class="panel panel-default" style="border-style: hidden; box-shadow: 0 0 0 0;">
+                <div class="panel-body">
+                    {{!-- do something here --}}
+                    <div class="text-center lead">
+                        <h3>
+                            <strong>Danh mục sản phẩm</strong>
+                        </h3>
+                    </div>
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th class="col-md-1">ID</th>
+                                <th class="col-md-3">Tên sản phẩm</th>
+                                <th class="col-md-1">Giá</th>
+                                <th>Ngày nhập</th>
+                                <th>Xem</th>
+                                <th>Mua</th>
+                                <th>Tồn</th>
+                                <th class="col-md-1">&nbsp;</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {{#each products}}
+                            <tr>
+                                <td>{{proID}}</td>
+                                <td>{{proName}}</td>
+                                <td>{{price}}</td>
+                                <td>{{addedDay}}</td>
+                                <td>{{totalView}}</td>
+                                <td>{{totalBought}}</td>
+                                <td>{{inStorage}}</td>
+                                <td class="text-center">
+                                    <a class="btn btn-primary btn-xs" href="/admin/product/edit?id={{proID}}" role="button">
+                                        <span class="glyphicon glyphicon-wrench"></span>
+                                    </a>
+                                    <a class="btn btn-danger btn-xs" href="/admin/product/delete?id={{proID}}" role="button">
+                                        <span class="glyphicon glyphicon-trash"></span>
+                                    </a>
+                                </td>
+                            </tr>
+                            {{/each}}
+                        </tbody>
+                    </table>
+                    <a class="btn btn-large btn-block btn-primary" href="/admin/product/add" role="button">
+                        <span class="glyphicon glyphicon-plus"></span>
+                        Thêm sản phẩm
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

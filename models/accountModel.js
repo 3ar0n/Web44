@@ -11,3 +11,14 @@ exports.signup = (user) => {
     and phone = '${user.phone}' and address = '${user.address}'`;
     return database.load(sql);
 }
+
+exports.loadUsers = () => {
+    var sql = `select email, fullName, phone, address, isAdmin from users`;
+    return database.load(sql);
+}
+
+exports.addUser = (user) => {
+    var sql = `insert into users(email, password, fullName, phone, address, isAdmin)
+    values('${user.email}', '${user.password}', '${user.fullName}', '${user.phone}', '${user.address}', '${user.isAdmin}')`;
+    return database.save(sql);
+}

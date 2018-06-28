@@ -15,7 +15,8 @@ const adminController = require('./controllers/adminController');
 // Middle-wares
 const handle404 = require('./middle-wares/handle404'),
       handleLayout = require('./middle-wares/handleLayout'),
-      restrict = require('./middle-wares/restrict');
+      restrict = require('./middle-wares/restrict'),
+      restrictAdmin = require('./middle-wares/restrictAdmin');
 
 const app = express();
 const port = 3000;
@@ -76,9 +77,9 @@ app.get('/home', (req, res) => {
 });
 
 app.use('/', homeController);
-app.use('/product',productController);
-app.use('/account',accountController);
-app.use('/admin',adminController);
+app.use('/product', productController);
+app.use('/account', accountController);
+app.use('/admin', restrictAdmin, adminController);
 
 app.use(handle404);
 

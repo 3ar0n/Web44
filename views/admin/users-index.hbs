@@ -1,0 +1,70 @@
+{{#section 'title'}}Dashboard{{/section}}
+
+{{#section 'css_js'}}
+    <link rel="stylesheet" type="text/css" href="/assets/css/bootstrap.min.css">
+    <script type="text/javascript" src="/assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/assets/js/jquery-3.3.1.min.js"></script> 
+{{/section}}
+
+<div class="col-md-3" style="padding-top:10px;">
+  <div class="panel panel-info">
+    <div class="list-group">
+      <a class="list-group-item active">
+        <span class="glyphicon glyphicon-user"></span> Người dùng</a>
+      <a href="/admin/category" class="list-group-item">
+        <span class="glyphicon glyphicon-flag"></span> Loại sản phẩm</a>
+      <a href="/admin/brand" class="list-group-item">
+        <span class="glyphicon glyphicon-list-alt"></span> Nhà sản xuất</a>
+      <a href="/admin/product" class="list-group-item">
+        <span class="glyphicon glyphicon-tag"></span> Sản phẩm</a>
+      <a href="/admin/cart" class="list-group-item">
+        <span class="glyphicon glyphicon-shopping-cart"></span> Đơn hàng</a>
+    </div>
+  </div>
+</div>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-9 col-md-9 col-lg-9">
+      <div class="panel panel-default" style="border-style: hidden; box-shadow: 0 0 0 0;">
+        <div class="panel-body">
+          {{!-- do something here --}}
+          <div class="text-center lead">
+            <h3>
+              <strong>Danh sách người dùng</strong>
+            </h3>
+          </div>
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th>email</th>
+                <th>Họ tên</th>
+                <th>Điện thoại</th>
+                <th>Địa chỉ</th>
+                <th class="text-center">Quản trị</th>
+              </tr>
+            </thead>
+            <tbody>
+              {{#each users}}
+              <tr>
+                <td>{{email}}</td>
+                <td>{{fullName}}</td>
+                <td>{{phone}}</td>
+                <td>{{address}}</td>
+                {{#if isAdmin}}
+                <td class="text-center">
+                  <span class="glyphicon glyphicon-ok"></span>
+                </td>
+                {{else}}
+                <td class="text-center">
+                  <span class="glyphicon glyphicon-remove"></span>
+                </td>
+                {{/if}}
+              </tr>
+              {{/each}}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
