@@ -1,0 +1,48 @@
+{{#section 'title'}}giỏ hàng{{/section}}
+
+{{#section 'css_js'}}
+
+    <link rel="stylesheet" type="text/css" href="/assets/css/productInformation.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/bootstrap.min.css">
+    <script type="text/javascript" src="/assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/assets/js/jquery-3.3.1.min.js"></script> 
+{{/section}}
+
+<section style="z-index: 0; background-color: white;">
+	<div class="container-fluid">
+	    <div class="row">
+	        <div class="col-sm-12 col-md-12 col-lg-12">
+	            <div class="panel panel-default" style="border-style: hidden; box-shadow: 0 0 0 0;">
+	                <div class="panel-body">
+	                    <div class="text-center lead">
+	                        <h3>
+	                            <strong>Chi tiết đơn hàng</strong>
+	                        </h3>
+	                    </div>
+	                    <table class="table table-hover">
+	                        <thead>
+	                            <tr>
+	                                <th>Sản phẩm</th>
+	                                <th>Đơn giá</th>
+	                                <th>Số lượng</th>
+	                            </tr>
+	                        </thead>
+	                        <tbody>
+	                            <tr>
+	                                <td>{{cartID}} </td>
+	                                <td>{{email}}  đ</td>
+	                                <td>{{createDate}} </td>
+	                            </tr>
+	                        </tbody>
+	                    </table>
+	                    <div class="text-center">
+	                        <h3>
+	                            <strong>Tổng tiền = ... đ</strong>
+	                        </h3>
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+	</div>
+</section>

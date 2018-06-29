@@ -3,7 +3,7 @@ const productModel = require('../models/productModel');
 //const addToCart = require('../models/addCart');
 const router = express.Router();
 
-var i = 0;
+//var i = 0;
 router.get('/', (req, res) => {
 	res.redirect('/');
 });
