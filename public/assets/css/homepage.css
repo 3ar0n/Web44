@@ -1,7 +1,7 @@
 body {
     background-color: #EEEEEE;
     margin: 0;
-    font-family: Verdana, Geneva, sans-serif;
+	font-family: Arial, Helvetica, sans-serif;
 }
 
 .footer {
@@ -78,7 +78,7 @@ p.catergory {
 .info_name {
     color: #002255;
     font-weight: bold;
-    font-size: 14px;
+    font-size: 16px;
     max-width: 190px;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -89,7 +89,8 @@ p.catergory {
     height: 182px;
 }
 .info_price {
-    font-size: 13px;
+    margin-top: 5px;
+    font-size: 16px;
     font-weight: bold;
     color: #e10c00;
 }
@@ -140,12 +141,12 @@ p.catergory {
     flex-wrap: wrap;
 }
 .main-content .side {
-    flex: 23%;
+    flex: 18%;
     background-color: #f1f1f1;
     padding: 20px;
 }
 .main-content .main {
-    flex: 77%;
+    flex: 82%;
     background-color: white;
     padding: 20px;
 }
@@ -190,7 +191,7 @@ p.catergory {
     padding-left: 35px;
     margin-bottom: 12px;
     cursor: pointer;
-    font-size: 18px;
+    font-size: 14px;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
