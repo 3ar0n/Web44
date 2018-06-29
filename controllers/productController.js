@@ -1,11 +1,12 @@
 const express = require('express');
 const productModel = require('../models/productModel');
+const addToCart = require('../models/addCart');
 const router = express.Router();
 
+var i = 0;
 router.get('/', (req, res) => {
 	res.redirect('/');
 });
-
 router.get('/view', (req, res) => {
 	var proID = req.query.id
 	productModel.loadDetail(proID).then(rows => {
@@ -24,5 +25,36 @@ router.get('/view', (req, res) => {
 		})
 	})
 });
+router.post('/', (req, res) => {
+	var check = addToCart();
+	if(check === true){
+		var link = window.location.search.substring(1);
+		var id = link.split('=');
+		var dateTime = new Date();
+		var cart{
+			cartID: i,
+			proID: id[1],
+			quantity: 1
+		}
+		addToCart.addCart(cart).then (rows => {
+                res.redirect('/');
+            }).catch(err => {
+                console.log(err);
+                res.end('fail');
+            });
+        var cartIF{
+        	cartID: i,,
+			email: req.session.user,
+			date: dateTime
+        }
+        addToCart.addCartIF(cartIF).then (rows => {
+                res.redirect('/');
+            }).catch(err => {
+                console.log(err);
+                res.end('fail');
+            });
+        i++;
+	}
+})
 
 module.exports = router;

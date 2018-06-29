@@ -3,6 +3,7 @@
 {{#section 'css_js'}}
     <link rel="stylesheet" type="text/css" href="/assets/css/productInformation.css">
     <link rel="stylesheet" type="text/css" href="/assets/css/homepage.css">
+    <script type="text/javascript" src="/assets/js/cart.js"></script> 
 {{/section}}
 
 {{!-- Bên dưới này là nội dung trình bày body của template: {{{body}}} tronng main.handlebars --}}
@@ -32,7 +33,7 @@
             <strong data-count="3">Số lượt mua</strong>
             <h3>{{totalBought}} lượt mua</h3>
         </div>
-        <button type="submit" class="buttonADD" style="margin-top: 0;">ADD TO CART</button>
+        <button type="submit" class="buttonADD" style="margin-top: 0;" onclick="addToCart()">ADD TO CART</button>
     </aside>
     {{/with}}
     <div class="rightInfo">
@@ -125,7 +126,7 @@
                     </li>
                     <li>
                         <span>Hệ điều hành:</span>
-                        <span>{{os}}</span>
+                        <span>{{OS}}</span>
                         <li>
                             <span>Camera sau:</span>
                             <span>{{rearCam}} MP</span>
@@ -136,11 +137,11 @@
                         </li>
                         <li>
                             <span>CPU:</span>
-                            <span>{{cpu}}</span>
+                            <span>{{CPU}}</span>
                         </li>
                         <li>
                             <span>Ram:</span>
-                            <span>{{ram}} GB</span>
+                            <span>{{RAM}} GB</span>
                         </li>
                         <li>
                             <span>Bộ nhớ trong:</span>
@@ -148,7 +149,7 @@
                         </li>
                         <li>
                             <span>Thẻ SIM:</span>
-                            <span>{{sim}}</span>
+                            <span>{{SIM}}</span>
                         </li>
                         <li>
                             <span>Dung lượng pin</span>

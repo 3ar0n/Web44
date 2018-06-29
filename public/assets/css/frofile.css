@@ -9,7 +9,7 @@ body
 }
 .title
 {
-    margin-top: 55px;
+    margin-top: 25px;
     position: relative;
     padding-top: 2vh;
     padding-bottom: 1vh;
@@ -17,15 +17,19 @@ body
     font-family: Helvetica;
     font-size: 26px;
     font-weight: bold;
-    color: #ff8383;
+    color: #00aaff;
+}
+.profile
+{
+    margin-top: 100px;
 }
 .line
 {
     position: relative;
-    margin-bottom: 1vh;
+    margin-bottom: 10vh;
     width: 100%;
     float: left;
-    background-color: #ff8383;
+    background-color: #00aaff;
     height: 2px;
 }
 .inputs
@@ -55,7 +59,7 @@ body
 }
 .input:focus
 {
-    border-bottom: 2px solid #ff8383;
+    border-bottom: 2px solid #00aaff;
 }
 .button
 {
@@ -64,8 +68,7 @@ body
 .buttonEdit
 {
     position: relative;
-    background: rgba(255, 64, 88, 0.74);
-    box-shadow: 0px 2px 20px 2px rgba(255, 114, 132, 0.5);
+    background: #00aaff;
     border-radius: 8px;
     width: 80%;
     height: 10vh;
@@ -76,6 +79,40 @@ body
     margin-bottom: 6vh;
     cursor: pointer;
     transition: all 0.5s;
+}
+table {
+    width:100%;
+}
+table tr
+{
+    height: 5vh;
+}
+table tr:nth-child(even) {
+    background-color: #eee;
+}
+table tr:nth-child(odd) {
+    background-color: #fff;
+}
+table th {
+    background-color: #00aaff;
+    color: white;
+    height: 5vh;
+}
+table#td01 {
+    position: relative;
+    width:100%;
+}
+.button_table {
+    background-color: #00aaff;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
 }
 @media (max-width: 1024px)
 {
