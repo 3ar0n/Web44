@@ -31,6 +31,11 @@ app.engine('hbs', exphbs({
                 thousand: '.'
             });
             return nf.to(n);
+        },
+        date_format: d => {
+            var day = new Date(d);
+            var str = day.getFullYear() + '-' + (day.getMonth() + 1) + '-' + day.getDate();
+            return str;
         }
     }
 }));

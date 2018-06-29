@@ -48,3 +48,13 @@ exports.loadSameCat = (proID, catID) => {
     var sql = `SELECT * FROM products WHERE catID = ${catID} AND proID <> ${proID} limit ${config.SAME_ITEMS}`;
     return database.load(sql);
 }
+
+exports.getInt = (proID) => {
+    var sql = `SELECT totalView, totalBought, inStorage FROM products WHERE proID = ${proID}`;
+    return database.load(sql);
+}
+
+exports.postInt = (proID, newView, newBought, newStore) => {
+    var sql = `UPDATE products set totalView = ${newView}, totalBought = ${newBought}, inStorage = ${newStore} WHERE proID = ${proID}`;
+    return database.save(sql);
+}
