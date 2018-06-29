@@ -27,3 +27,8 @@ exports.checkEmail = (email) => {
     var sql = `SELECT * FROM users WHERE email = '${email}'`;
     return database.load(sql);
 }
+
+exports.load = (user) => {
+    var sql = `select * from users where email = '${user.email}'`;
+    return database.load(sql);
+}
