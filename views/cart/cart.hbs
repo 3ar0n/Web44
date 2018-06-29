@@ -1,6 +1,8 @@
 {{#section 'title'}}giỏ hàng{{/section}}
 
 {{#section 'css_js'}}
+
+    <link rel="stylesheet" type="text/css" href="/assets/css/productInformation.css">
     <link rel="stylesheet" type="text/css" href="/assets/css/bootstrap.min.css">
     <script type="text/javascript" src="/assets/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="/assets/js/jquery-3.3.1.min.js"></script> 
@@ -14,7 +16,7 @@
 	                <div class="panel-body">
 	                    <div class="text-center lead">
 	                        <h3>
-	                            <strong>Chi tiết mã đơn hàng</strong>
+	                            <strong>Chi tiết đơn hàng</strong>
 	                        </h3>
 	                    </div>
 	                    <table class="table table-hover">
@@ -27,15 +29,15 @@
 	                        </thead>
 	                        <tbody>
 	                            <tr>
-	                                <td> </td>
-	                                <td>  đ</td>
-	                                <td> </td>
+	                                <td>{{cartID}} </td>
+	                                <td>{{email}}  đ</td>
+	                                <td>{{createDate}} </td>
 	                            </tr>
 	                        </tbody>
 	                    </table>
 	                    <div class="text-center">
 	                        <h3>
-	                            <strong>Tổng tiền = {{number_format sum}} đ</strong>
+	                            <strong>Tổng tiền = ... đ</strong>
 	                        </h3>
 	                    </div>
 	                </div>

@@ -11,6 +11,7 @@ const homeController = require('./controllers/homeController');  // example
 const productController = require('./controllers/productController');
 const accountController = require('./controllers/accountController');
 const adminController = require('./controllers/adminController');
+const cartController = require('./controllers/cartController');
 
 // Middle-wares
 const handle404 = require('./middle-wares/handle404'),
@@ -85,6 +86,7 @@ app.use('/', homeController);
 app.use('/product', productController);
 app.use('/account', accountController);
 app.use('/admin', restrictAdmin, adminController);
+app.use('/cart', cartController)
 
 app.use(handle404);
 
