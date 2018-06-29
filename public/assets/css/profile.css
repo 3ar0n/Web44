@@ -7,7 +7,7 @@ body
     font-family: 'Century Gothic', sans-serif;
     transition: 0.5s;
 }
-.title
+.p_title
 {
     margin-top: 25px;
     position: relative;
@@ -19,11 +19,11 @@ body
     font-weight: bold;
     color: #00aaff;
 }
-.profile
+.p_profile
 {
     margin-top: 100px;
 }
-.line
+.p_line
 {
     position: relative;
     margin-bottom: 10vh;
@@ -32,7 +32,7 @@ body
     background-color: #00aaff;
     height: 2px;
 }
-.inputs
+.p_inputs
 {
     position: relative;
     float: left;
@@ -40,7 +40,7 @@ body
     margin-top: 2vh;
     text-align: center;
 }
-.input
+.p_input
 {
     float: none;
     position: relative;
@@ -57,15 +57,15 @@ body
     opacity: 1;
     display: inline-block;
 }
-.input:focus
+.p_input:focus
 {
     border-bottom: 2px solid #00aaff;
 }
-.button
+.p_button
 {
     text-align: center;
 }
-.buttonEdit
+.p_buttonEdit
 {
     position: relative;
     background: #00aaff;
@@ -102,7 +102,7 @@ table#td01 {
     position: relative;
     width:100%;
 }
-.button_table {
+.p_button_table {
     background-color: #00aaff;
     border: none;
     color: white;
@@ -116,18 +116,18 @@ table#td01 {
 }
 @media (max-width: 1024px)
 {
-    .buttonEdit
+    .p_buttonEdit
     {
         margin-top: 6vh;
     }
-    .title
+    .p_title
     {
         font-size: 36px;
     }
 }
 @media (max-width: 765px)
 {
-    .title
+    .p_title
     {
         font-size: 26px;
     }

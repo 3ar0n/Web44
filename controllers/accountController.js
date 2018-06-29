@@ -4,7 +4,7 @@ const restrict = require('../middle-wares/restrict');
 const router = express.Router();
 
 router.get('/', restrict, (req, res) => {
-    res.render('account/frofile');
+    res.render('account/profile');
     /*accountModel.load(res.locals.layoutVM.curUser).then(rows => {
         req.session.user = rows[0];
         var vm = {
