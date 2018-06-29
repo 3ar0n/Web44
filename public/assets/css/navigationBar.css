@@ -7,8 +7,8 @@
 .search-bar
 {
     float: left;
-    width: 30vw;
-    margin-top: 9px;
+    width: 15vw;
+    margin-top: 5px;
     margin-left: 6vw;
 }
 .search-bar input[type=text] {
@@ -18,7 +18,7 @@
     border-radius: 4px;
     font-size: 14px;
     background-color: white;
-    padding: 8px 20px 5px 10px;
+    padding: 7px 20px 7px 10px;
     /*-webkit-transition: width 0.4s ease-in-out;
     transition: width 0.4s ease-in-out;*/
 }
@@ -27,7 +27,7 @@
     top : 0px;
     position: fixed;
     width: 100%;
-    height: 55px;
+    height: 46px;
     background-color: #00aaff;
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -35,11 +35,11 @@
 .navigation-bar a{
     z-index: 5;
     float: right;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 500;
     color: white;
     text-align: center;
-    padding: 14px 16px;
+    padding: 11px 13px;
     text-decoration: none;
 }
 .dropdown {
@@ -49,16 +49,16 @@
 .dropdown .button {
     z-index: 5;
     cursor: pointer;
-    font-size: 16px;    
+    font-size: 15px;    
     border: none;
     outline: none;
     color: white;
-    padding: 14px 16px;
-    font-size: 18px;
+    padding: 11px 13px;
+    font-size: 16px;
     font-weight: 500;
     background-color: inherit;
     font-family: inherit;
-    margin: 0;
+    margin: 0px;
 }
 
 .navigation-bar a:hover, .dropdown:hover .button, .button:focus {
@@ -78,7 +78,8 @@
 .dropdown-content a {
     float: none;
     color: #00aaff;
-    padding: 12px 16px;
+    padding: 11px 13px;
+    font-size: 14px;  
     text-decoration: none;
     display: block;
     text-align: left;
@@ -90,9 +91,6 @@
 
 .show {
     display: block;
-}
-.navigation-bar a.dropdown-icon {
-    display: none;
 }
 
 @media screen and (max-width: 800px) {
@@ -109,19 +107,13 @@
     .navigation-bar a {
         display: none;
     }
-    .navigation-bar a.dropdown-icon {
-        display: block;
-    }
 
     .navigation-bar.responsive {
         z-index: 5;
         position: absolute;
         float: right;
     }
-    .navigation-bar.responsive a.dropdown-icon {
-        position: absolute;
-        float: right;
-    }
+
     .navigation-bar.responsive a{
         width: 100%;
         display: block;

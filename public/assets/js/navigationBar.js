@@ -15,6 +15,10 @@ function typeFunction() {
     document.getElementById("typeDropdown").classList.toggle("show");
 }
 
+function userFunction() {
+    document.getElementById("userDropdown").classList.toggle("show");
+}
+
 
 window.onclick = function(e) {
     if (!e.target.matches('.brandButton')) {
@@ -23,10 +27,16 @@ window.onclick = function(e) {
             myDropdown.classList.remove('show');
         }
     }
-  if (!e.target.matches('.typeButton')) {
+    if (!e.target.matches('.typeButton')) {
         var myDropdown = document.getElementById("typeDropdown");
         if (myDropdown.classList.contains('show')) {
             myDropdown.classList.remove('show');
         }
-  }
+    }
+    if (!e.target.matches('.userButton')) {
+        var myDropdown = document.getElementById("userDropdown");
+        if (myDropdown.classList.contains('show')) {
+            myDropdown.classList.remove('show');
+        }
+    }
 }

@@ -16,43 +16,49 @@
 		<form id="frmLogout" method="post" action="/account/logout"></form>
 		{{#if layoutVM.curUser.isAdmin}}
 		<a href="#" onclick="log_out()">📤 Đăng xuất</a>
-		<a href="#">👤 Admin</a>
 		{{else}}
 		<form class="search-bar">
 			<input type=text name="search" placeholder="Tìm kiếm...">
 		</form>
-		<a href="javascript:void(0);" class="dropdown-icon" onclick="dropdownNav()">&#9776;</a>
+		{{!-- <a href="javascript:void(0);" class="dropdown-icon" onclick="dropdownNav()">&#9776;</a> --}}
+		<a href="/cart">🛒 Giỏ hàng</a>
 		{{#if layoutVM.isLogged}}
-		<a href="#" onclick="log_out()">📤 Đăng xuất</a>
-		<a href="#">👤 {{layoutVM.username}}</a>
+		<div class="user dropdown">
+			<button class="userButton button" onclick="userFunction()">
+				👤 {{layoutVM.username}}▾
+			</button>
+			<div class="dropdown-content" id="userDropdown">
+				<a href="/account">Thông tin cá nhân</a>
+				<a href="#" onclick="log_out()">Đăng xuất</a>
+			</div>
+		</div>
 		{{else}}
-		<a href="/account/signup">📑 Đăng ký</a>
+		<a href="/account/signup">📋 Đăng ký</a>
 		<a href="/account/signin">📥 Đăng nhập</a>
 		{{/if}}
-		<a href="/">🏠 Trang chủ</a>
-		{{!-- Brands and Types --}}
 		<div class="brand dropdown">
 			<button class="brandButton button" onclick="brandFunction()">
-				⇩ Hãng
+				🔖 Thương hiệu▾
 			</button>
 			<div class="dropdown-content" id="brandDropdown">
-				<a href="#">Apple</a>
-				<a href="#">Bphone</a>
-				<a href="#">Htc</a>
+				<a href="/view?brand=0">Apple</a>
+				<a href="/view?brand=1">Bphone</a>
+				<a href="/view?brand=2">Htc</a>
 			</div>
 		</div> 
 		<div class="type dropdown">
 			<button class="typeButton button" onclick="typeFunction()">
-				⇩ Loại
+				📱 Loại▾
 			</button>
 			<div class="dropdown-content" id="typeDropdown">
-				<a href="#">Điện thoại</a>
-				<a href="#">Máy tính bảng</a>
+				<a href="/view?cat=0">Điện thoại</a>
+				<a href="/view?cat=1">Máy tính bảng</a>
 			</div>
-		</div> 
+		</div>
+		<a id="homepage" href="/">🏠 Trang chủ</a>
 		{{/if}}
 	</div>
-	<div style="margin-top: 50px;">
+	<div style="margin-top: 46px;">
 		{{{body}}}
 	</div>
 	
