@@ -58,3 +58,30 @@ exports.postInt = (proID, newView, newBought, newStore) => {
     var sql = `UPDATE products set totalView = ${newView}, totalBought = ${newBought}, inStorage = ${newStore} WHERE proID = ${proID}`;
     return database.save(sql);
 }
+
+exports.loadByCat = (id) => {
+    var sql = `SELECT * FROM products JOIN categories ON products.catID = categories.catID WHERE products.catID = ${id}`;
+    return database.load(sql);
+}
+
+exports.loadByBrand = (id) => {
+    var sql = `SELECT * FROM products JOIN brands ON products.brandID = brands.brandID WHERE products.brandID = ${id}`;
+    return database.load(sql);
+}
+
+exports.loadByBrandCat = (brandID, catID) => {
+    var sql = `SELECT * FROM products JOIN brands ON products.brandID = brands.brandID
+    JOIN categories ON products.catID = categories.catID
+    WHERE products.brandID = ${brandID} AND products.catID = ${catID}`;
+    return database.load(sql);
+}
+
+exports.loadCategories = () => {
+    var sql = `SELECT * FROM categories`;
+    return database.load(sql);
+}
+
+exports.loadBrand = () => {
+    var sql = `SELECT * FROM brands`;
+    return database.load(sql);
+}

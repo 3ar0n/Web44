@@ -1,3 +1,5 @@
+const productModel = require('../models/productModel');
+
 module.exports = (req, res, next) => {
 
 	if (req.session.isLogged === null) {
@@ -18,5 +20,11 @@ module.exports = (req, res, next) => {
         username: userName
     };
 
+    productModel.loadBrand().then(rows => {
+        res.locals.layoutVM.brand = rows;
+    });
+    productModel.loadCategories().then(rows => {
+        res.locals.layoutVM.cat = rows;
+    });
     next();
 };

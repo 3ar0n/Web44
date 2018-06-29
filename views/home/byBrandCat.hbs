@@ -1,0 +1,87 @@
+{{#section 'title'}}Sóng Thần - Smartphone & Tablet chính hãng{{/section}}
+
+{{#section 'css_js'}}
+    <link rel="stylesheet" type="text/css" href="/assets/css/homepage.css">
+    <script type="text/javascript" src="/assets/js/homepage.js"></script> 
+{{/section}}
+
+{{!-- Bên dưới này là nội dung trình bày body của template: {{{body}}} tronng main.handlebars --}}
+<button onclick="backToTopFunction()" id="backToTop">&#9650</button>
+
+<div class="main-content">
+    <div class="side">
+        {{!-- <p class="catergory">Nhà sản xuất</p>
+        <div class="side-button">
+            {{#each Category}}
+                <button class="home_sidebtn"><a href="/brand/view?id={{brandID}}">{{brandName}}</a></button>
+            {{/each}}
+        </div> --}}
+        
+        {{!-- Price --}}
+        <div class="title_side price">Giá</div>
+        <label class="container_side"><= 2.000.000
+            <input type="checkbox" checked="checked" name="checkbox_price">
+            <span class="checkmark_side"></span>
+        </label>
+        <label class="container_side">2.000.000 - 5.000.000
+            <input type="checkbox" name="checkbox_price">
+            <span class="checkmark_side"></span>
+        </label>
+        <label class="container_side">5.000.000 - 10.000.000
+            <input type="checkbox" name="checkbox_price">
+            <span class="checkmark_side"></span>
+        </label>
+        <label class="container_side">>= 10.000.000
+            <input type="checkbox" name="checkbox_price">
+            <span class="checkmark_side"></span>
+        </label>
+        {{!-- Brand --}}
+        <div class="title_side brand">Hãng</div>
+        <label class="container_side">Apple
+            <input type="checkbox" checked="checked" name="checkbox_brand">
+            <span class="checkmark_side"></span>
+        </label>
+        <label class="container_side">Htc
+            <input type="checkbox" name="checkbox_brand">
+            <span class="checkmark_side"></span>
+        </label>
+        <label class="container_side">Oppo
+            <input type="checkbox" name="checkbox_brand">
+            <span class="checkmark_side"></span>
+        </label>
+        <label class="container_side">Blackberry
+            <input type="checkbox" name="checkbox_brand">
+            <span class="checkmark_side"></span>
+        </label>
+        {{!-- Type --}}
+        <div class="title_side type">Loại</div>
+        <label class="container_side">Điện thoại
+            <input type="checkbox" checked="checked" name="checkbox_type">
+            <span class="checkmark_side"></span>
+        </label>
+        <label class="container_side">Máy tính bảng
+            <input type="checkbox" name="checkbox_type">
+            <span class="checkmark_side"></span>
+        </label>
+    </div>
+    <div class="main">
+        <p class="catergory"> {{cat}} {{brand}} </p>
+        <div class="container">
+            {{#each product}}
+            <div class="columns">
+                <ul class="info">
+                    <li class="info_name">{{proName}}</li>
+                    <li class="info_img">
+                        <img src="/img/product/{{imgLink}}" alt="image" style="width: 158px; height: 182px;">
+                    </li>
+                    <li class="info_price">{{number_format price}} đ</li>
+                    <li class="info_sum">{{shortInfo}}</li>
+                    <li class="info_link" style="text-align: right; font-size: 11px;">
+                        <a name="id" class="home_product_detail" href="/product/view?id={{proID}}">Chi tiết »</a>
+                    </li>
+                </ul>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+</div>

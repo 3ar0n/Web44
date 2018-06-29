@@ -21,4 +21,37 @@ router.get('/', (req, res) => {
     });
 });
 
+router.get('/view', (req, res) => {
+    var catID = req.query.cat;
+    var brandID = req.query.brand;
+    if (brandID == -1) {
+        productModel.loadByCat(catID).then(rows => {
+            var vm = {
+                cat: res.locals.layoutVM.cat[catID].catName,
+                product: rows
+            }
+            res.render('home/byBrandCat', vm);
+        })
+    } else {
+        if (catID == -1) {
+            productModel.loadByBrand(brandID).then(rows => {
+                var vm = {
+                    brand: res.locals.layoutVM.brand[brandID].brandName,
+                    product: rows
+                }
+                res.render('home/byBrandCat', vm);
+            })
+        } else {
+            productModel.loadByBrandCat(brandID, catID).then(rows => {
+                var vm = {
+                    brand: res.locals.layoutVM.brand[brandID].brandName,
+                    cat: res.locals.layoutVM.cat[catID].catName,
+                    product: rows
+                }
+                res.render('home/byBrandCat', vm);
+            })
+        }
+    }
+});
+
 module.exports = router;

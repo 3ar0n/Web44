@@ -41,9 +41,9 @@
 				🔖 Thương hiệu▾
 			</button>
 			<div class="dropdown-content" id="brandDropdown">
-				<a href="/view?brand=0">Apple</a>
-				<a href="/view?brand=1">Bphone</a>
-				<a href="/view?brand=2">Htc</a>
+				{{#each layoutVM.brand}}
+				<a href="/view?cat=-1&brand={{brandID}}">{{brandName}}</a>
+				{{/each}}
 			</div>
 		</div> 
 		<div class="type dropdown">
@@ -51,8 +51,9 @@
 				📱 Loại▾
 			</button>
 			<div class="dropdown-content" id="typeDropdown">
-				<a href="/view?cat=0">Điện thoại</a>
-				<a href="/view?cat=1">Máy tính bảng</a>
+				{{#each layoutVM.cat}}
+				<a href="/view?cat={{catID}}&brand=-1">{{catName}}</a>
+				{{/each}}
 			</div>
 		</div>
 		<a id="homepage" href="/">🏠 Trang chủ</a>
