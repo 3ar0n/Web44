@@ -81,7 +81,8 @@ body
     transition: all 0.5s;
 }
 table {
-    width:100%;
+    width:80%;
+    margin: 0 auto;
 }
 table tr
 {
@@ -103,10 +104,11 @@ table#td01 {
     width:100%;
 }
 .button_table {
+    width: 100%;
     background-color: #00aaff;
     border: none;
     color: white;
-    padding: 15px 32px;
+    padding: 15px 0px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
