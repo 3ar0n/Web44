@@ -8,13 +8,14 @@
     <div class="p_title">HỒ SƠ CÁ NHÂN</div>
     <span class="p_line"></span>
     <div class="p_inputs">
-        <input type="text" class="p_input" placeholder="Email" id="email_us" required="true" name="email" readonly/>
-        <input type="password" class="p_input" placeholder="Mật khẩu cũ" id="pass_us" required="true" name="password" readonly/>  
-        <input type="password" class="p_input" placeholder="Mật khẩu mới" id="pass_new_us" required="true" name="password_new"/>
-        <input type="password" class="p_input" placeholder="Nhập lại mật khẩu mới" id="conf_pass_new_us" required="true" name="password_new"/>
-        <input type="text" class="p_input" placeholder="Họ tên" id="name_us" required="true" name="fullName"/>
-        <input type="text" class="p_input" placeholder="Số điện thoại" id="phone_number_us" required="true" name="phone"/>                    
-        <input type="text" class="p_input" placeholder="Địa chỉ" id="address_us" required="true" name="address"/> 
+        {{#with User}}
+        <input type="text" class="p_input" placeholder="Email" id="email_us" name="email" value="{{email}}" readonly/>
+        <input type="text" class="p_input" placeholder="Họ tên" id="name_us" name="fullName" value="{{fullName}}"/>
+        <input type="text" class="p_input" placeholder="Số điện thoại" id="phone_number_us" name="phone" value="{{phone}}"/>                    
+        <input type="text" class="p_input" placeholder="Địa chỉ" id="address_us" name="address" value="{{address}}"/>
+        <input type="password" class="p_input" placeholder="Mật khẩu mới" id="pass_new_us" name="password_new"/>
+        <input type="password" class="p_input" placeholder="Nhập lại mật khẩu" id="conf_pass_new_us" name="password_rep"/>
+        {{/with}}
     </div>
     <div class="p_button">
         <button type="submit" class="p_buttonEdit" onclick="buttonEdit()">CẬP NHẬT THÔNG TIN</button>
@@ -25,28 +26,19 @@
         <tr>
             <th>Mã đơn hàng</th>
             <th>Ngày mua</th> 
-            <th>Tổng tiền</th>
             <th>Trạng thái</th>
             <th>Chi tiết</th>
         </tr>
+        {{#each Carts}}
         <tr>
-            <td>Jill</td>
-            <td>Smith</td>
-            <td>Tom</td>
-            <td>Done</td>
+            <td>{{cartID}}</td>
+            <td>{{date_format createDate}}</td>
+            <td>{{status}}</td>
             <td>
                 <a href="#" class="p_button_table">Chi tiết</a>
             </td>
         </tr>
-        <tr>
-            <td>Hello</td>
-            <td>ABC</td>
-            <td>Rouns</td>
-            <td>Done</td>
-            <td>
-                <a href="#" class="p_button_table">Chi tiết</a>
-            </td>
-        </tr>
+        {{/each}}
     </table>
     <div class="p_title"></div>
     <span class="p_line"></span>

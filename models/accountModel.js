@@ -32,3 +32,8 @@ exports.load = (user) => {
     var sql = `select * from users where email = '${user.email}'`;
     return database.load(sql);
 }
+
+exports.update = (user) => {
+    var sql = `UPDATE users set password = '${user.password}', fullName = '${user.fullName}', phone = '${user.phone}', address = '${user.address}' WHERE email = '${user.email}'`;
+    return database.save(sql);
+}
