@@ -1,136 +1,251 @@
-body
-{
+body {
+    background-color: #EEEEEE;
+    margin: 0;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.footer {
+    background-color: #0073f7;
+    padding: 5px;
+    text-align: left;
+}
+.footer p {
+    color: #FFFFFF;
+    text-align: center;
+}
+
+p.catergory {
+    /* text-transform: uppercase; */
+    color: #2196F3;
+    font-style: oblique;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+#backToTop {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 35px; /* Place the button at the bottom of the page */
+    right: 5px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: #0073f78a; /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 18px; /* Increase font size */
+}
+
+#backToTop:hover {
+    background-color: #0073f7d7; /* Add a dark-grey background on hover */
+}
+
+.container {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+/* Product infomation */
+.columns {
+    width: 196px;
+    padding: 10px;
+    font-size: 12px;
+}
+
+/*@media screen and (max-width: 800px) {
+    .columns { width: 33.333%; }
+}*/
+
+.info {
+    list-style-type: none;
+    /*border: 2px solid #fff;*/
     margin: 0;
     padding: 0;
-    width: 100%;
-    height: 100%;
-    font-family: 'Century Gothic', sans-serif;
-    transition: 0.5s;
+    -webkit-transition: 0.1s;
+    transition: 0.1s;
 }
-.title
-{
-    margin-top: 25px;
-    position: relative;
-    padding-top: 2vh;
-    padding-bottom: 1vh;
+.info li {
+    /*border-bottom: 1px solid #fff;*/
+    padding: 4px;
     text-align: center;
-    font-family: Helvetica;
-    font-size: 26px;
+}
+.info:hover {
+    /*border: 2px solid #444444;*/
+    box-shadow: 0px 8px 12px 0px rgba(0, 0, 0, 0.5)
+}
+.info_name {
+    color: #002255;
     font-weight: bold;
-    color: #00aaff;
+    font-size: 16px;
+    max-width: 190px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; 
 }
-.profile
-{
-    margin-top: 100px;
+.info_img {
+    width: 158px;
+    height: 182px;
 }
-.line
-{
-    position: relative;
-    margin-bottom: 10vh;
-    width: 100%;
-    float: left;
-    background-color: #00aaff;
-    height: 2px;
+.info_price {
+    margin-top: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #e10c00;
 }
-.inputs
-{
-    position: relative;
-    float: left;
-    width: 100%;
-    margin-top: 2vh;
-    text-align: center;
+.info_sum {
+    color: #333333;
 }
-.input
-{
-    float: none;
-    position: relative;
-    width: 80%;
-    margin: 1vh auto;
-    border: none;
-    border-bottom: 2px solid #b0bec5;
-    outline: none;
-    font-weight: normal;
-    color: #8ad8ff;
-    background-color: transparent;
-    transition: all 0.25s;
-    font-size: 3vh;
-    opacity: 1;
-    display: inline-block;
-}
-.input:focus
-{
-    border-bottom: 2px solid #00aaff;
-}
-.button
-{
-    text-align: center;
-}
-.buttonEdit
-{
-    position: relative;
-    background: #00aaff;
-    border-radius: 8px;
-    width: 80%;
-    height: 10vh;
-    border: none;
-    color: #ffffff;
-    font-size: 3vh;
-    margin-top: 6vh; /*22vh*/
-    margin-bottom: 6vh;
-    cursor: pointer;
-    transition: all 0.5s;
-}
-table {
-    width:80%;
-    margin: 0 auto;
-}
-table tr
-{
-    height: 5vh;
-}
-table tr:nth-child(even) {
-    background-color: #eee;
-}
-table tr:nth-child(odd) {
-    background-color: #fff;
-}
-table th {
-    background-color: #00aaff;
-    color: white;
-    height: 5vh;
-}
-table#td01 {
-    position: relative;
-    width:100%;
-}
-.button_table {
-    width: 100%;
-    background-color: #00aaff;
-    border: none;
-    color: white;
-    padding: 15px 0px;
+
+.see-more {
+    margin: auto;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
+    font-size: 14px;
+    font-weight: bold;
+    width: 100px;
+    display: block;
+    color: white;
+    padding: 2px;
+    border-radius: 10px;
+    background-color: #00aaff;
+}
+.see-more:hover {
+    background-color: #0073f7;
+}
+
+.side-button button {
+    background-color: #f1f1f1; /* Green background */
+    border: 1px solid #f1f1f1; /* Green border */
+    color: #444444; /* White text */
+    font-weight: bold;
+    padding: 10px 20px; /* Some padding */
+    cursor: pointer; /* Pointer/hand icon */
+    width: 100%; /* Set a width if needed */
+    display: block; /* Make the buttons appear below each other */
+}
+
+.side-button button:not(:last-child) {
+    border-bottom: none; /* Prevent double borders */
+}
+
+/* Add a background color on hover */
+.side-button button:hover {
+    color: white;
+    background-color: #0073f7;
+}
+
+.main-content {
+    display: flex;
+    flex-wrap: wrap;
+}
+.main-content .side {
+    flex: 18%;
+    background-color: #f1f1f1;
+    padding: 20px;
+}
+.main-content .main {
+    flex: 82%;
+    background-color: white;
+    padding: 20px;
+}
+
+@media screen and (max-width: 800px) {
+    .main-content {
+        flex-direction: column;
+    }
+}
+
+.home_sidebtn a {
+    color: black;
+    text-decoration: none;
+}
+
+.home_sidebtn a:hover {
+    color: white;
+}
+
+.home_product_detail {
+    color: #444444;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.home_product_detail:hover {
+    color: #00aaff;
+}
+
+
+/* Check Box */
+/* Title */
+.title_side
+{
+    font-weight: bold;
+    margin: 10px 0px;
+}
+/* The container */
+.container_side {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 14px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container_side input {
+    position: absolute;
+    opacity: 0;
     cursor: pointer;
 }
-@media (max-width: 1024px)
-{
-    .buttonEdit
-    {
-        margin-top: 6vh;
-    }
-    .title
-    {
-        font-size: 36px;
-    }
+
+/* Create a custom checkbox */
+.checkmark_side {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 18px;
+    width: 18px;
+    background-color: #fff;
 }
-@media (max-width: 765px)
-{
-    .title
-    {
-        font-size: 26px;
-    }
+
+/* On mouse-over, add a grey background color */
+.container_side:hover input ~ .checkmark_side {
+    background-color: #fff;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container_side input:checked ~ .checkmark_side {
+    background-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark_side:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.container_side input:checked ~ .checkmark_side:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.container_side .checkmark_side:after {
+    left: 5px;
+    top: 1px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
 }
