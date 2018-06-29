@@ -51,8 +51,8 @@
                             <tr>
                                 <td>{{proID}}</td>
                                 <td>{{proName}}</td>
-                                <td>{{price}}</td>
-                                <td>{{addedDay}}</td>
+                                <td>{{number_format price}}</td>
+                                <td>{{date_format addedDay}}</td>
                                 <td>{{totalView}}</td>
                                 <td>{{totalBought}}</td>
                                 <td>{{inStorage}}</td>
@@ -61,7 +61,7 @@
                                         <span class="glyphicon glyphicon-wrench"></span>
                                     </a>
                                     <a class="btn btn-danger btn-xs" href="/admin/product/delete?id={{proID}}" role="button">
-                                        <span class="glyphicon glyphicon-trash"></span>
+                                        <span class="glyphicon glyphicon-wrench"></span>
                                     </a>
                                 </td>
                             </tr>

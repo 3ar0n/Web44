@@ -1,9 +1,9 @@
 module.exports = (req, res, next) => {
     if (req.session.user === null) {
-        res.render('error/index');
+        res.redirect('/account/signin');
     } else {
         if (req.session.user.isAdmin === 0) {
-            res.render('error/index');
+            res.redirect('/account/signin');
         } else {
             next();
         }
